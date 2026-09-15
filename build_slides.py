@@ -113,11 +113,10 @@ SLIDES = {
     },
     9: {
         "title": "4 | Prepare for response and recovery",
-        "bullets": [
-            "Coordinate emergency plans, communication protocols and drills.",
-            "Plan recovery before an earthquake occurs.",
-            "Build Back Better: reduce future vulnerability and feed lessons into mitigation.",
-        ],
+        "cycle_chart": True,
+        "link_note": ("Mitigation, preparedness, response and recovery overlap rather "
+                      "than forming isolated stages \u2014 lessons feed back into the "
+                      "next planning cycle."),
         "notes": ("The fourth component integrates preparedness with recovery planning. "
                   "Build Back Better means using reconstruction to reduce future "
                   "vulnerability. Mitigation, preparedness, response, and recovery "
@@ -572,6 +571,218 @@ DIAGRAM_HTML = """<div class="diagram-zone">
     <p class="link-note diagram-link-note">@@LINK_NOTE@@</p>"""
 
 # ----------------------------------------------------------------------------
+# Disaster management cycle chart (slide 9) — pre/during/post phases +
+# feedback loop, laid out horizontally for the 16:9 stage.
+# Styles live in slide09.css only.
+# ----------------------------------------------------------------------------
+CYCLE_CSS = """
+/* ---- disaster management cycle chart (HTML/SVG) ---- */
+.cycle-zone{margin-top:6px}
+.figure--cycle{container-type:inline-size}
+.cycle-card{
+  --cyc-pre:#1b803a;
+  --cyc-during:#d85718;
+  --cyc-post:#166db8;
+  --cyc-feedback:#1b803a;
+  background:var(--c-paper);
+  border:1px solid var(--c-line);
+  border-radius:14px;
+  width:min(100%,1180px);
+  margin-inline:auto;
+  padding:clamp(10px,1.7cqw,20px) clamp(10px,1.9cqw,24px);
+  font-size:clamp(7.5px,1.5cqw,13.5px); /* everything below scales in em */
+}
+.cycle-row{
+  display:grid;
+  grid-template-columns:1fr 26px 1fr 26px 1fr;
+  gap:6px;align-items:stretch;
+}
+.phase{display:flex;flex-direction:column;min-width:0}
+.phase-banner{
+  color:#fff;text-align:center;
+  padding:.5em 1em;border-radius:3px;
+  box-shadow:0 2px 4px rgba(0,0,0,.08);
+}
+.phase-title{font-family:var(--font-head);font-size:1.12em;font-weight:800;line-height:1.25}
+.phase-sub{font-size:.95em;font-weight:600;line-height:1.25;margin-top:1px}
+.phase--pre .phase-banner{background:var(--cyc-pre)}
+.phase--during .phase-banner{background:var(--cyc-during)}
+.phase--post .phase-banner{background:var(--cyc-post)}
+.phase-frame{
+  flex:1;display:flex;flex-direction:column;gap:.8em;
+  border:2px solid;border-radius:3px;
+  padding:.9em .8em;margin-top:2px;
+}
+.phase--pre .phase-frame{border-color:var(--cyc-pre)}
+.phase--during .phase-frame{border-color:var(--cyc-during)}
+.phase--post .phase-frame{border-color:var(--cyc-post)}
+.sub-card{flex:1;display:flex;flex-direction:column;background:#fff;border-radius:2px;overflow:hidden}
+.sub-card>header{
+  color:#fff;font-size:.98em;font-weight:700;text-align:center;
+  padding:.45em .5em;white-space:nowrap;
+}
+.phase--pre .sub-card>header{background:var(--cyc-pre)}
+.phase--during .sub-card>header{background:var(--cyc-during)}
+.phase--post .sub-card>header{background:var(--cyc-post)}
+.sub-body{
+  flex:1;background:#fff;border:1px solid;border-top:none;
+  padding:.6em .8em;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.phase--pre .sub-body{border-color:#94c9a4}
+.phase--during .sub-body{border-color:#f1aa86}
+.phase--post .sub-body{border-color:#97c3e8}
+.bullet-list{list-style-type:disc;padding-left:1.5em;margin:0}
+.bullet-list li{
+  font-size:.95em;line-height:1.45;
+  color:var(--c-ink);font-weight:500;margin-bottom:2px;
+}
+.bullet-list li:last-child{margin-bottom:0}
+.seismic-box{display:flex;align-items:center;justify-content:center;height:100%}
+.seismic-svg{width:88%;height:auto;overflow:visible}
+.flow-arrow{display:flex;align-items:center;justify-content:center}
+.flow-arrow svg{width:100%;height:24px}
+.cycle-connector-down{display:flex;justify-content:center;height:14px;margin-top:2px}
+.cycle-connector-down svg{height:100%;width:auto}
+.cycle-feedback{
+  position:relative;width:74%;margin:.3em auto 0;
+  display:flex;align-items:center;justify-content:center;
+}
+.feedback-banner{
+  width:100%;background:var(--cyc-feedback);color:#fff;text-align:center;
+  padding:.5em 3.2em;border-radius:2px;
+  box-shadow:0 2px 4px rgba(0,0,0,.08);
+}
+.feedback-title{font-family:var(--font-head);font-size:1.12em;font-weight:800;line-height:1.25}
+.feedback-sub{font-size:.95em;font-weight:600;line-height:1.25;margin-top:1px}
+.loop-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:6.2em;z-index:3;pointer-events:none;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.22));
+}
+.loop-arrow--left{left:-1em}
+.loop-arrow--right{right:-1em}
+.cycle-link-note{margin-top:10px}
+@media (max-width:860px){
+  .cycle-row{grid-template-columns:1fr;gap:10px}
+  .flow-arrow{height:22px}
+  .flow-arrow svg{width:24px;height:100%}
+  .cycle-feedback{width:100%}
+  .loop-arrow{width:4.6em}
+  .loop-arrow--left{left:0}
+  .loop-arrow--right{right:0}
+  .sub-card>header{white-space:normal}
+}
+"""
+
+CYCLE_HTML = """<div class="cycle-zone">
+    <figure class="figure figure--cycle">
+      <div class="cycle-card">
+        <div class="cycle-row">
+          <section class="phase phase--pre">
+            <div class="phase-banner">
+              <div class="phase-title">Pre-Disaster Phase</div>
+              <div class="phase-sub">Preparedness &amp; Mitigation</div>
+            </div>
+            <div class="phase-frame">
+              <article class="sub-card">
+                <header>Risk Identification &amp; Assessment</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Hazard Modeling</li><li>Vulnerability Analysis</li></ul></div>
+              </article>
+              <article class="sub-card">
+                <header>Risk Prevention &amp; Mitigation</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Structural Retrofitting</li><li>Land-Use Planning</li></ul></div>
+              </article>
+              <article class="sub-card">
+                <header>Emergency Preparedness</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Early Warning Systems</li><li>Response Planning</li></ul></div>
+              </article>
+            </div>
+          </section>
+          <div class="flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 26 24" fill="none"><path d="M2 12 L18 12" stroke="#1b803a" stroke-width="4.5" stroke-linecap="square"/><polygon points="15,4 25,12 15,20" fill="#1b803a"/></svg>
+          </div>
+          <section class="phase phase--during">
+            <div class="phase-banner">
+              <div class="phase-title">During Disaster Phase</div>
+              <div class="phase-sub">Disturbance &amp; Response</div>
+            </div>
+            <div class="phase-frame">
+              <article class="sub-card">
+                <header>Seismic Event (Disequilibrium)</header>
+                <div class="sub-body">
+                  <div class="seismic-box">
+                    <svg class="seismic-svg" viewBox="0 0 160 55" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="80" cy="46" rx="20" ry="5.5" fill="none" stroke="#f28b82" stroke-width="1.2" opacity="0.6"/>
+                      <ellipse cx="80" cy="46" rx="13" ry="3.8" fill="none" stroke="#ea4335" stroke-width="1.2" opacity="0.8"/>
+                      <ellipse cx="80" cy="46" rx="6" ry="1.8" fill="none" stroke="#d93025" stroke-width="1.2"/>
+                      <circle cx="80" cy="46" r="1.5" fill="#d93025"/>
+                      <path d="M 12 36 L 46 36 L 52 28 L 57 42 L 62 18 L 68 47 L 74 6 L 80 50 L 86 16 L 92 42 L 97 29 L 102 36 L 148 36" fill="none" stroke="#ea4335" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </article>
+              <article class="sub-card">
+                <header>Emergency Response</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Search &amp; Rescue</li><li>Evacuation Operations</li></ul></div>
+              </article>
+              <article class="sub-card">
+                <header>Rapid Damage Assessment</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Damage Evaluation</li><li>Resource Deployment</li></ul></div>
+              </article>
+            </div>
+          </section>
+          <div class="flow-arrow" aria-hidden="true">
+            <svg viewBox="0 0 26 24" fill="none"><path d="M2 12 L18 12" stroke="#d85718" stroke-width="4.5" stroke-linecap="square"/><polygon points="15,4 25,12 15,20" fill="#d85718"/></svg>
+          </div>
+          <section class="phase phase--post">
+            <div class="phase-banner">
+              <div class="phase-title">Post-Disaster Phase</div>
+              <div class="phase-sub">Recovery &amp; Continuous Improvement</div>
+            </div>
+            <div class="phase-frame">
+              <article class="sub-card">
+                <header>Recovery &amp; Rehabilitation</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Infrastructure Repair</li><li>Community Support</li></ul></div>
+              </article>
+              <article class="sub-card">
+                <header>Adaptation &amp; Transformation</header>
+                <div class="sub-body"><ul class="bullet-list"><li>Building Resilience</li><li>Urban Renewal</li></ul></div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <div class="cycle-connector-down" aria-hidden="true">
+          <svg viewBox="0 0 24 14" fill="none"><path d="M12 0 L12 8" stroke="#166db8" stroke-width="3.5"/><polygon points="5,6 12,14 19,6" fill="#166db8"/></svg>
+        </div>
+        <div class="cycle-feedback">
+          <svg class="loop-arrow loop-arrow--left" viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cyc-silver-left" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#9ca3af"/><stop offset="45%" stop-color="#d1d5db"/><stop offset="70%" stop-color="#f3f4f6"/><stop offset="100%" stop-color="#9ca3af"/>
+              </linearGradient>
+            </defs>
+            <path d="M 80 50 C 35 50, 10 42, 10 26 C 10 14, 30 6, 60 6 L 60 0 L 84 12 L 60 24 L 60 16 C 36 16, 22 21, 22 27 C 22 36, 45 40, 80 40 Z" fill="url(#cyc-silver-left)" stroke="#6b7280" stroke-width="0.75"/>
+          </svg>
+          <div class="feedback-banner">
+            <div class="feedback-title">The Feedback Loop</div>
+            <div class="feedback-sub">Lessons Learned &amp; Ongoing Monitoring</div>
+          </div>
+          <svg class="loop-arrow loop-arrow--right" viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="cyc-silver-right" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f3f4f6"/><stop offset="35%" stop-color="#e5e7eb"/><stop offset="70%" stop-color="#9ca3af"/><stop offset="100%" stop-color="#6b7280"/>
+              </linearGradient>
+            </defs>
+            <path d="M 10 10 C 55 10, 80 18, 80 34 C 80 46, 60 54, 30 54 L 30 60 L 6 48 L 30 36 L 30 44 C 54 44, 68 39, 68 33 C 68 24, 45 20, 10 20 Z" fill="url(#cyc-silver-right)" stroke="#4b5563" stroke-width="0.75"/>
+          </svg>
+        </div>
+      </div>
+      <figcaption>The disaster management cycle: mitigation and preparedness before an event, response during, recovery and adaptation after — closed by a continuous feedback loop.</figcaption>
+    </figure>
+    <p class="link-note cycle-link-note">@@CYCLE_NOTE@@</p>"""
+
+# ----------------------------------------------------------------------------
 # HTML template
 # ----------------------------------------------------------------------------
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -596,7 +807,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </main>
 
 <script>
-  const DECK = { prev:@@PREV@@, next:@@NEXT@@, first:"slide01.html", last:"slide11.html", num:@@N@@, total:@@TOTAL@@, menu:"../index.html" };
+  const DECK = { prev:@@PREV@@, next:@@NEXT@@, first:"slide01.html", last:"slide@@LAST@@.html", num:@@N@@, total:@@TOTAL@@, menu:"../index.html" };
 </script>
 <script src="../js/deck.js"></script>
 @@EXTRA_BODY@@
@@ -631,7 +842,12 @@ def build_content(num: int, data: dict):
             .replace("@@DIAGRAM_BULLETS@@", bullets)
             .replace("@@LINK_NOTE@@", esc(data.get("link_note", "")))
         )
-        return html, {"live": False, "diagram": True}
+        return html, {"live": False, "diagram": True, "cycle": False}
+
+    # ---- slide 9: disaster management cycle chart ----
+    if data.get("cycle_chart"):
+        html = CYCLE_HTML.replace("@@CYCLE_NOTE@@", esc(data.get("link_note", "")))
+        return html, {"live": False, "diagram": False, "cycle": True}
 
     if has_figure:
         parts.append('<div class="cols cols--figure">')
@@ -698,7 +914,9 @@ def build_slide(num: int, data: dict) -> None:
 
     content, extras = build_content(num, data)
 
-    extra_css = (LIVE_CSS if extras["live"] else "") + (DIAGRAM_CSS if extras["diagram"] else "")
+    extra_css = ((LIVE_CSS if extras["live"] else "")
+                 + (DIAGRAM_CSS if extras["diagram"] else "")
+                 + (CYCLE_CSS if extras.get("cycle") else ""))
     extra_head = LIVE_HEAD if extras["live"] else ""
     extra_body = ""
     if extras["live"]:
@@ -722,6 +940,7 @@ def build_slide(num: int, data: dict) -> None:
         .replace("@@TITLE_HTML@@", esc(data["title"]))
         .replace("@@NOTES@@", data.get("notes", "").replace("--", "—"))
         .replace("@@N@@", str(num))
+        .replace("@@LAST@@", f"{TOTAL:02d}")
         .replace("@@PREV@@", prev)
         .replace("@@NEXT@@", nxt)
         .replace("@@TOTAL@@", str(TOTAL))
