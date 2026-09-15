@@ -27,13 +27,13 @@
   <header class="topbar">
     <div class="glass badge">
       <span class="dot"></span>
-      <span style="color:#cbd5e1;font-weight:500">ESRM20 Regional Setting</span>
+      <span class="t-strong">ESRM20 Regional Setting</span>
       <span class="sep">|</span>
       <span class="mono pga">PGA 475yr: 0.40–0.55g</span>
     </div>
     <div class="glass badge">
       <span class="mono n">17</span>
-      <span style="color:#94a3b8">Active Faults in Metro Zone</span>
+      <span class="t-dim">Active Faults in Metro Zone</span>
     </div>
   </header>
 
@@ -113,11 +113,9 @@
     const REGIONAL_CENTER = [38.8, 26.2];
     const REGIONAL_ZOOM = 6.0;
 
-    // Dark cartography base + label layers (Esri)
-    const TILE_LAYER_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
-    const LABEL_LAYER_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
-
-    let mainMap;
+    // Light cartography (Esri World Light Gray base + reference labels)
+    const TILE_LAYER_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+    const LABEL_LAYER_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
 
     function initMainMap() {
       try {
@@ -130,11 +128,11 @@
           attributionControl: true
         });
 
+        // Light base tile layer + subtle labels
         L.tileLayer(TILE_LAYER_URL, {
           maxZoom: 16,
           attribution: '&copy; Esri, HERE, Garmin, OpenStreetMap'
         }).addTo(mainMap);
-
         L.tileLayer(LABEL_LAYER_URL, { maxZoom: 16, opacity: 0.75 }).addTo(mainMap);
 
         L.control.zoom({ position: 'topright' }).addTo(mainMap);
@@ -207,6 +205,8 @@
       }
     }
 
+    let mainMap;
+
     window.addEventListener('DOMContentLoaded', () => {
       initMainMap();
       window.addEventListener('resize', () => { if (mainMap) mainMap.invalidateSize(); });
@@ -226,11 +226,10 @@
         if (typeof DECK !== 'undefined') window.deckGo ? window.deckGo('next') : (window.location.href = DECK.next);
       });
 
-      // Keyboard shortcuts
+      // Keyboard shortcuts (arrow keys / Space / Esc handled by deck.js)
       window.addEventListener('keydown', (e) => {
         if (e.key === 'i' || e.key === 'I') mainMap?.flyTo(IZMIR_COORDS, 8.5, { duration: 1.2 });
         else if (e.key === 'r' || e.key === 'R') mainMap?.flyTo(REGIONAL_CENTER, REGIONAL_ZOOM, { duration: 1.2 });
-        // Arrow keys / Space / Esc are handled by deck.js
       });
     });
   </script>
