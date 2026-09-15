@@ -54,7 +54,7 @@ SLIDES = {
                   "European risk context. It supports the motivation for coordinated "
                   "risk management; it is not a new calculation produced by this study."),
     },
-    4: {
+    5: {
         "title": "Four components form one learning cycle",
         "bullets": [
             "Risk understanding",
@@ -72,7 +72,7 @@ SLIDES = {
                   "their interaction, with experience and new evidence feeding back into "
                   "future decisions."),
     },
-    5: {
+    6: {
         "title": "1 | Build a shared understanding of risk",
         "bullets": [
             "Combine hazard, exposure, vulnerability and institutional capacity.",
@@ -85,7 +85,7 @@ SLIDES = {
                   "Operating Picture gives participating agencies a shared basis for "
                   "understanding risks and operational needs."),
     },
-    6: {
+    7: {
         "title": "2 | Make coordination operational",
         "bullets": [
             "Establish a City-Level Resilience Coordination Platform.",
@@ -98,7 +98,7 @@ SLIDES = {
                   "sector, and civil society. Risk information becomes actionable only "
                   "when institutions know who is responsible."),
     },
-    7: {
+    8: {
         "title": "3 | Turn priorities into investment",
         "bullets": [
             "Structural: retrofit buildings and strengthen critical lifelines.",
@@ -111,7 +111,7 @@ SLIDES = {
                   "land-use planning, capacity building, and monitoring or warning "
                   "systems."),
     },
-    8: {
+    9: {
         "title": "4 | Prepare for response and recovery",
         "bullets": [
             "Coordinate emergency plans, communication protocols and drills.",
@@ -123,7 +123,7 @@ SLIDES = {
                   "vulnerability. Mitigation, preparedness, response, and recovery "
                   "overlap rather than forming isolated stages."),
     },
-    9: {
+    10: {
         "title": "Embed the roadmap in municipal routines",
         "roadmap": [
             ("I", "Establish the shared risk information base."),
@@ -136,7 +136,7 @@ SLIDES = {
                   "implementation. In Türkiye, alignment with İRAP and local Earthquake "
                   "Master Plans can support coherence."),
     },
-    10: {
+    11: {
         "title": "Contribution and evidence boundaries",
         "bullets": [
             "Contribution: a municipal architecture linking risk, governance and action.",
@@ -148,7 +148,7 @@ SLIDES = {
                   "preparedness in one municipal architecture. The paper does not report "
                   "a municipal pilot or measured improvements in losses or recovery time."),
     },
-    11: {
+    12: {
         "title": "Resilience needs coordinated decisions",
         "bullets": [
             "Connect engineering evidence with municipal responsibility.",
@@ -163,7 +163,7 @@ SLIDES = {
     },
 }
 
-TOTAL = 11
+TOTAL = 12
 
 # ----------------------------------------------------------------------------
 # CSS template (identical rules for every standard slide, but delivered as a

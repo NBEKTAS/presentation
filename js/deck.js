@@ -87,6 +87,13 @@
 
   function go(rel) { nav(rel); }
 
+  /* Exposed bridge so custom slide buttons can navigate through the player */
+  window.deckGo = function (dir) {
+    if (dir === "next") go(DECK.next);
+    else if (dir === "prev") go(DECK.prev);
+    else if (dir === "menu") go(DECK.menu);
+  };
+
   /* Keyboard: arrows, space, page keys, Home/End */
   document.addEventListener("keydown", function (e) {
     if (e.altKey || e.ctrlKey || e.metaKey) return;
@@ -104,23 +111,28 @@
     }
   });
 
-  /* Click zones: right 25% = next, left 15% = prev (middle untouched) */
-  document.addEventListener("click", function (e) {
-    if (e.target.closest("a,button") || bar.contains(e.target)) return;
-    if (e.clientX > window.innerWidth * 0.75) go(DECK.next);
-    else if (e.clientX < window.innerWidth * 0.15) go(DECK.prev);
-  });
+  /* Click zones: right 25% = next, left 15% = prev (middle untouched).
+     A slide can opt out with DECK.clickZones = false (e.g. interactive maps). */
+  if (DECK.clickZones !== false) {
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("a,button") || bar.contains(e.target)) return;
+      if (e.clientX > window.innerWidth * 0.75) go(DECK.next);
+      else if (e.clientX < window.innerWidth * 0.15) go(DECK.prev);
+    });
+  }
 
-  /* Touch swipe */
-  var x0 = null;
-  document.addEventListener("touchstart", function (e) {
-    x0 = e.touches[0].clientX;
-  }, { passive: true });
-  document.addEventListener("touchend", function (e) {
-    if (x0 === null) return;
-    var dx = e.changedTouches[0].clientX - x0;
-    if (dx < -60) go(DECK.next);
-    else if (dx > 60) go(DECK.prev);
-    x0 = null;
-  }, { passive: true });
+  /* Touch swipe (opt out with DECK.swipe = false, e.g. pannable maps) */
+  if (DECK.swipe !== false) {
+    var x0 = null;
+    document.addEventListener("touchstart", function (e) {
+      x0 = e.touches[0].clientX;
+    }, { passive: true });
+    document.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (dx < -60) go(DECK.next);
+      else if (dx > 60) go(DECK.prev);
+      x0 = null;
+    }, { passive: true });
+  }
 })();

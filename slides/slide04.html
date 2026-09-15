@@ -3,91 +3,241 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slide 04 — Four components form one learning cycle</title>
+<title>Slide 04 — İzmir Regional Setting (Interactive Map)</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <link rel="stylesheet" href="../css/slide04.css">
-
 <!--
-  SPEAKER NOTES (from PPTX):
-  The framework is organized around four interconnected components, aligned with the Sendai priorities: shared understanding of risk, governance and coordination, structural and non-structural investment, and preparedness with Build Back Better recovery. Their value lies in their interaction, with experience and new evidence feeding back into future decisions.
+  SPEAKER NOTES (from PPTX, slide "İzmir motivates a city-scale approach"):
+  İzmir provides the setting for the proposed framework. The seismic risk map
+  locates the city within the wider European risk context; it is not a new
+  calculation produced by this study. Buildings, infrastructure, institutions,
+  and communities must be considered together. İRAP is a potential entry point:
+  the framework should connect with existing municipal arrangements.
 -->
 </head>
 <body>
-<main class="stage">
-  <section class="slide">
-    <h1 class="slide-title">Four components form one learning cycle</h1>
-    <div class="diagram-zone">
-    <figure class="figure figure--diagram">
-      <div class="diagram-card">
-        <svg class="arrows-layer" viewBox="0 0 1000 750" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <marker id="ah-1" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto"><polygon points="0 0, 7.5 3.5, 0 7" fill="#2563EB"/></marker>
-            <marker id="ah-2" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto"><polygon points="0 0, 7.5 3.5, 0 7" fill="#D97706"/></marker>
-            <marker id="ah-3" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto"><polygon points="0 0, 7.5 3.5, 0 7" fill="#059669"/></marker>
-            <marker id="ah-4" markerWidth="8" markerHeight="8" refX="6" refY="3.5" orient="auto"><polygon points="0 0, 7.5 3.5, 0 7" fill="#7C3AED"/></marker>
-          </defs>
-          <path id="arc-1" class="cycle-arc" d="M 620 125 A 285 285 0 0 1 760 265"/>
-          <path id="arc-2" class="cycle-arc" d="M 760 485 A 285 285 0 0 1 620 625"/>
-          <path id="arc-3" class="cycle-arc" d="M 380 625 A 285 285 0 0 1 240 485"/>
-          <path id="arc-4" class="cycle-arc" d="M 240 265 A 285 285 0 0 1 380 125"/>
-        </svg>
-        <div class="diagram-grid">
-          <section class="node node--top">
-            <div class="node-title-wrapper"><h2 class="node-title">1. Understanding Risk</h2></div>
-            <ul>
-              <li>Hazard Assessment</li>
-              <li>Exposure Mapping</li>
-              <li>Vulnerability Analysis</li>
-              <li>Risk Communication</li>
-            </ul>
-          </section>
-          <section class="node node--left">
-            <div class="node-title-wrapper"><h2 class="node-title">4. Preparedness &amp;<br>Build Back Better</h2></div>
-            <ul>
-              <li>Emergency Planning</li>
-              <li>Early Warning Systems</li>
-              <li>Response Capacity</li>
-              <li>Resilient Reconstruction</li>
-            </ul>
-          </section>
-          <section class="hub">
-            <h1 class="hub-title">City-Scale<br>Operational Integration</h1>
-            <ul>
-              <li>Data Platform</li>
-              <li>Budget Alignment</li>
-              <li>Monitoring &amp; Evaluation</li>
-              <li>Adaptive Learning</li>
-            </ul>
-          </section>
-          <section class="node node--right">
-            <div class="node-title-wrapper"><h2 class="node-title">2. Risk Governance</h2></div>
-            <ul>
-              <li>Institutional Mandates</li>
-              <li>Regulatory Framework</li>
-              <li>Multi-Stakeholder Coordination</li>
-              <li>Political Commitment</li>
-            </ul>
-          </section>
-          <section class="node node--bottom">
-            <div class="node-title-wrapper"><h2 class="node-title">3. Resilience Investment</h2></div>
-            <ul>
-              <li>Structural Mitigation</li>
-              <li>Infrastructure Reinforcement</li>
-              <li>Financial Instruments</li>
-              <li>Urban Planning Integration</li>
-            </ul>
-          </section>
+
+  <div id="fullMap" role="region" aria-label="Regional European Seismic Risk Map"></div>
+
+  <!-- Vignettes for depth and legibility -->
+  <div class="vig vig--t"></div>
+  <div class="vig vig--l"></div>
+
+  <header class="topbar">
+    <div class="glass badge">
+      <span class="dot"></span>
+      <span style="color:#cbd5e1;font-weight:500">ESRM20 Regional Setting</span>
+      <span class="sep">|</span>
+      <span class="mono pga">PGA 475yr: 0.40–0.55g</span>
+    </div>
+    <div class="glass badge">
+      <span class="mono n">17</span>
+      <span style="color:#94a3b8">Active Faults in Metro Zone</span>
+    </div>
+  </header>
+
+  <main class="side">
+    <div class="glass card">
+
+      <div>
+        <span class="eyebrow">Case Study &amp; Motivation</span>
+        <h1>İzmir motivates a <span class="grad">city-scale</span> approach</h1>
+      </div>
+
+      <div class="rule"></div>
+
+      <ul class="points">
+        <li>
+          <div class="ico ico--red">
+            <svg viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+          </div>
+          <div>
+            <strong>Interconnected Urban Assets</strong>
+            <span>Complex lifelines, aging building stock, and essential port infrastructure require unified, cross-sector risk governance.</span>
+          </div>
+        </li>
+        <li>
+          <div class="ico ico--amber">
+            <svg viewBox="0 0 20 20"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
+          </div>
+          <div>
+            <strong>Institutional Entry Point</strong>
+            <span>İzmir's Disaster Risk Reduction Plan (<span class="k k--amber">İRAP</span>) and municipal urban planning provide direct policy integration.</span>
+          </div>
+        </li>
+        <li>
+          <div class="ico ico--sky">
+            <svg viewBox="0 0 20 20"><path d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z"/></svg>
+          </div>
+          <div>
+            <strong>Regional Risk Context</strong>
+            <span>Positions the metropolitan area within European seismotectonic belts (<span class="k k--sky">EFEHR ESRM20</span>) as setting, not a new site computation.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="actions">
+        <button id="btnFocusIzmir" class="btn btn--primary">
+          <span class="ring"></span> Zoom to İzmir Node
+        </button>
+        <button id="btnResetRegional" class="btn">Reset Regional View</button>
+      </div>
+
+      <div class="legend">
+        <div class="lbl">
+          <span>European Seismic Risk Index (ESRM20)</span>
+          <span class="hi mono">High / Very High</span>
+        </div>
+        <div class="bar"></div>
+        <div class="scale mono">
+          <span>Very Low</span><span>Moderate</span><span class="focus">İzmir Focus ▲</span><span>Extreme</span>
         </div>
       </div>
-      <figcaption>The four components form a continuous learning cycle around an operational-integration core (adapted from the paper).</figcaption>
-    </figure>
-    <p class="link-note diagram-link-note">Shared data, budget alignment and monitoring connect the components.</p>
-  </section>
-</main>
+
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="navbtns">
+      <button id="btnPrevSlide" class="navbtn"><span>←</span> Slide 03</button>
+      <button id="btnNextSlide" class="navbtn">Slide 05 <span>→</span></button>
+    </div>
+    <div class="hint mono">Click &amp; drag regional map · Zoom into İzmir node to inspect local setting</div>
+    <div class="credit mono">Seismic Resilience Research Group · 2026</div>
+  </footer>
+
+  <script>
+    // Geographic constants
+    const IZMIR_COORDS = [38.4237, 27.1428];
+    const REGIONAL_CENTER = [38.8, 26.2];
+    const REGIONAL_ZOOM = 6.0;
+
+    // Dark cartography base + label layers (Esri)
+    const TILE_LAYER_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+    const LABEL_LAYER_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}';
+
+    let mainMap;
+
+    function initMainMap() {
+      try {
+        mainMap = L.map('fullMap', {
+          center: REGIONAL_CENTER,
+          zoom: REGIONAL_ZOOM,
+          zoomSnap: 0.1,
+          zoomDelta: 0.5,
+          zoomControl: false,
+          attributionControl: true
+        });
+
+        L.tileLayer(TILE_LAYER_URL, {
+          maxZoom: 16,
+          attribution: '&copy; Esri, HERE, Garmin, OpenStreetMap'
+        }).addTo(mainMap);
+
+        L.tileLayer(LABEL_LAYER_URL, { maxZoom: 16, opacity: 0.75 }).addTo(mainMap);
+
+        L.control.zoom({ position: 'topright' }).addTo(mainMap);
+
+        // Live ESRM20 risk-index overlay (verified EFEHR MapProxy service)
+        try {
+          const seismicWmsLayer = L.tileLayer.wms('https://maps.eu-risk.eucentre.it/mapproxy/European_Risk_Index_Gridded/ows', {
+            layers: 'seismic-risk',
+            styles: '',
+            format: 'image/png',
+            transparent: true,
+            version: '1.1.1',
+            opacity: 0.55,
+            uppercase: true
+          });
+          seismicWmsLayer.addTo(mainMap);
+        } catch (wmsErr) {
+          console.warn("WMS tile service unreachable, using cartographic hazard overlay", wmsErr);
+        }
+
+        // Aegean high-hazard corridor (ESRM20 / Aegean Extensional Zone)
+        const highRiskAegeanCorridor = [
+          [40.8, 23.5], [40.2, 27.8], [38.8, 28.5], [37.2, 28.2], [36.2, 26.0], [37.5, 23.2]
+        ];
+        L.polygon(highRiskAegeanCorridor, {
+          color: '#ef4444', weight: 1, fillColor: '#dc2626', fillOpacity: 0.12, dashArray: '3, 6'
+        }).addTo(mainMap).bindTooltip('High Seismic Hazard Corridor (ESRM20 / Aegean Extensional Zone)', { sticky: true });
+
+        // Regional fault systems
+        const regionalFaults = [
+          [[38.8, 26.5], [38.5, 27.1], [38.4, 27.6], [38.2, 28.5]],   // Gediz Graben / W Anatolia
+          [[39.5, 24.5], [39.8, 25.8], [40.1, 26.8]],                 // North Aegean Trough
+          [[37.8, 26.6], [37.9, 27.0], [37.85, 27.4]]                 // Samos / Kuşadası Fault (2020 Mw 7.0)
+        ];
+        regionalFaults.forEach(coords => {
+          L.polyline(coords, { color: '#f87171', weight: 2, dashArray: '5, 5', opacity: 0.8 }).addTo(mainMap);
+        });
+
+        // 2020 Samos Mw 7.0 epicenter + wave-path to İzmir
+        const samosEpicenter = [37.90, 26.80];
+        L.circleMarker(samosEpicenter, {
+          radius: 7, color: '#fbbf24', weight: 2, fillColor: '#d97706', fillOpacity: 0.9
+        }).addTo(mainMap).bindTooltip('2020 Samos Mw 7.0 Epicenter (~70 km from İzmir, caused severe Bayraklı collapses)');
+
+        L.polyline([samosEpicenter, IZMIR_COORDS], {
+          color: '#f59e0b', weight: 1.5, dashArray: '4, 4', opacity: 0.7
+        }).addTo(mainMap);
+
+        // Distance rings around İzmir
+        [50000, 100000].forEach((r, idx) => {
+          L.circle(IZMIR_COORDS, {
+            radius: r, color: '#ef4444', weight: 1, dashArray: '2, 6', fillOpacity: 0.02
+          }).addTo(mainMap).bindTooltip(`${(idx + 1) * 50} km Radius`, { sticky: true });
+        });
+
+        // Animated radar beacon + marker for İzmir
+        const beaconIcon = L.divIcon({ className: 'radar-beacon', iconSize: [20, 20], iconAnchor: [10, 10] });
+        L.marker(IZMIR_COORDS, { icon: beaconIcon }).addTo(mainMap);
+
+        const izmirMarkerMain = L.circleMarker(IZMIR_COORDS, {
+          radius: 7, color: '#ffffff', weight: 2.5, fillColor: '#ef4444', fillOpacity: 1
+        }).addTo(mainMap);
+
+        izmirMarkerMain.bindTooltip('İZMİR (STUDY FOCUS)', {
+          permanent: true, direction: 'right', offset: [12, 0], className: 'izmir-custom-tooltip'
+        }).openTooltip();
+
+      } catch (err) {
+        console.error("Error initializing main map:", err);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initMainMap();
+      window.addEventListener('resize', () => { if (mainMap) mainMap.invalidateSize(); });
+
+      document.getElementById('btnFocusIzmir')?.addEventListener('click', () => {
+        if (mainMap) mainMap.flyTo(IZMIR_COORDS, 8.5, { duration: 1.4 });
+      });
+      document.getElementById('btnResetRegional')?.addEventListener('click', () => {
+        if (mainMap) mainMap.flyTo(REGIONAL_CENTER, REGIONAL_ZOOM, { duration: 1.4 });
+      });
+
+      // Slide navigation (player-aware via deck.js)
+      document.getElementById('btnPrevSlide')?.addEventListener('click', () => {
+        if (typeof DECK !== 'undefined') window.deckGo ? window.deckGo('prev') : (window.location.href = DECK.prev);
+      });
+      document.getElementById('btnNextSlide')?.addEventListener('click', () => {
+        if (typeof DECK !== 'undefined') window.deckGo ? window.deckGo('next') : (window.location.href = DECK.next);
+      });
+
+      // Keyboard shortcuts
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'i' || e.key === 'I') mainMap?.flyTo(IZMIR_COORDS, 8.5, { duration: 1.2 });
+        else if (e.key === 'r' || e.key === 'R') mainMap?.flyTo(REGIONAL_CENTER, REGIONAL_ZOOM, { duration: 1.2 });
+        // Arrow keys / Space / Esc are handled by deck.js
+      });
+    });
+  </script>
 
 <script>
-  const DECK = { prev:"slide03.html", next:"slide05.html", first:"slide01.html", last:"slide11.html", num:4, total:11, menu:"../index.html" };
+  const DECK = { prev:"slide03.html", next:"slide05.html", first:"slide01.html", last:"slide12.html", num:4, total:12, menu:"../index.html", clickZones:false, swipe:false };
 </script>
 <script src="../js/deck.js"></script>
-
 </body>
 </html>
