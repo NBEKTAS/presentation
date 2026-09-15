@@ -72,7 +72,7 @@ SLIDES = {
                   "their interaction, with experience and new evidence feeding back into "
                   "future decisions."),
     },
-    6: {
+    7: {
         "title": "1 | Build a shared understanding of risk",
         "bullets": [
             "Combine hazard, exposure, vulnerability and institutional capacity.",
@@ -85,7 +85,7 @@ SLIDES = {
                   "Operating Picture gives participating agencies a shared basis for "
                   "understanding risks and operational needs."),
     },
-    7: {
+    8: {
         "title": "Prioritize risks on a likelihood \u00d7 impact matrix",
         "heat_matrix": True,
         "link_note": ("Rate each risk by likelihood and impact, act on red cells first, "
@@ -98,7 +98,7 @@ SLIDES = {
                   "contingency arrangements. The register is a living document, updated "
                   "as threats evolve."),
     },
-    8: {
+    9: {
         "title": "2 | Make coordination operational",
         "bullets": [
             "Establish a City-Level Resilience Coordination Platform.",
@@ -111,7 +111,7 @@ SLIDES = {
                   "sector, and civil society. Risk information becomes actionable only "
                   "when institutions know who is responsible."),
     },
-    9: {
+    10: {
         "title": "Assess governance readiness with a self-assessment tool",
         "mdrga_wheel": True,
         "link_note": ("A municipal self-assessment empowers authorities to review "
@@ -125,7 +125,7 @@ SLIDES = {
                   "developed through a partnership between IFRC, the Nepal Red Cross "
                   "Society and MoFAGA, co-designed with CBDRM platform partners."),
     },
-    10: {
+    11: {
         "title": "3 | Turn priorities into investment",
         "bullets": [
             "Structural: retrofit buildings and strengthen critical lifelines.",
@@ -138,7 +138,7 @@ SLIDES = {
                   "land-use planning, capacity building, and monitoring or warning "
                   "systems."),
     },
-    11: {
+    12: {
         "title": "4 | Prepare for response and recovery",
         "cycle_chart": True,
         "link_note": ("Mitigation, preparedness, response and recovery overlap rather "
@@ -149,7 +149,7 @@ SLIDES = {
                   "vulnerability. Mitigation, preparedness, response, and recovery "
                   "overlap rather than forming isolated stages."),
     },
-    12: {
+    13: {
         "title": "Validate readiness before the earthquake occurs",
         "checklist": True,
         "link_note": ("Preparedness is validated through practice: response plans, "
@@ -162,7 +162,7 @@ SLIDES = {
                   "Command System streamlines inter-agency decisions; and regular "
                   "drills rehearse roles and expose weaknesses before a real event."),
     },
-    13: {
+    14: {
         "title": "Embed the roadmap in municipal routines",
         "roadmap_diagram": [
             ("I", "Establish the shared risk information base.",
@@ -182,7 +182,7 @@ SLIDES = {
                   "implementation. In Türkiye, alignment with İRAP and local Earthquake "
                   "Master Plans can support coherence."),
     },
-    15: {
+    16: {
         "title": "Contribution and evidence boundaries",
         "bullets": [
             "Contribution: a municipal architecture linking risk, governance and action.",
@@ -194,7 +194,7 @@ SLIDES = {
                   "preparedness in one municipal architecture. The paper does not report "
                   "a municipal pilot or measured improvements in losses or recovery time."),
     },
-    16: {
+    17: {
         "title": "Resilience needs coordinated decisions",
         "bullets": [
             "Connect engineering evidence with municipal responsibility.",
@@ -209,7 +209,7 @@ SLIDES = {
     },
 }
 
-TOTAL = 16
+TOTAL = 17
 
 # ----------------------------------------------------------------------------
 # CSS template (identical rules for every standard slide, but delivered as a

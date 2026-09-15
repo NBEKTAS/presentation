@@ -8,16 +8,16 @@ Standalone per-slide HTML presentation generated from `Bektas_ECEE2026_Presentat
 index.html              Overview menu (links to all slides)
 presentation.html       ★ CENTRAL PLAYER — the one file you open to present
 slides/
-  slide01.html … slide16.html   Each slide = independent HTML page
+  slide01.html … slide17.html   Each slide = independent HTML page
   assets/                       Figures extracted from the PPTX
 css/
-  slide01.css … slide16.css     One stylesheet PER SLIDE (fully isolated)
+  slide01.css … slide17.css     One stylesheet PER SLIDE (fully isolated)
   menu.css                      Stylesheet for index.html only
   player.css                    Stylesheet for presentation.html only
 js/
   deck.js                       Slide-side nav (standalone mode; relays to
                                 the player when embedded)
-build_slides.py                 Regenerates slides 02–11 + their CSS
+build_slides.py                 Regenerates slides 02–17 + their CSS (custom hand-written: 04 map, 06 framework, 15 blueprint)
 serve.py                        Detached local server (port 8642)
 ```
 
