@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presenting — A City-Scale Integrated Earthquake Risk Management Framework</title>
+<link rel="stylesheet" href="css/player.css">
+</head>
+<body>
+
+<div class="player" id="player">
+  <div class="progress" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+  <div class="stage-wrap">
+    <div class="stage" id="stage">
+      <iframe id="frame" title="Presentation slide"></iframe>
+
+      <button class="edge edge--prev" id="btnPrev" aria-label="Previous slide">&#10094;</button>
+      <button class="edge edge--next" id="btnNext" aria-label="Next slide">&#10095;</button>
+    </div>
+  </div>
+
+  <footer class="hud">
+    <a class="hud-exit" href="index.html" title="Back to overview (Esc)">✕ Exit</a>
+    <div class="dots" id="dots" role="tablist" aria-label="Slides"></div>
+    <div class="hud-right">
+      <span class="counter" id="counter">1 / 11</span>
+      <button class="hud-btn" id="btnFs" title="Fullscreen (F)">⛶</button>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var TOTAL = 11;
+  var frame = document.getElementById("frame");
+  var stage = document.getElementById("stage");
+  var dotsEl = document.getElementById("dots");
+  var counter = document.getElementById("counter");
+  var fill = document.getElementById("progressFill");
+
+  /* ---- dots ---- */
+  var dots = [];
+  for (var i = 1; i <= TOTAL; i++) {
+    (function (n) {
+      var d = document.createElement("button");
+      d.className = "dot";
+      d.title = "Slide " + n;
+      d.setAttribute("aria-label", "Go to slide " + n);
+      d.addEventListener("click", function () { show(n); });
+      dotsEl.appendChild(d);
+      dots.push(d);
+    })(i);
+  }
+
+  /* ---- deep link: presentation.html#5 starts at slide 5 ---- */
+  var start = parseInt((location.hash || "").replace("#", ""), 10);
+  var current = (start >= 1 && start <= TOTAL) ? start : 1;
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function fileFor(n) { return "slides/slide" + pad(n) + ".html"; }
+
+  function show(n, fromFrame) {
+    if (n < 1 || n > TOTAL) return;
+    current = n;
+    frame.src = fileFor(n);
+    counter.textContent = n + " / " + TOTAL;
+    fill.style.width = (n / TOTAL * 100) + "%";
+    dots.forEach(function (d, i) { d.classList.toggle("is-active", i === n - 1); });
+    history.replaceState(null, "", "#" + n);
+  }
+
+  function next() { show(current === TOTAL ? TOTAL : current + 1); }
+  function prev() { show(current === 1 ? 1 : current - 1); }
+
+  /* ---- messages from slides (js/deck.js inside the iframe) ---- */
+  window.addEventListener("message", function (e) {
+    var m = e.data;
+    if (!m || m.type !== "deck-nav") return;
+    if (m.rel === "../index.html" || m.rel === "menu") { location.href = "index.html"; return; }
+    var mt = /slide(\d+)\.html$/.exec(m.rel);
+    if (mt) show(parseInt(mt[1], 10));
+  });
+
+  /* ---- controls ---- */
+  document.getElementById("btnNext").addEventListener("click", next);
+  document.getElementById("btnPrev").addEventListener("click", prev);
+
+  document.getElementById("btnFs").addEventListener("click", toggleFs);
+  function toggleFs() {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else stage.requestFullscreen && stage.requestFullscreen();
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    switch (e.key) {
+      case "ArrowRight": case " ": case "PageDown": e.preventDefault(); next(); break;
+      case "ArrowLeft": case "PageUp": e.preventDefault(); prev(); break;
+      case "Home": e.preventDefault(); show(1); break;
+      case "End": e.preventDefault(); show(TOTAL); break;
+      case "Escape": location.href = "index.html"; break;
+      case "f": case "F": toggleFs(); break;
+    }
+  });
+
+  /* click zones on the letterbox area */
+  stage.addEventListener("click", function (e) {
+    if (e.target.closest("button")) return;
+    var r = stage.getBoundingClientRect();
+    var x = (e.clientX - r.left) / r.width;
+    if (x > 0.75) next();
+    else if (x < 0.15) prev();
+  });
+
+  /* touch swipe */
+  var x0 = null;
+  stage.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener("touchend", function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (dx < -60) next(); else if (dx > 60) prev();
+    x0 = null;
+  }, { passive: true });
+
+  show(current);
+
+  /* Live hash navigation (e.g. user edits URL to #7 while open) */
+  window.addEventListener("hashchange", function () {
+    var n = parseInt((location.hash || "").replace("#", ""), 10);
+    if (n >= 1 && n <= TOTAL && n !== current) show(n);
+  });
+})();
+</script>
+</body>
+</html>

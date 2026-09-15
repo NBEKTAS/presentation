@@ -1,0 +1,236 @@
+/* ============================================================
+   slide04.css — ONLY used by slides/slide04.html.
+   ECEE2026 theme: slate #44546A, accent #4472C4, Calibri Light.
+   No other slide loads this file.
+   ============================================================ */
+:root{
+  --c-primary:#44546A;
+  --c-primary-dark:#2E3A52;
+  --c-accent:#4472C4;
+  --c-ink:#22262E;
+  --c-muted:#66707F;
+  --c-paper:#FFFFFF;
+  --c-line:#D9DEE7;
+  --font-head:"Calibri Light","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-body:Calibri,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--font-body);
+  color:var(--c-ink);
+  background:var(--c-paper);
+}
+.stage{
+  min-height:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:48px clamp(24px,5vw,72px) 104px;
+}
+.slide{width:min(1180px,100%)}
+
+/* ---- title ---- */
+.slide-title{
+  font-family:var(--font-head);font-weight:300;
+  font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.18;
+  color:var(--c-primary-dark);
+  padding-left:16px;border-left:5px solid var(--c-accent);
+  margin-bottom:clamp(24px,4vh,44px);
+  max-width:30ch;
+}
+
+/* ---- bullet list ---- */
+.points{list-style:none}
+.points li{
+  position:relative;
+  font-size:clamp(1.08rem,1rem + .45vw,1.32rem);
+  line-height:1.5;
+  padding-left:30px;
+  margin-bottom:clamp(14px,2.4vh,24px);
+  max-width:58ch;
+}
+.points li::before{
+  content:"";
+  position:absolute;left:2px;top:.52em;
+  width:11px;height:11px;
+  background:var(--c-accent);
+  transform:rotate(45deg);
+}
+.points li strong{color:var(--c-primary-dark)}
+
+/* ---- 2x2 component grid (slide 4) ---- */
+.points--grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:14px;max-width:640px;
+}
+.points--grid li{
+  background:#F4F6FA;
+  border:1px solid var(--c-line);
+  border-left:4px solid var(--c-accent);
+  border-radius:8px;
+  padding:16px 18px;margin-bottom:0;
+  font-weight:700;color:var(--c-primary-dark);
+}
+.points--grid li::before{display:none}
+.link-note{
+  margin-top:18px;
+  font-size:1.05rem;color:var(--c-muted);
+  padding-left:30px;position:relative;
+  max-width:56ch;
+}
+.link-note::before{
+  content:"⇄";
+  position:absolute;left:2px;top:0;
+  color:var(--c-accent);font-weight:700;
+}
+
+/* ---- roadmap (slide 9) ---- */
+.roadmap{list-style:none;max-width:760px}
+.roadmap li{
+  display:flex;align-items:baseline;gap:16px;
+  padding:clamp(10px,1.8vh,16px) 0;
+  border-bottom:1px solid var(--c-line);
+  font-size:clamp(1.08rem,1rem + .4vw,1.3rem);line-height:1.45;
+}
+.roadmap li:last-child{border-bottom:none}
+.roman{
+  font-family:var(--font-head);
+  font-weight:700;color:var(--c-accent);
+  min-width:52px;text-align:right;
+  font-size:1.05em;letter-spacing:.02em;
+}
+
+/* ---- figure (slides 3, 4) ---- */
+.cols{display:grid;gap:clamp(24px,4vw,48px);align-items:center}
+.cols--figure{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.figure{min-width:0}
+.figure img{
+  width:100%;height:auto;
+  max-height:58vh;object-fit:contain;
+  border:1px solid var(--c-line);
+  border-radius:10px;
+  box-shadow:0 10px 28px rgba(46,58,82,.14);
+  background:#fff;
+}
+.figure figcaption{
+  margin-top:12px;
+  font-size:.88rem;color:var(--c-muted);line-height:1.45;
+}
+
+/* ---- closing chip (slide 11) ---- */
+.closing{
+  display:inline-block;margin-top:clamp(18px,3vh,30px);
+  font-family:var(--font-head);
+  font-size:1.25rem;font-weight:700;letter-spacing:.04em;
+  color:#fff;background:var(--c-primary);
+  border-radius:999px;padding:10px 30px;
+}
+
+@media (max-width:860px){
+  .cols--figure{grid-template-columns:1fr}
+  .points li,.link-note{max-width:none}
+}
+
+/* ---- framework cycle diagram (HTML/SVG, colorful) ---- */
+.diagram-zone{margin-top:6px}
+.diagram-link-note{margin-top:10px;max-width:none}
+.figure--diagram{container-type:inline-size}
+.diagram-card{
+  position:relative;
+  background:var(--c-paper);
+  border:1px solid var(--c-line);
+  border-radius:14px;
+  aspect-ratio:4/3;
+  width:min(100%,calc(58vh * 4 / 3));
+  margin-inline:auto;
+  padding:16px;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(8.5px,2.1cqw,14px); /* everything below scales in em */
+}
+.arrows-layer{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;z-index:1;
+}
+.cycle-arc{
+  fill:none;stroke-linecap:round;stroke-linejoin:round;
+  stroke-width:3.2;
+  stroke-dasharray:7,7;
+  animation:dashCycle 22s linear infinite;
+}
+#arc-1{stroke:#2563EB;marker-end:url(#ah-1)}
+#arc-2{stroke:#D97706;marker-end:url(#ah-2)}
+#arc-3{stroke:#059669;marker-end:url(#ah-3)}
+#arc-4{stroke:#7C3AED;marker-end:url(#ah-4)}
+@keyframes dashCycle{to{stroke-dashoffset:-400}}
+.diagram-grid{
+  position:relative;width:100%;height:100%;z-index:2;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,216px) minmax(0,1fr);
+  grid-template-rows:1fr minmax(0,52%) 1fr;
+  align-items:center;justify-items:center;
+}
+.node{
+  display:flex;flex-direction:column;z-index:3;padding:6px 10px;border-radius:12px;
+}
+.node-title{
+  font-family:var(--font-head);
+  font-size:1.32em;font-weight:700;
+  color:var(--stage);line-height:1.22;
+  display:inline-block;width:fit-content;
+  padding-bottom:3px;margin-bottom:7px;
+  border-bottom:2px solid var(--stage);
+  white-space:nowrap;
+}
+.node ul,.hub ul{list-style:none;padding:0;margin:0}
+.node li{
+  display:flex;align-items:center;gap:.5em;
+  font-size:1em;line-height:1.42;
+  font-weight:500;color:var(--c-ink);
+  margin-bottom:3px;white-space:nowrap;
+}
+.node li::before{
+  content:"";display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:var(--stage);flex-shrink:0;
+}
+.node--top{grid-column:2;grid-row:1;align-items:center;align-self:flex-start;text-align:center;padding-top:2px;--stage:#2563EB}
+.node--top ul{text-align:left;display:inline-block}
+.node--right{grid-column:3;grid-row:2;align-items:flex-start;justify-self:start;padding-left:18px;--stage:#D97706}
+.node--bottom{grid-column:2;grid-row:3;align-items:center;align-self:flex-end;text-align:center;padding-bottom:2px;--stage:#059669}
+.node--bottom ul{text-align:left;display:inline-block}
+.node--left{grid-column:1;grid-row:2;align-items:flex-start;justify-self:end;padding-right:18px;--stage:#7C3AED}
+.node--left .node-title{white-space:normal}
+.hub{
+  grid-column:2;grid-row:2;
+  width:100%;max-width:216px;aspect-ratio:1/1;
+  border-radius:50%;border:2px solid var(--c-primary-dark);
+  background:#fff;z-index:3;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:12px 16px;text-align:center;
+  box-shadow:0 4px 18px rgba(15,23,42,.05);
+}
+.hub-title{
+  font-family:var(--font-head);
+  font-size:1.12em;font-weight:700;line-height:1.22;
+  color:var(--c-primary-dark);
+  display:inline-block;border-bottom:1.5px solid var(--c-primary-dark);
+  padding-bottom:4px;margin-bottom:7px;width:88%;
+}
+.hub li{
+  display:flex;align-items:center;gap:.45em;
+  font-size:.95em;line-height:1.4;
+  font-weight:500;color:var(--c-ink);
+  margin-bottom:2px;white-space:nowrap;
+}
+.hub li::before{
+  content:"";display:inline-block;width:4px;height:4px;border-radius:50%;
+  background:var(--c-primary-dark);flex-shrink:0;
+}
+@media (max-width:860px){
+  .diagram-card{aspect-ratio:auto;width:100%;max-width:560px;padding:18px 12px}
+  .arrows-layer{display:none}
+  .diagram-grid{display:flex;flex-direction:column;gap:16px}
+  .node--top,.node--right,.node--bottom,.node--left{padding:0;align-items:center;text-align:center}
+  .node li,.hub li{white-space:normal}
+  .hub{order:-1;margin-bottom:6px}
+}
+

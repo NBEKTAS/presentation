@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide 03 — İzmir motivates a city-scale approach</title>
+<link rel="stylesheet" href="../css/slide03.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<!--
+  SPEAKER NOTES (from PPTX):
+  İzmir provides the setting for the proposed framework. The seismic risk map reproduced from the paper locates the city within the wider European risk context. It supports the motivation for coordinated risk management; it is not a new calculation produced by this study.
+-->
+</head>
+<body>
+<main class="stage">
+  <section class="slide">
+    <h1 class="slide-title">İzmir motivates a city-scale approach</h1>
+    <div class="cols cols--figure">
+    <div>
+<ul class="points">
+      <li>Interconnected urban assets require coordinated risk management.</li>
+      <li>İRAP and local planning provide an institutional entry point.</li>
+      <li>The map provides regional context, not a new loss calculation.</li>
+    </ul>
+    </div>
+    <figure class="figure figure--map">
+      <div class="map-wrap map--static" id="mapWrap">
+        <img class="map-fallback" src="assets/slide03-map.jpeg" alt="Live layer: European Seismic Risk Index (ESRM20, EFEHR) — context only, not a new loss calculation. Static figure from the paper shown when offline.">
+        <div class="map" id="liveMap" aria-label="Interactive European seismic risk map"></div>
+        <span class="map-badge">EFEHR ESRM20 · <span class="st">loading…</span></span>
+        <div class="map-legend" id="mapLegend"></div>
+      </div>
+      <figcaption>Live layer: European Seismic Risk Index (ESRM20, EFEHR) — context only, not a new loss calculation. Static figure from the paper shown when offline.</figcaption>
+    </figure>
+  </div>
+  </section>
+</main>
+
+<script>
+  const DECK = { prev:"slide02.html", next:"slide04.html", first:"slide01.html", last:"slide11.html", num:3, total:11, menu:"../index.html" };
+</script>
+<script src="../js/deck.js"></script>
+<script>
+
+/* Live EFEHR European Seismic Risk Index layer (ESRM20, CC BY 4.0).
+   Falls back to the static paper figure if tiles/Leaflet are unavailable. */
+(function () {
+  var wrap = document.querySelector('.map-wrap');
+  if (!wrap) return;
+  var badge = wrap.querySelector('.map-badge .st');
+  function goStatic() {
+    wrap.classList.remove('map--live');
+    wrap.classList.add('map--static');
+    if (badge) badge.textContent = 'OFFLINE · static figure';
+  }
+  if (typeof L === 'undefined') { goStatic(); return; }
+
+  var map = L.map('liveMap', {
+    zoomControl: false, attributionControl: false,
+    scrollWheelZoom: false, keyboard: false,
+    zoomSnap: 0.25, inertia: false
+  }).setView([40.5, 18.0], 4);
+
+  var tilesOk = false;
+  var risk = L.tileLayer.wms('https://maps.eu-risk.eucentre.it/mapproxy/European_Risk_Index_Gridded/ows', {
+    layers: 'seismic-risk,shaded-relief,country',
+    format: 'image/png', transparent: true, version: '1.1.1',
+    styles: '', uppercase: true
+  });
+  risk.on('tileload', function () {
+    if (!tilesOk) {
+      tilesOk = true;
+      wrap.classList.add('map--live');
+      if (badge) badge.textContent = 'LIVE';
+    }
+  });
+  risk.on('tileerror', function () { /* counted below */ });
+  risk.addTo(map);
+
+  /* If no tile has loaded within 6s, show the static figure instead */
+  setTimeout(function () { if (!tilesOk) goStatic(); }, 6000);
+
+  /* İzmir marker + label */
+  L.circleMarker([38.4237, 27.1428], {
+    radius: 7, color: '#FFFFFF', weight: 2,
+    fillColor: '#E74C3C', fillOpacity: 1
+  }).addTo(map).bindTooltip('İzmir', {
+    permanent: true, direction: 'right', offset: [10, 0],
+    className: 'izmir-label'
+  }).openTooltip();
+
+  /* Zoom controls styled to stay visible over the map */
+  L.control.zoom({ position: 'topright' }).addTo(map);
+})();
+</script>
+</body>
+</html>

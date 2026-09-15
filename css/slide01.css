@@ -1,0 +1,76 @@
+/* ============================================================
+   slide01.css — ONLY used by slides/slide01.html.
+   Colors/fonts mirror the ECEE2026 PPTX theme (slate #44546A,
+   Calibri Light headings) but no other slide loads this file.
+   ============================================================ */
+:root{
+  --c-primary:#44546A;
+  --c-primary-dark:#2E3A52;
+  --c-accent:#4472C4;
+  --c-ink:#22262E;
+  --c-paper:#FFFFFF;
+  --font-head:"Calibri Light","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-body:Calibri,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--font-body);
+  color:var(--c-ink);
+  background:linear-gradient(160deg,#3B4A61 0%,var(--c-primary) 55%,var(--c-primary-dark) 100%);
+}
+.stage{
+  min-height:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:64px 24px 110px; /* bottom padding clears deck.js bar */
+}
+.card{
+  width:min(1000px,100%);
+  background:var(--c-paper);
+  border-radius:14px;
+  padding:clamp(36px,5vw,64px);
+  box-shadow:0 24px 60px rgba(15,22,35,.35);
+}
+.kicker{
+  display:inline-block;
+  font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--c-accent);
+  border:1px solid var(--c-accent);
+  border-radius:999px;
+  padding:6px 14px;
+  margin-bottom:26px;
+}
+h1{
+  font-family:var(--font-head);
+  font-weight:300;
+  font-size:clamp(1.8rem,4.2vw,3rem);
+  line-height:1.16;
+  color:var(--c-primary-dark);
+  padding-left:18px;
+  border-left:6px solid var(--c-accent);
+  max-width:26ch;
+}
+.authors{
+  margin-top:30px;
+  font-size:clamp(1rem,1.6vw,1.15rem);
+  line-height:1.6;
+  color:var(--c-ink);
+}
+.authors strong{font-weight:700}
+.affil{
+  margin-top:14px;
+  font-size:.95rem;
+  line-height:1.65;
+  color:#5A6373;
+}
+.affil sup{color:var(--c-accent);font-weight:700}
+.contact{
+  margin-top:26px;
+  font-size:.95rem;
+  color:var(--c-primary);
+}
+.contact a{color:var(--c-accent);text-decoration:none;border-bottom:1px solid currentColor}
+@media (max-width:640px){
+  .card{padding:28px 22px}
+  h1{border-left-width:4px;padding-left:12px}
+}

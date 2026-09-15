@@ -1,0 +1,160 @@
+/* ============================================================
+   slide03.css — ONLY used by slides/slide03.html.
+   ECEE2026 theme: slate #44546A, accent #4472C4, Calibri Light.
+   No other slide loads this file.
+   ============================================================ */
+:root{
+  --c-primary:#44546A;
+  --c-primary-dark:#2E3A52;
+  --c-accent:#4472C4;
+  --c-ink:#22262E;
+  --c-muted:#66707F;
+  --c-paper:#FFFFFF;
+  --c-line:#D9DEE7;
+  --font-head:"Calibri Light","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-body:Calibri,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--font-body);
+  color:var(--c-ink);
+  background:var(--c-paper);
+}
+.stage{
+  min-height:100%;
+  display:flex;align-items:center;justify-content:center;
+  padding:48px clamp(24px,5vw,72px) 104px;
+}
+.slide{width:min(1180px,100%)}
+
+/* ---- title ---- */
+.slide-title{
+  font-family:var(--font-head);font-weight:300;
+  font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.18;
+  color:var(--c-primary-dark);
+  padding-left:16px;border-left:5px solid var(--c-accent);
+  margin-bottom:clamp(24px,4vh,44px);
+  max-width:30ch;
+}
+
+/* ---- bullet list ---- */
+.points{list-style:none}
+.points li{
+  position:relative;
+  font-size:clamp(1.08rem,1rem + .45vw,1.32rem);
+  line-height:1.5;
+  padding-left:30px;
+  margin-bottom:clamp(14px,2.4vh,24px);
+  max-width:58ch;
+}
+.points li::before{
+  content:"";
+  position:absolute;left:2px;top:.52em;
+  width:11px;height:11px;
+  background:var(--c-accent);
+  transform:rotate(45deg);
+}
+.points li strong{color:var(--c-primary-dark)}
+
+/* ---- 2x2 component grid (slide 4) ---- */
+.points--grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:14px;max-width:640px;
+}
+.points--grid li{
+  background:#F4F6FA;
+  border:1px solid var(--c-line);
+  border-left:4px solid var(--c-accent);
+  border-radius:8px;
+  padding:16px 18px;margin-bottom:0;
+  font-weight:700;color:var(--c-primary-dark);
+}
+.points--grid li::before{display:none}
+.link-note{
+  margin-top:18px;
+  font-size:1.05rem;color:var(--c-muted);
+  padding-left:30px;position:relative;
+  max-width:56ch;
+}
+.link-note::before{
+  content:"⇄";
+  position:absolute;left:2px;top:0;
+  color:var(--c-accent);font-weight:700;
+}
+
+/* ---- roadmap (slide 9) ---- */
+.roadmap{list-style:none;max-width:760px}
+.roadmap li{
+  display:flex;align-items:baseline;gap:16px;
+  padding:clamp(10px,1.8vh,16px) 0;
+  border-bottom:1px solid var(--c-line);
+  font-size:clamp(1.08rem,1rem + .4vw,1.3rem);line-height:1.45;
+}
+.roadmap li:last-child{border-bottom:none}
+.roman{
+  font-family:var(--font-head);
+  font-weight:700;color:var(--c-accent);
+  min-width:52px;text-align:right;
+  font-size:1.05em;letter-spacing:.02em;
+}
+
+/* ---- figure (slides 3, 4) ---- */
+.cols{display:grid;gap:clamp(24px,4vw,48px);align-items:center}
+.cols--figure{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.figure{min-width:0}
+.figure img{
+  width:100%;height:auto;
+  max-height:58vh;object-fit:contain;
+  border:1px solid var(--c-line);
+  border-radius:10px;
+  box-shadow:0 10px 28px rgba(46,58,82,.14);
+  background:#fff;
+}
+.figure figcaption{
+  margin-top:12px;
+  font-size:.88rem;color:var(--c-muted);line-height:1.45;
+}
+
+/* ---- closing chip (slide 11) ---- */
+.closing{
+  display:inline-block;margin-top:clamp(18px,3vh,30px);
+  font-family:var(--font-head);
+  font-size:1.25rem;font-weight:700;letter-spacing:.04em;
+  color:#fff;background:var(--c-primary);
+  border-radius:999px;padding:10px 30px;
+}
+
+@media (max-width:860px){
+  .cols--figure{grid-template-columns:1fr}
+  .points li,.link-note{max-width:none}
+}
+
+/* ---- live EFEHR seismic-risk map ---- */
+.map-wrap{
+  position:relative;width:100%;aspect-ratio:1200/560;
+  background:#DFE6EF;
+  border:1px solid var(--c-line);border-radius:10px;
+  box-shadow:0 10px 28px rgba(46,58,82,.14);
+  overflow:hidden;
+}
+.map{position:absolute;inset:0;cursor:grab;z-index:400}
+.map:active{cursor:grabbing}
+.map-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:100}
+.map-wrap.map--live .map-fallback{display:none}
+.map-badge{
+  position:absolute;top:10px;left:10px;z-index:700;
+  background:rgba(46,58,82,.9);color:#fff;
+  font-size:.66rem;font-weight:700;letter-spacing:.09em;
+  padding:4px 11px;border-radius:999px;
+}
+.map-badge .st{color:#8FE3A8}
+.map-wrap.map--static .map-badge .st{color:#FFD37D}
+.map-legend{
+  position:absolute;left:10px;bottom:10px;z-index:700;
+  background:rgba(255,255,255,.94);border-radius:6px;
+  padding:4px 6px;max-height:44%;width:auto;
+}
+.map-wrap.map--static .map-legend{display:none}
+.leaflet-control-attribution{display:none}
+
