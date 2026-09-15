@@ -124,12 +124,19 @@ SLIDES = {
     },
     10: {
         "title": "Embed the roadmap in municipal routines",
-        "roadmap": [
-            ("I", "Establish the shared risk information base."),
-            ("II", "Formalize mandates and cross-sector coordination."),
-            ("III", "Prioritize and finance risk reduction measures."),
-            ("IV", "Integrate preparedness, recovery and continuous review."),
+        "roadmap_diagram": [
+            ("I", "Establish the shared risk information base.",
+             "Shared GIS and a Common Operating Picture."),
+            ("II", "Formalize mandates and cross-sector coordination.",
+             "City-Level Resilience Coordination Platform."),
+            ("III", "Prioritize and finance risk reduction measures.",
+             "Structural and non-structural investment."),
+            ("IV", "Integrate preparedness, recovery and continuous review.",
+             "Build Back Better; lessons feed the next cycle."),
         ],
+        "link_note": ("Feedback continues throughout implementation \u2014 in T\u00fcrkiye, "
+                      "alignment with \u0130RAP and local Earthquake Master Plans can "
+                      "support coherence."),
         "notes": ("The implementation roadmap follows four phases, providing an "
                   "organizational sequence while feedback continues throughout "
                   "implementation. In Türkiye, alignment with İRAP and local Earthquake "
@@ -783,6 +790,106 @@ CYCLE_HTML = """<div class="cycle-zone">
     <p class="link-note cycle-link-note">@@CYCLE_NOTE@@</p>"""
 
 # ----------------------------------------------------------------------------
+# Ascending roadmap diagram (slide 10) — four phases climbing a gradient
+# arrow toward an outcome circle, per the user's reference visuals.
+# Styles live in slide10.css only.
+# ----------------------------------------------------------------------------
+ROADMAP_CSS = """
+/* ---- ascending roadmap diagram (HTML/SVG) ---- */
+.rm-zone{margin-top:6px}
+.figure--rm{container-type:inline-size}
+.rm-card{
+  position:relative;
+  background:var(--c-paper);
+  border:1px solid var(--c-line);
+  border-radius:14px;
+  width:min(100%,1180px);
+  margin-inline:auto;
+  padding:clamp(8px,1.3cqw,16px);
+  font-size:clamp(7px,1.3cqw,12.5px); /* everything below scales in em */
+  overflow:hidden;
+}
+.rm-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.rm-stage{
+  position:relative;z-index:2;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1em;
+  align-items:end;
+  padding:6.5em 12em .5em .8em; /* top rail for the goal circle, right rail so cards clear it */
+}
+.rm-step{display:flex;flex-direction:column;gap:.45em;min-width:0}
+.rm-step--2{margin-bottom:4.5em}
+.rm-step--3{margin-bottom:9em}
+.rm-step--4{margin-bottom:13.5em}
+.rm-chip{
+  width:2.7em;height:2.7em;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:var(--font-head);font-weight:800;font-size:1.1em;
+  box-shadow:0 3px 10px rgba(15,23,42,.2);
+}
+.rm-step--1 .rm-chip{background:#2563EB}
+.rm-step--2 .rm-chip{background:#D97706}
+.rm-step--3 .rm-chip{background:#059669}
+.rm-step--4 .rm-chip{background:#7C3AED}
+.rm-stepbox{
+  background:#fff;border:1px solid var(--c-line);border-left:4px solid;
+  border-radius:8px;padding:.7em .8em;
+  box-shadow:0 4px 14px rgba(15,23,42,.06);
+}
+.rm-step--1 .rm-stepbox{border-left-color:#2563EB}
+.rm-step--2 .rm-stepbox{border-left-color:#D97706}
+.rm-step--3 .rm-stepbox{border-left-color:#059669}
+.rm-step--4 .rm-stepbox{border-left-color:#7C3AED}
+.rm-card-title{
+  font-family:var(--font-head);font-weight:700;
+  font-size:1.05em;line-height:1.3;margin:0 0 .3em;
+  color:var(--c-ink);
+}
+.rm-sub{font-size:.95em;line-height:1.42;margin:0;font-weight:500;color:var(--c-muted)}
+.rm-goal{
+  position:absolute;top:1em;right:1.4em;z-index:3;
+  width:9.5em;aspect-ratio:1/1;border-radius:50%;
+  background:#4472C4;color:#fff;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:1em;
+  font-family:var(--font-head);font-weight:700;font-size:1.02em;line-height:1.3;
+  box-shadow:0 6px 18px rgba(68,114,196,.35);
+}
+.rm-link-note{margin-top:10px}
+@media (max-width:860px){
+  .rm-card{width:100%;max-width:560px}
+  .rm-svg,.rm-goal{display:none}
+  .rm-stage{display:flex;flex-direction:column;gap:14px;padding:6px}
+  .rm-step--2,.rm-step--3,.rm-step--4{margin-bottom:0}
+}
+"""
+
+ROADMAP_HTML = """<div class="rm-zone">
+    <figure class="figure figure--rm">
+      <div class="rm-card">
+        <svg class="rm-svg" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="rm-grad" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#4472C4"/>
+              <stop offset="1" stop-color="#7C3AED"/>
+            </linearGradient>
+            <marker id="rm-head" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto">
+              <polygon points="0 0, 5 2.5, 0 5" fill="#7C3AED"/>
+            </marker>
+          </defs>
+          <path d="M 25 585 C 320 565, 600 430, 800 230" fill="none" stroke="url(#rm-grad)" stroke-width="34" stroke-linecap="round" opacity="0.22" marker-end="url(#rm-head)"/>
+        </svg>
+        <div class="rm-stage">
+@@RM_STEPS@@
+        </div>
+        <div class="rm-goal">Resilience embedded in municipal routines</div>
+      </div>
+      <figcaption>Implementation roadmap: four phases embedded in municipal routines, closing the loop with continuous feedback (adapted from the paper).</figcaption>
+    </figure>
+    <p class="link-note rm-link-note">@@RM_NOTE@@</p>"""
+
+# ----------------------------------------------------------------------------
 # HTML template
 # ----------------------------------------------------------------------------
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -848,6 +955,23 @@ def build_content(num: int, data: dict):
     if data.get("cycle_chart"):
         html = CYCLE_HTML.replace("@@CYCLE_NOTE@@", esc(data.get("link_note", "")))
         return html, {"live": False, "diagram": False, "cycle": True}
+
+    # ---- slide 10: ascending roadmap diagram ----
+    if data.get("roadmap_diagram"):
+        steps = "\n".join(
+            (f'          <section class="rm-step rm-step--{i}">'
+             f'\n            <span class="rm-chip">{esc(roman)}</span>'
+             f'\n            <div class="rm-stepbox">'
+             f'\n              <h3 class="rm-card-title">{esc(title)}</h3>'
+             f'\n              <p class="rm-sub">{esc(sub)}</p>'
+             f'\n            </div>'
+             f'\n          </section>')
+            for i, (roman, title, sub) in enumerate(data["roadmap_diagram"], 1)
+        )
+        html = (ROADMAP_HTML
+                .replace("@@RM_STEPS@@", steps)
+                .replace("@@RM_NOTE@@", esc(data.get("link_note", ""))))
+        return html, {"live": False, "diagram": False, "cycle": False, "roadmap": True}
 
     if has_figure:
         parts.append('<div class="cols cols--figure">')
@@ -916,7 +1040,8 @@ def build_slide(num: int, data: dict) -> None:
 
     extra_css = ((LIVE_CSS if extras["live"] else "")
                  + (DIAGRAM_CSS if extras["diagram"] else "")
-                 + (CYCLE_CSS if extras.get("cycle") else ""))
+                 + (CYCLE_CSS if extras.get("cycle") else "")
+                 + (ROADMAP_CSS if extras.get("roadmap") else ""))
     extra_head = LIVE_HEAD if extras["live"] else ""
     extra_body = ""
     if extras["live"]:
