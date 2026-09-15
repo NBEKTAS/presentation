@@ -182,7 +182,7 @@ SLIDES = {
                   "implementation. In Türkiye, alignment with İRAP and local Earthquake "
                   "Master Plans can support coherence."),
     },
-    14: {
+    15: {
         "title": "Contribution and evidence boundaries",
         "bullets": [
             "Contribution: a municipal architecture linking risk, governance and action.",
@@ -194,7 +194,7 @@ SLIDES = {
                   "preparedness in one municipal architecture. The paper does not report "
                   "a municipal pilot or measured improvements in losses or recovery time."),
     },
-    15: {
+    16: {
         "title": "Resilience needs coordinated decisions",
         "bullets": [
             "Connect engineering evidence with municipal responsibility.",
@@ -209,7 +209,7 @@ SLIDES = {
     },
 }
 
-TOTAL = 15
+TOTAL = 16
 
 # ----------------------------------------------------------------------------
 # CSS template (identical rules for every standard slide, but delivered as a
