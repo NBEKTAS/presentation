@@ -86,6 +86,19 @@ SLIDES = {
                   "understanding risks and operational needs."),
     },
     7: {
+        "title": "Prioritize risks on a likelihood \u00d7 impact matrix",
+        "heat_matrix": True,
+        "link_note": ("Rate each risk by likelihood and impact, act on red cells first, "
+                      "and keep the register alive \u2014 reviewed annually and after every "
+                      "significant incident."),
+        "notes": ("Risk assessment is the systematic process of identifying, analyzing "
+                  "and evaluating potential risks. A nine-cell matrix rates likelihood "
+                  "against impact: high-probability, high-impact risks such as annual "
+                  "flooding take priority; rare-but-severe risks call for insurance and "
+                  "contingency arrangements. The register is a living document, updated "
+                  "as threats evolve."),
+    },
+    8: {
         "title": "2 | Make coordination operational",
         "bullets": [
             "Establish a City-Level Resilience Coordination Platform.",
@@ -98,7 +111,21 @@ SLIDES = {
                   "sector, and civil society. Risk information becomes actionable only "
                   "when institutions know who is responsible."),
     },
-    8: {
+    9: {
+        "title": "Assess governance readiness with a self-assessment tool",
+        "mdrga_wheel": True,
+        "link_note": ("A municipal self-assessment empowers authorities to review "
+                      "disaster-risk-governance status, identify needs and priorities, "
+                      "and take action \u2014 after the IFRC / NRCS / MoFAGA MDRGA tool."),
+        "notes": ("Structured self-assessment strengthens local disaster risk "
+                  "governance: it raises awareness of roles and responsibilities, "
+                  "identifies gaps and opportunities, and tracks progress over time. "
+                  "The MDRGA tool organizes 65 indicators across six thematic areas, "
+                  "from policy and legal frameworks to cross-cutting issues. It was "
+                  "developed through a partnership between IFRC, the Nepal Red Cross "
+                  "Society and MoFAGA, co-designed with CBDRM platform partners."),
+    },
+    10: {
         "title": "3 | Turn priorities into investment",
         "bullets": [
             "Structural: retrofit buildings and strengthen critical lifelines.",
@@ -111,7 +138,7 @@ SLIDES = {
                   "land-use planning, capacity building, and monitoring or warning "
                   "systems."),
     },
-    9: {
+    11: {
         "title": "4 | Prepare for response and recovery",
         "cycle_chart": True,
         "link_note": ("Mitigation, preparedness, response and recovery overlap rather "
@@ -122,7 +149,20 @@ SLIDES = {
                   "vulnerability. Mitigation, preparedness, response, and recovery "
                   "overlap rather than forming isolated stages."),
     },
-    10: {
+    12: {
+        "title": "Validate readiness before the earthquake occurs",
+        "checklist": True,
+        "link_note": ("Preparedness is validated through practice: response plans, "
+                      "crisis communication, incident command and regular drills keep "
+                      "the municipality ready to act."),
+        "notes": ("Crisis management prepares the municipality to respond when risks "
+                  "materialize. A well-developed emergency response plan assigns roles, "
+                  "communication protocols and resources; a crisis communication plan "
+                  "designates spokespeople and multi-channel alerts; an Incident "
+                  "Command System streamlines inter-agency decisions; and regular "
+                  "drills rehearse roles and expose weaknesses before a real event."),
+    },
+    13: {
         "title": "Embed the roadmap in municipal routines",
         "roadmap_diagram": [
             ("I", "Establish the shared risk information base.",
@@ -142,7 +182,7 @@ SLIDES = {
                   "implementation. In Türkiye, alignment with İRAP and local Earthquake "
                   "Master Plans can support coherence."),
     },
-    11: {
+    14: {
         "title": "Contribution and evidence boundaries",
         "bullets": [
             "Contribution: a municipal architecture linking risk, governance and action.",
@@ -154,7 +194,7 @@ SLIDES = {
                   "preparedness in one municipal architecture. The paper does not report "
                   "a municipal pilot or measured improvements in losses or recovery time."),
     },
-    12: {
+    15: {
         "title": "Resilience needs coordinated decisions",
         "bullets": [
             "Connect engineering evidence with municipal responsibility.",
@@ -169,7 +209,7 @@ SLIDES = {
     },
 }
 
-TOTAL = 12
+TOTAL = 15
 
 # ----------------------------------------------------------------------------
 # CSS template (identical rules for every standard slide, but delivered as a
@@ -890,6 +930,250 @@ ROADMAP_HTML = """<div class="rm-zone">
     <p class="link-note rm-link-note">@@RM_NOTE@@</p>"""
 
 # ----------------------------------------------------------------------------
+# Risk assessment matrix (slide 6) — 3x3 likelihood x impact grid.
+# Styles live in slide06.css only.
+# ----------------------------------------------------------------------------
+HEAT_CSS = """
+/* ---- risk assessment matrix ---- */
+.mx-zone{margin-top:6px}
+.figure--mx{container-type:inline-size}
+.mx-card{
+  background:var(--c-paper);border:1px solid var(--c-line);border-radius:14px;
+  width:min(100%,1100px);margin-inline:auto;
+  padding:clamp(8px,1.4cqw,16px) clamp(8px,1.6cqw,18px);
+  font-size:clamp(7px,1.35cqw,12.5px);
+}
+.mx-grid{
+  display:grid;gap:.45em;
+  grid-template-columns:2.2em repeat(3,1fr);
+  grid-template-rows:repeat(3,1fr) 2.2em;
+}
+.mx-cell{
+  border-radius:6px;padding:.6em .7em;
+  display:flex;flex-direction:column;justify-content:center;gap:.15em;
+  color:#fff;min-height:5.2em;
+}
+.mx-cell b{font-size:1.02em;line-height:1.25;font-weight:700}
+.mx-cell span{font-size:.88em;line-height:1.3;opacity:.92;font-weight:500}
+.mx-g{background:#15803d}.mx-y{background:#b45309}.mx-r{background:#b91c1c}
+.mx-lab{
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85em;font-weight:700;color:var(--c-muted);
+  text-transform:uppercase;letter-spacing:.04em;
+}
+.mx-x{
+  flex-direction:row;gap:.4em;
+  background:linear-gradient(90deg,#15803d33,#b4530933,#b91c1c33);
+  color:var(--c-ink);min-height:0;font-weight:700;
+}
+.mx-axis{font-size:.85em;font-weight:700;color:var(--c-muted);text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;justify-content:center}
+.mx-note{font-size:.92em;color:var(--c-muted);margin:.6em 0 0;line-height:1.45}
+.mx-link-note{margin-top:8px}
+@media (max-width:860px){.mx-cell{min-height:4.2em}}
+"""
+
+HEAT_HTML = """<div class="mx-zone">
+    <figure class="figure figure--mx">
+      <div class="mx-card">
+        <div class="mx-grid">
+          <div class="mx-axis">Impact \u2192</div>
+          <div class="mx-cell mx-y"><b>Likely \u00d7 Moderate</b><span>Plan retrofits and budget reserves</span></div>
+          <div class="mx-cell mx-r"><b>Likely \u00d7 Major</b><span>Priority: lifeline strengthening, land-use controls</span></div>
+          <div class="mx-cell mx-r"><b>Likely \u00d7 Severe</b><span>Act now: retrofit programs, early warning, drills</span></div>
+          <div class="mx-axis">\u2190</div>
+          <div class="mx-cell mx-g"><b>Occasional \u00d7 Moderate</b><span>Monitor; update the risk register annually</span></div>
+          <div class="mx-cell mx-y"><b>Occasional \u00d7 Major</b><span>Mitigation plans with named owners</span></div>
+          <div class="mx-cell mx-r"><b>Occasional \u00d7 Severe</b><span>Insurance + emergency preparedness</span></div>
+          <div class="mx-axis">\u2190</div>
+          <div class="mx-cell mx-g"><b>Rare \u00d7 Moderate</b><span>Watch list</span></div>
+          <div class="mx-cell mx-g"><b>Rare \u00d7 Major</b><span>Contingency arrangements</span></div>
+          <div class="mx-cell mx-y"><b>Rare \u00d7 Severe</b><span>Business continuity, mutual aid</span></div>
+          <div class="mx-lab">Likelihood</div>
+          <div class="mx-cell mx-x">Lower</div>
+          <div class="mx-cell mx-x">Rising</div>
+          <div class="mx-cell mx-x">Higher</div>
+        </div>
+        <p class="mx-note">Nine-cell matrix: rate each risk by likelihood and impact, then act on the red cells first \u2014 the discipline behind a municipal risk register.</p>
+      </div>
+      <figcaption>Risk prioritization matrix \u2014 likelihood \u00d7 impact (after standard municipal risk-management practice).</figcaption>
+    </figure>
+    <p class="link-note mx-link-note">@@MX_NOTE@@</p>"""
+
+# ----------------------------------------------------------------------------
+# MDRGA governance-assessment wheel (slide 8) — six thematic areas around
+# "65 indicators" (after the IFRC / NRCS / MoFAGA Municipal Disaster Risk
+# Governance Assessment Tool). Styles live in slide08.css only.
+# ----------------------------------------------------------------------------
+MDRGA_CSS = """
+/* ---- MDRGA governance wheel ---- */
+.mw-zone{margin-top:6px}
+.figure--mw{container-type:inline-size}
+.mw-card{
+  background:var(--c-paper);border:1px solid var(--c-line);border-radius:14px;
+  width:min(100%,1140px);margin-inline:auto;
+  padding:clamp(8px,1.4cqw,16px) clamp(8px,1.6cqw,18px);
+  font-size:clamp(7px,1.4cqw,13px);
+  display:flex;gap:1.6em;align-items:center;
+}
+.mw-side{
+  flex:0 0 21%;align-self:stretch;
+  background:#1e3a5f;color:#fff;border-radius:10px;
+  padding:1.2em 1em;display:flex;flex-direction:column;gap:.9em;
+}
+.mw-side h3{font-family:var(--font-head);font-size:1.02em;font-weight:800;line-height:1.3;margin:0}
+.mw-side ul{list-style:none;padding:0;margin:0}
+.mw-side li{font-size:.88em;line-height:1.42;font-weight:500;margin-bottom:.5em}
+.mw-side li::before{content:\"\u2713\";margin-right:.45em;font-weight:800;color:#7fb3e8}
+.mw-side p{font-size:.8em;line-height:1.4;margin:.2em 0 0;opacity:.85}
+.mw-wheel{flex:1;min-width:0}
+.mw-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:.6em;margin-bottom:.5em}
+.mw-chip{
+  background:#e2e8f0;border-radius:6px;padding:.55em .6em;
+  display:flex;align-items:center;gap:.5em;
+  font-size:.9em;font-weight:600;color:var(--c-ink);line-height:1.3;
+}
+.mw-chip::before{content:\"\u2713\";display:flex;align-items:center;justify-content:center;
+  width:1.5em;height:1.5em;border-radius:50%;border:.14em solid #1e3a5f;
+  color:#1e3a5f;font-weight:800;flex-shrink:0;font-size:.95em}
+.mw-flex{display:flex;align-items:center;gap:.8em}
+.mw-donut{position:relative;width:19em;aspect-ratio:1/1;flex-shrink:0}
+.mw-donut .seg{position:absolute;inset:0;border-radius:50%}
+.mw-center{
+  position:absolute;inset:29%;background:#fff;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:.4em;box-shadow:0 3px 12px rgba(15,23,42,.12);
+}
+.mw-center b{font-family:var(--font-head);font-size:2.1em;font-weight:800;color:#1e3a5f;line-height:1}
+.mw-center span{font-size:.82em;line-height:1.3;color:var(--c-ink);font-weight:600}
+.mw-cats{flex:1;min-width:0;display:flex;flex-direction:column;gap:.45em}
+.mw-cat{display:flex;align-items:center;gap:.55em;font-weight:600;font-size:.95em;color:var(--c-ink)}
+.mw-cat i{font-style:normal;display:flex;align-items:center;justify-content:center;
+  width:1.7em;height:1.7em;border-radius:50%;color:#fff;font-weight:800;font-size:.92em;flex-shrink:0}
+.mw-c1{background:#f4a7ab}.mw-c2{background:#e05c46}.mw-c3{background:#c9482f}
+.mw-c4{background:#f4a7ab}.mw-c5{background:#e05c46}.mw-c6{background:#c9482f}
+.mw-cat span b{display:block;font-size:.85em;color:var(--c-muted);font-weight:500}
+.mw-link-note{margin-top:8px}
+@media (max-width:860px){
+  .mw-card{flex-direction:column}
+  .mw-side{flex:none;width:100%}
+  .mw-flex{flex-direction:column}
+}
+"""
+
+MDRGA_HTML = """<div class="mw-zone">
+    <figure class="figure figure--mw">
+      <div class="mw-card">
+        <div class="mw-side">
+          <h3>MDRGA \u2014 Municipal Disaster Risk Governance Assessment</h3>
+          <ul>
+            <li>Raise awareness of roles and responsibilities</li>
+            <li>Identify gaps and opportunities</li>
+            <li>Track progress over time</li>
+          </ul>
+          <p>Developed by IFRC, Nepal Red Cross Society and MoFAGA, co-designed with CBDRM platform partners.</p>
+        </div>
+        <div class="mw-wheel">
+          <div class="mw-cols">
+            <div class="mw-chip">Awareness of mandates</div>
+            <div class="mw-chip">Gap identification</div>
+            <div class="mw-chip">Progress tracking</div>
+          </div>
+          <div class="mw-flex">
+            <div class="mw-donut">
+              <svg viewBox=\"0 0 200 200\" style=\"width:100%;height:100%\" aria-hidden=\"true\">
+                <circle cx=\"100\" cy=\"100\" r=\"78\" fill=\"none\" stroke=\"#f4a7ab\" stroke-width=\"44\" stroke-dasharray=\"245 490\" transform=\"rotate(-90 100 100)\"/>
+                <circle cx=\"100\" cy=\"100\" r=\"78\" fill=\"none\" stroke=\"#e05c46\" stroke-width=\"44\" stroke-dasharray=\"163 490\" stroke-dashoffset=\"-245\" transform=\"rotate(-90 100 100)\"/>
+                <circle cx=\"100\" cy=\"100\" r=\"78\" fill=\"none\" stroke=\"#c9482f\" stroke-width=\"44\" stroke-dasharray=\"82 490\" stroke-dashoffset=\"-408\" transform=\"rotate(-90 100 100)\"/>
+              </svg>
+              <div class="mw-center"><b>65</b><span>indicators across six thematic areas</span></div>
+            </div>
+            <div class="mw-cats">
+              <div class="mw-cat"><i class="mw-c1">1</i><span>Policy, Legal and Regulatory Framework</span></div>
+              <div class="mw-cat"><i class="mw-c2">2</i><span>Institutional and Organizational Structure</span></div>
+              <div class="mw-cat"><i class="mw-c3">3</i><span>Planning, Budgeting and Monitoring</span></div>
+              <div class="mw-cat"><i class="mw-c4">4</i><span>Coordination, Partnerships and Collaboration</span></div>
+              <div class="mw-cat"><i class="mw-c5">5</i><span>Resources and Capacities</span></div>
+              <div class="mw-cat"><i class="mw-c6">6</i><span>Cross-cutting Issues</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption>Governance self-assessment: 65 indicators across six thematic areas (after the IFRC / NRCS / MoFAGA MDRGA tool).</figcaption>
+    </figure>
+    <p class="link-note mw-link-note">@@MW_NOTE@@</p>"""
+
+# ----------------------------------------------------------------------------
+# Crisis-readiness checklist (slide 11) — four groups from the municipal
+# crisis-management playbook. Styles live in slide11.css only.
+# ----------------------------------------------------------------------------
+CHECK_CSS = """
+/* ---- crisis-readiness checklist ---- */
+.ck-zone{margin-top:6px}
+.figure--ck{container-type:inline-size}
+.ck-card{
+  background:var(--c-paper);border:1px solid var(--c-line);border-radius:14px;
+  width:min(100%,1140px);margin-inline:auto;
+  padding:clamp(8px,1.4cqw,16px) clamp(8px,1.6cqw,18px);
+  font-size:clamp(7px,1.35cqw,12.5px);
+  display:grid;grid-template-columns:1fr 1fr;gap:.9em;
+}
+.ck-group{background:#fff;border:1px solid var(--c-line);border-radius:10px;padding:.8em .9em}
+.ck-group h3{
+  font-family:var(--font-head);font-size:1em;font-weight:800;margin:0 0 .5em;
+  color:var(--c-primary-dark);border-bottom:2px solid var(--c-line);padding-bottom:.35em;
+}
+.ck-group ul{list-style:none;padding:0;margin:0}
+.ck-group li{
+  display:flex;gap:.5em;align-items:flex-start;
+  font-size:.92em;line-height:1.42;font-weight:500;color:var(--c-ink);margin-bottom:.4em;
+}
+.ck-group li::before{content:"";flex-shrink:0;width:1.1em;height:1.1em;margin-top:.12em;
+  border:.14em solid var(--c-accent);border-radius:.25em;background:#fff}
+.ck-link-note{margin-top:8px}
+@media (max-width:860px){.ck-card{grid-template-columns:1fr}}
+"""
+
+CHECK_HTML = """<div class="ck-zone">
+    <figure class="figure figure--ck">
+      <div class="ck-card">
+        <div class="ck-group">
+          <h3>Emergency Response Plan</h3>
+          <ul>
+            <li>Roles and responsibilities defined across departments</li>
+            <li>Scenario playbooks for the priority risks in the register</li>
+            <li>Coordination with regional and state emergency services</li>
+          </ul>
+        </div>
+        <div class="ck-group">
+          <h3>Crisis Communication</h3>
+          <ul>
+            <li>Designated spokespeople and backup contacts</li>
+            <li>Multi-channel alerts: SMS, social media, local media</li>
+            <li>Pre-approved message templates for fast release</li>
+          </ul>
+        </div>
+        <div class="ck-group">
+          <h3>Incident Command System</h3>
+          <ul>
+            <li>Standard ICS structure adopted across agencies</li>
+            <li>Staff trained in ICS roles and decision thresholds</li>
+            <li>Clear escalation and handover procedures</li>
+          </ul>
+        </div>
+        <div class="ck-group">
+          <h3>Drills and Training</h3>
+          <ul>
+            <li>Annual or semi-annual multi-agency exercises</li>
+            <li>After-action reviews feeding the risk register</li>
+            <li>Recovery pre-planning: Build Back Better criteria</li>
+          </ul>
+        </div>
+      </div>
+      <figcaption>Crisis-readiness checklist \u2014 preparedness validated through practice, not paperwork alone.</figcaption>
+    </figure>
+    <p class="link-note ck-link-note">@@CK_NOTE@@</p>"""
+
+# ----------------------------------------------------------------------------
 # HTML template
 # ----------------------------------------------------------------------------
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -956,7 +1240,22 @@ def build_content(num: int, data: dict):
         html = CYCLE_HTML.replace("@@CYCLE_NOTE@@", esc(data.get("link_note", "")))
         return html, {"live": False, "diagram": False, "cycle": True}
 
-    # ---- slide 10: ascending roadmap diagram ----
+    # ---- slide 7: risk assessment matrix ----
+    if data.get("heat_matrix"):
+        html = HEAT_HTML.replace("@@MX_NOTE@@", esc(data.get("link_note", "")))
+        return html, {"live": False, "diagram": False, "heat": True}
+
+    # ---- slide 9: MDRGA governance wheel ----
+    if data.get("mdrga_wheel"):
+        html = MDRGA_HTML.replace("@@MW_NOTE@@", esc(data.get("link_note", "")))
+        return html, {"live": False, "diagram": False, "mdrga": True}
+
+    # ---- slide 12: crisis-readiness checklist ----
+    if data.get("checklist"):
+        html = CHECK_HTML.replace("@@CK_NOTE@@", esc(data.get("link_note", "")))
+        return html, {"live": False, "diagram": False, "check": True}
+
+    # ---- slide 13: ascending roadmap diagram ----
     if data.get("roadmap_diagram"):
         steps = "\n".join(
             (f'          <section class="rm-step rm-step--{i}">'
@@ -1041,7 +1340,10 @@ def build_slide(num: int, data: dict) -> None:
     extra_css = ((LIVE_CSS if extras["live"] else "")
                  + (DIAGRAM_CSS if extras["diagram"] else "")
                  + (CYCLE_CSS if extras.get("cycle") else "")
-                 + (ROADMAP_CSS if extras.get("roadmap") else ""))
+                 + (ROADMAP_CSS if extras.get("roadmap") else "")
+                 + (HEAT_CSS if extras.get("heat") else "")
+                 + (MDRGA_CSS if extras.get("mdrga") else "")
+                 + (CHECK_CSS if extras.get("check") else ""))
     extra_head = LIVE_HEAD if extras["live"] else ""
     extra_body = ""
     if extras["live"]:
