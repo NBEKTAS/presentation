@@ -3,9 +3,29 @@ import { ArrowRight, Shield, Activity, Layers, CheckCircle2 } from 'lucide-react
 
 export const Slide7Investment: React.FC = () => {
   return (
-    <div className="w-full h-full min-h-0 flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-hidden">
+    <div className="relative w-full h-full min-h-0 flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-hidden">
+      {/* Background Image Layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
+        <img
+          src={`${import.meta.env.BASE_URL}images/izmir_skyline.png`}
+          alt="İzmir Skyline"
+          className="w-full h-full object-cover object-center opacity-40"
+        />
+        <div className="absolute inset-0 bg-slate-50/70 backdrop-blur-[2px] pointer-events-none" />
+      </div>
+
+      {/* Source Link */}
+      <a 
+        href="https://share.google/Du3LPJugKISC9Czsi" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="absolute top-3 right-4 sm:top-4 sm:right-6 z-20 text-[10px] sm:text-xs font-bold text-slate-500 hover:text-sky-600 bg-white/80 hover:bg-white px-2 py-1 rounded-md backdrop-blur-md border border-slate-200 transition-colors shadow-sm"
+      >
+        Image Source
+      </a>
+
       {/* Title */}
-      <div className="mb-2 sm:mb-3 shrink-0">
+      <div className="relative z-10 mb-2 sm:mb-3 shrink-0">
         <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
           Turn Priorities into Investment
         </h1>
@@ -15,11 +35,11 @@ export const Slide7Investment: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 min-h-0 flex flex-col justify-between gap-3 sm:gap-4">
+      <div className="relative z-10 flex-1 min-h-0 flex flex-col justify-between gap-3 sm:gap-4">
         {/* Two Columns: Structural vs Non-Structural Measures */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 flex-1 min-h-0">
           {/* Structural Measures Card */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-xs flex flex-col justify-between">
+          <div className="bg-white/95 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-slate-100">
                 <span className="p-2 sm:p-2.5 rounded-xl bg-sky-50 text-sky-700 border border-sky-200 shadow-2xs">
@@ -95,7 +115,7 @@ export const Slide7Investment: React.FC = () => {
           </div>
 
           {/* Non-Structural Measures Card */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-xs flex flex-col justify-between">
+          <div className="bg-white/95 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-slate-100">
                 <span className="p-2 sm:p-2.5 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 shadow-2xs">
@@ -172,7 +192,7 @@ export const Slide7Investment: React.FC = () => {
         </div>
 
         {/* Multi-Stage Decision Appraisal Funnel */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-3 sm:p-5 lg:p-6 shadow-xs shrink-0">
+        <div className="bg-white/95 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-3 sm:p-5 lg:p-6 shadow-sm shrink-0">
           <div className="flex items-center justify-between mb-2 sm:mb-3">
             <div className="flex items-center gap-2">
               <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-sky-600" />
