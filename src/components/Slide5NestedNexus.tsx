@@ -60,7 +60,7 @@ export const Slide5NestedNexus: React.FC = () => {
   return (
     <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[100rem] mx-auto overflow-hidden">
       {/* Slide Heading */}
-      <div className="mb-3 lg:mb-4 shrink-0">
+      <div className="mb-1 lg:mb-2 shrink-0">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
           Nested Nexus <span className="text-sky-600">Architecture Model</span>
         </h1>
@@ -70,7 +70,7 @@ export const Slide5NestedNexus: React.FC = () => {
       </div>
 
       {/* Main Presentation Card */}
-      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-2 sm:p-4 lg:p-6 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-center overflow-hidden">
+      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-2 sm:p-3 lg:p-4 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 items-center overflow-hidden">
         {/* Left Column: Concentric Circles Diagram (5 cols) */}
         <div className="lg:col-span-5 h-full flex flex-col items-center justify-center p-2">
           <svg viewBox="0 0 520 480" className="w-full h-full max-h-[440px] xl:max-h-[540px] overflow-visible">
@@ -214,11 +214,11 @@ export const Slide5NestedNexus: React.FC = () => {
         </div>
 
         {/* Right Column: The 4 Structural Tiers (7 cols) */}
-        <div className="lg:col-span-7 h-full flex flex-col justify-between gap-2 lg:gap-3 py-1 overflow-hidden">
+        <div className="lg:col-span-7 h-full flex flex-col justify-between gap-1.5 lg:gap-2 py-0.5 min-h-0">
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className={`flex-1 min-h-0 p-2.5 sm:p-3 lg:p-4 rounded-xl border ${tier.color} shadow-2xs flex flex-col justify-center overflow-hidden`}
+              className={`flex-1 min-h-0 px-2.5 py-1.5 sm:px-3 sm:py-2 lg:px-4 lg:py-2 rounded-xl border ${tier.color} shadow-2xs flex flex-col justify-center`}
             >
               <div className="flex items-center justify-between mb-1.5">
                 <div className="flex items-center gap-2">
@@ -231,7 +231,7 @@ export const Slide5NestedNexus: React.FC = () => {
                   {tier.role}
                 </span>
               </div>
-              <ul className="space-y-0.5 sm:space-y-1 text-sm sm:text-base lg:text-lg xl:text-xl text-slate-700 min-h-0 overflow-hidden">
+              <ul className="space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-700 min-h-0">
                 {tier.points.map((pt, pIdx) => (
                   <li key={pIdx} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0 mt-1.5" />
