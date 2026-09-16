@@ -22,15 +22,15 @@ export const Slide9Takeaways: React.FC = () => {
       points: [
         {
           label: 'Lifeline Interdependence',
-          text: 'Couples building safety with water, power, transit, and hospital network reliability.',
+          text: 'Couples building safety with lifeline network reliability.',
         },
         {
           label: 'Multi-Agency Spatial Data',
-          text: 'Unifies fragmented agency operations around a shared spatial risk intelligence platform.',
+          text: 'Unifies agency operations around a shared risk intelligence platform.',
         },
         {
           label: 'Area-Wide Interventions',
-          text: 'Prioritizes district-scale redevelopment over isolated, single-building retrofits.',
+          text: 'Prioritizes district-scale resilience over single-building interventions.',
         },
       ],
     },
@@ -47,15 +47,15 @@ export const Slide9Takeaways: React.FC = () => {
       points: [
         {
           label: 'Post-Disaster Forensics',
-          text: 'Translates structural damage diagnostics directly into updated seismic fragility models.',
+          text: 'Translates structural damage diagnostics into updated seismic fragility models.',
         },
         {
           label: 'Statutory Build Back Better',
-          text: 'Pre-enacts Sendai Priority 4 reconstruction bylaws before seismic events strike.',
+          text: 'Pre-enacts reconstruction bylaws before seismic events strike.',
         },
         {
           label: 'Digital Risk Inventories',
-          text: 'Preserves multi-decade institutional memory to prevent policy amnesia between shocks.',
+          text: 'Preserves risk knowledge across changing political administrations.',
         },
       ],
     },
@@ -71,16 +71,16 @@ export const Slide9Takeaways: React.FC = () => {
         'Directly translates hazard microzonation and engineering models into municipal capital budgets.',
       points: [
         {
-          label: 'Science-to-Budget Bridge',
-          text: 'Converts probabilistic hazard models (PSHA) into defensible municipal CapEx investments.',
+          label: 'Binding Master Plans',
+          text: 'Enforces seismic safety limits in 1/25,000 and 1/5,000 spatial master plans and zoning bylaws.',
         },
         {
-          label: 'Tri-Stage Appraisal',
-          text: 'Ranks interventions via Cost-Benefit (CBA), Cost-Effectiveness, and Multi-Criteria filters.',
+          label: 'Ex-Ante Risk Reserves',
+          text: 'Directs municipal budgets toward pre-disaster adaptation rather than post-disaster relief.',
         },
         {
-          label: 'Bankable IFI Proposals',
-          text: 'Delivers transparent, audit-ready portfolios to secure international development financing.',
+          label: 'Appraisal Algorithms',
+          text: 'Employs automated appraisal algorithms to prevent subjective prioritization.',
         },
       ],
     },

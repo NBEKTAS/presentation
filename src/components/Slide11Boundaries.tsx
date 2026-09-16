@@ -16,15 +16,15 @@ export const Slide11Boundaries: React.FC = () => {
       points: [
         {
           label: 'Operational 9-Cell Matrix',
-          text: 'Converts ground acceleration and soil amplification directly into statutory risk registers and CapEx votes.',
+          text: 'Converts ground acceleration into statutory risk registers and CapEx votes.',
         },
         {
           label: 'Departmental Ownership',
-          text: 'Establishes clear statutory workflows across water, transport, emergency health, and housing agencies.',
+          text: 'Establishes workflows across water, transport, health, and housing agencies.',
         },
         {
           label: 'Ex-Ante Resourcing',
-          text: 'Shifts municipal policy from reactive disaster relief to institutionalized, pre-allocated resilience budgets.',
+          text: 'Shifts municipal policy to institutionalized, pre-allocated resilience budgets.',
         },
       ],
     },
@@ -41,15 +41,15 @@ export const Slide11Boundaries: React.FC = () => {
       points: [
         {
           label: 'Metropolitan Testbed',
-          text: 'Calibrated for İzmir\'s active faulting, alluvial basin amplification, and dense concrete housing stock.',
+          text: 'Calibrated for İzmir\'s active faults, basin amplification, and concrete housing.',
         },
         {
           label: 'Longitudinal Validation',
-          text: 'Theoretical loss reductions require ongoing empirical verification against future events and retrofit data.',
+          text: 'Theoretical loss reductions require empirical verification against future events.',
         },
         {
           label: 'Fiscal Boundaries',
-          text: 'Implementation velocity is constrained by municipal debt ceilings, sovereign borrowing limits, and credit ratings.',
+          text: 'Velocity is constrained by municipal debt ceilings and sovereign borrowing limits.',
         },
       ],
     },
@@ -66,22 +66,22 @@ export const Slide11Boundaries: React.FC = () => {
       points: [
         {
           label: 'Regional Archetypes',
-          text: 'Readily applicable to Athens, Thessaloniki, Naples, Catania, and the Marmara corridor.',
+          text: 'Applicable to Athens, Thessaloniki, Naples, Catania, and the Marmara corridor.',
         },
         {
           label: 'Standardized Toolkit',
-          text: 'The 4-tier nexus and 3-stage appraisal funnel provide an open governance standard for cities.',
+          text: 'The 4-tier nexus provides an open governance standard for active cities.',
         },
         {
           label: 'Multi-Hazard Horizons',
-          text: 'Future extensions encompass cascading hazards including liquefaction, tsunami inundation, and storm surges.',
+          text: 'Future extensions encompass cascading hazards like liquefaction and tsunamis.',
         },
       ],
     },
   ];
 
   return (
-    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[115.625rem] mx-auto p-2 sm:p-4 lg:p-5 xl:p-6">
+    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[115.625rem] mx-auto p-2 sm:p-4 lg:p-5 xl:p-6 overflow-hidden">
       {/* Slide Header */}
       <div className="mb-2 sm:mb-3 lg:mb-4 shrink-0 border-b border-slate-200/80 pb-2 sm:pb-3 xl:pb-4">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-slate-900 tracking-tight leading-tight">
