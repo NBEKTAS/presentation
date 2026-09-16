@@ -15,65 +15,24 @@ export const Slide4LearningCycle: React.FC = () => {
 
       {/* Main Presentation Card */}
       <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm relative flex items-center justify-center overflow-hidden">
-        {/* Animated Curved Connecting Arcs */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none hidden md:block"
-          viewBox="0 0 1000 600"
-          preserveAspectRatio="xMidYMid meet"
-          aria-hidden="true"
-        >
-          <defs>
-            <marker id="arr-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-              <polygon points="0 0, 10 5, 0 10" fill="#2563eb" />
-            </marker>
-            <marker id="arr-amber" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-              <polygon points="0 0, 10 5, 0 10" fill="#d97706" />
-            </marker>
-            <marker id="arr-emerald" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-              <polygon points="0 0, 10 5, 0 10" fill="#059669" />
-            </marker>
-            <marker id="arr-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-              <polygon points="0 0, 10 5, 0 10" fill="#7c3aed" />
-            </marker>
-          </defs>
-
+        {/* Dynamic Responsive Curved Connecting Arcs */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0">
           {/* 1 -> 2 (Top to Right) */}
-          <path
-            d="M 610 200 C 690 200, 720 230, 720 260"
-            fill="none"
-            stroke="#2563eb"
-            strokeWidth="3"
-            strokeDasharray="6 6"
-            markerEnd="url(#arr-blue)"
-          />
+          <div className="absolute top-[20%] left-[50%] w-[32%] h-[30%] border-t-[3px] border-r-[3px] border-dashed border-blue-600 rounded-tr-[3rem] animate-pulse" />
+          <div className="absolute top-[50%] right-[16.5%] -mt-1.5 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-blue-600 rotate-90" />
+          
           {/* 2 -> 3 (Right to Bottom) */}
-          <path
-            d="M 720 370 C 720 400, 690 430, 610 430"
-            fill="none"
-            stroke="#d97706"
-            strokeWidth="3"
-            strokeDasharray="6 6"
-            markerEnd="url(#arr-amber)"
-          />
+          <div className="absolute top-[50%] left-[50%] w-[32%] h-[30%] border-b-[3px] border-r-[3px] border-dashed border-amber-600 rounded-br-[3rem] animate-pulse" />
+          <div className="absolute bottom-[18.5%] left-[50%] -ml-1.5 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[10px] border-r-amber-600 rotate-90" />
+
           {/* 3 -> 4 (Bottom to Left) */}
-          <path
-            d="M 390 430 C 310 430, 280 400, 280 370"
-            fill="none"
-            stroke="#059669"
-            strokeWidth="3"
-            strokeDasharray="6 6"
-            markerEnd="url(#arr-emerald)"
-          />
+          <div className="absolute top-[50%] right-[50%] w-[32%] h-[30%] border-b-[3px] border-l-[3px] border-dashed border-emerald-600 rounded-bl-[3rem] animate-pulse" />
+          <div className="absolute top-[50%] left-[16.5%] -mt-1.5 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[10px] border-r-emerald-600 -rotate-90" />
+
           {/* 4 -> 1 (Left to Top) */}
-          <path
-            d="M 280 260 C 280 230, 310 200, 390 200"
-            fill="none"
-            stroke="#7c3aed"
-            strokeWidth="3"
-            strokeDasharray="6 6"
-            markerEnd="url(#arr-purple)"
-          />
-        </svg>
+          <div className="absolute top-[20%] right-[50%] w-[32%] h-[30%] border-t-[3px] border-l-[3px] border-dashed border-purple-600 rounded-tl-[3rem] animate-pulse" />
+          <div className="absolute top-[18.5%] left-[50%] -ml-1.5 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-purple-600 -rotate-90" />
+        </div>
 
         {/* 3x3 Grid Layout of the Cycle */}
         <div className="w-full max-w-6xl h-full flex flex-col justify-between py-2 relative z-10">
