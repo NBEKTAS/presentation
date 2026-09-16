@@ -65,9 +65,7 @@ export const Slide7Investment: React.FC = () => {
                       High-Risk Buildings
                     </span>
                   </div>
-                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
-                      Prioritized seismic strengthening and retrofitting for high-risk buildings and critical public assets.
-                    </span>
+
                 </div>
               </div>
 
@@ -82,9 +80,7 @@ export const Slide7Investment: React.FC = () => {
                       Critical Networks
                     </span>
                   </div>
-                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
-                      Physical hardening of water, energy, and transit networks to maintain critical functionality.
-                    </span>
+
                 </div>
               </div>
 
@@ -99,9 +95,7 @@ export const Slide7Investment: React.FC = () => {
                       Geotechnical Works
                     </span>
                   </div>
-                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
-                      Geotechnical engineering to address local ground amplification, slope stability, and liquefaction risk.
-                    </span>
+
                 </div>
               </div>
             </div>
@@ -141,9 +135,7 @@ export const Slide7Investment: React.FC = () => {
                       Spatial Master Plans
                     </span>
                   </div>
-                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
-                      Integrating hazard assessments and microzonation directly into statutory spatial master plans and regulations.
-                    </span>
+
                 </div>
               </div>
 
@@ -158,9 +150,7 @@ export const Slide7Investment: React.FC = () => {
                       Operational Readiness
                     </span>
                   </div>
-                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
-                      Deploying monitoring networks and automated protocols to alert agencies and initiate protective actions.
-                    </span>
+
                 </div>
               </div>
 
@@ -175,9 +165,7 @@ export const Slide7Investment: React.FC = () => {
                       Fiscal Reserves
                     </span>
                   </div>
-                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
-                      Establishing fiscal reserves and insurance mechanisms to support rapid post-disaster recovery.
-                    </span>
+
                 </div>
               </div>
             </div>
