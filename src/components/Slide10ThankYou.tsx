@@ -42,15 +42,15 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
   return (
     <div className="relative w-full h-full min-h-0 flex flex-col justify-between max-w-[106.25rem] mx-auto p-3 sm:p-4 lg:p-5 xl:p-6 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
       {/* University Campus Aerial Background Image */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none bg-slate-950">
         <img
           src={`${import.meta.env.BASE_URL}images/sze_campus_bg.jpg`}
           alt="Széchenyi István University Campus, Győr"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-contain object-center opacity-90"
           referrerPolicy="no-referrer"
         />
         {/* Very soft edge gradient to ensure top title readability without dimming the campus photo */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/25 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/25 pointer-events-none" />
       </div>
 
       {/* Foreground Content Layer */}
