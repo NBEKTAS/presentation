@@ -145,7 +145,7 @@ export const Slide9Takeaways: React.FC = () => {
                 }`}
               />
 
-              <div className="flex flex-col h-full gap-2.5 @sm:gap-3.5 @xl:gap-4">
+              <div className="flex flex-col h-full gap-2 @sm:gap-3 @xl:gap-4">
                 {/* Header: Icon + Number & Title */}
                 <div>
                   <div className="flex items-center gap-3 @sm:gap-3.5 @xl:gap-4 mb-2 @sm:mb-2.5 @xl:mb-3">
@@ -162,23 +162,30 @@ export const Slide9Takeaways: React.FC = () => {
                     </div>
                   </div>
 
-
+                  {/* Concise Principle Statement */}
+                  <div className="bg-slate-50 border border-slate-100/90 rounded-xl px-3 @sm:px-3.5 @xl:px-4 py-2 @xl:py-2.5 mb-1">
+                    <p className="text-sm @sm:text-base font-medium text-slate-700 leading-relaxed">
+                      {item.principle}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Scannable Bullets Proportionally Distributed on Full Screen */}
-                <div className="flex-1 flex flex-col justify-evenly py-1 gap-2 @xl:gap-3">
+                {/* Scannable Bullets - Slide 4 Compact Style */}
+                <ul className="flex-1 flex flex-col justify-evenly py-1 gap-1.5 @xl:gap-2 text-xs @sm:text-sm @lg:text-[15px] text-slate-700">
                   {item.points.map((pt, pIdx) => (
-                    <div
-                      key={pIdx}
-                      className="flex items-start gap-2.5 @sm:gap-3 text-sm @sm:text-base @lg:text-lg text-slate-700 leading-relaxed"
-                    >
-                      <CheckCircle2 className={`w-4 h-4 @sm:w-4.5 @sm:h-4.5 @xl:w-5 @xl:h-5 mt-0.5 @xl:mt-1 shrink-0 ${item.checkColor}`} />
-                      <p>
-                        <strong className="font-bold text-slate-950 text-lg @sm:text-xl @lg:text-2xl">{pt.label}</strong>
-                      </p>
-                    </div>
+                    <li key={pIdx} className="flex items-start gap-2.5">
+                      <span className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${
+                        item.theme === 'sky' ? 'bg-sky-500' :
+                        item.theme === 'emerald' ? 'bg-emerald-500' :
+                        item.theme === 'amber' ? 'bg-amber-500' : 'bg-purple-500'
+                      }`} />
+                      <span className="leading-relaxed">
+                        <strong className="font-bold text-slate-900">{pt.label}:</strong>{' '}
+                        {pt.text}
+                      </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           );
