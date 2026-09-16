@@ -15,10 +15,6 @@ export const Slide11Boundaries: React.FC = () => {
         'Aims to bridge the divide between technical ground-motion models and municipal capital budgeting.',
       points: [
         {
-          label: 'Operational 9-Cell Matrix',
-          text: 'Will convert ground acceleration into statutory risk registers and CapEx votes.',
-        },
-        {
           label: 'Departmental Ownership',
           text: 'Will establish workflows across water, transport, health, and housing agencies.',
         },
