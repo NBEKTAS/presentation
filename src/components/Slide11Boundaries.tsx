@@ -117,12 +117,7 @@ export const Slide11Boundaries: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Concise Overview Statement */}
-                  <div className="bg-slate-50 border border-slate-100/90 rounded-xl px-3 @sm:px-3.5 @xl:px-4 py-2 @xl:py-2.5">
-                    <p className="text-sm @sm:text-base @lg:text-base @xl:text-lg @2xl:text-xl font-medium text-slate-700 leading-relaxed">
-                      {pillar.intro}
-                    </p>
-                  </div>
+                  {/* Removed Overview Statement to save vertical space */}
                 </div>
 
                 {/* Scannable Bullets Proportionally Distributed on Full Screen */}
