@@ -101,28 +101,37 @@ export const Slide8Recovery: React.FC = () => {
           {/* 3 Sub-Boxes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 mt-0.5 sm:mt-1 flex-1 min-h-0 items-stretch">
             {/* Box 1: Seismic Event with wave graphic */}
-            <div className="border border-amber-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-amber-600 text-white text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl font-bold text-center py-1 sm:py-1.5 px-2 truncate">
-                Seismic Event (Disequilibrium)
-              </div>
-              <div className="p-2 sm:p-3 flex-1 flex flex-col items-center justify-center">
-                <svg viewBox="0 0 220 50" className="w-full max-w-[17.5rem] h-10 sm:h-12 lg:h-14">
+            <div className="border border-amber-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col relative">
+              {/* Background SVG Watermark */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none z-0 mt-8">
+                <svg viewBox="0 0 220 50" className="w-full h-full scale-[1.3]">
                   {/* Jagged Seismograph Wave in Red */}
                   <path
-                    d="M 5 25 L 40 25 L 48 16 L 55 35 L 62 6 L 70 44 L 78 12 L 86 36 L 94 22 L 102 28 L 215 25"
+                    d="M -10 25 L 40 25 L 48 16 L 55 35 L 62 6 L 70 44 L 78 12 L 86 36 L 94 22 L 102 28 L 230 25"
                     fill="none"
                     stroke="#dc2626"
-                    strokeWidth="2.5"
+                    strokeWidth="3.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                   {/* Epicenter concentric pulse rings */}
-                  <ellipse cx="74" cy="40" rx="18" ry="5" fill="none" stroke="#dc2626" strokeWidth="1.5" opacity="0.65" />
-                  <ellipse cx="74" cy="40" rx="32" ry="8" fill="none" stroke="#dc2626" strokeWidth="1" strokeDasharray="4 2" opacity="0.4" />
+                  <ellipse cx="74" cy="40" rx="18" ry="5" fill="none" stroke="#dc2626" strokeWidth="2" opacity="0.8" />
+                  <ellipse cx="74" cy="40" rx="32" ry="8" fill="none" stroke="#dc2626" strokeWidth="1.5" strokeDasharray="4 2" opacity="0.6" />
                 </svg>
-                <span className="text-[10px] sm:text-xs font-semibold text-rose-700 tracking-tight mt-0.5">
-                  Transient Shock &amp; Structural Shaking
-                </span>
+              </div>
+
+              <div className="bg-amber-600 text-white text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl font-bold text-center py-1 sm:py-1.5 px-2 truncate relative z-10">
+                Seismic Event (Disequilibrium)
+              </div>
+              <div className="p-2 sm:p-3 flex-1 flex flex-col items-center justify-center relative z-10 text-center space-y-1">
+                <div className="flex items-center gap-2 font-bold text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-800">
+                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
+                  <span>Transient Shock</span>
+                </div>
+                <div className="flex items-center gap-2 font-bold text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-800">
+                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
+                  <span>Structural Shaking</span>
+                </div>
               </div>
             </div>
 
