@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { SLIDES_LIST } from './data/frameworkData';
 import { DeckNav } from './components/DeckNav';
 import { SlideOverviewModal } from './components/SlideOverviewModal';
+import { SlideContainer } from './components/SlideContainer';
 
 // Slide components
 import { Slide1Title } from './components/Slide1Title';
@@ -203,31 +204,33 @@ export default function App() {
       />
 
       {/* Main Slide Presentation Stage */}
-      <main className="flex-1 min-h-0 w-full relative overflow-y-auto overflow-x-hidden flex flex-col p-4 sm:p-6 lg:p-8 items-stretch">
-        {/* On-screen Directional Floating Buttons */}
-        {currentSlide > 1 && (
-          <button
-            onClick={handlePrev}
-            className="fixed left-2 sm:left-4 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
-            title="Previous Slide (← / ↑ / Page Up)"
-            aria-label="Previous Slide"
-          >
-            <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
-          </button>
-        )}
+      <main className="flex-1 min-h-0 w-full relative flex flex-col items-stretch overflow-hidden">
+        <SlideContainer>
+          {/* On-screen Directional Floating Buttons */}
+          {currentSlide > 1 && (
+            <button
+              onClick={handlePrev}
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
+              title="Previous Slide (← / ↑ / Page Up)"
+              aria-label="Previous Slide"
+            >
+              <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
+            </button>
+          )}
 
-        {currentSlide < SLIDES_LIST.length && (
-          <button
-            onClick={handleNext}
-            className="fixed right-2 sm:right-4 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
-            title="Next Slide (→ / ↓ / Page Down / Space)"
-            aria-label="Next Slide"
-          >
-            <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-0.5" />
-          </button>
-        )}
+          {currentSlide < SLIDES_LIST.length && (
+            <button
+              onClick={handleNext}
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
+              title="Next Slide (→ / ↓ / Page Down / Space)"
+              aria-label="Next Slide"
+            >
+              <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-0.5" />
+            </button>
+          )}
 
-        {renderSlideContent()}
+          {renderSlideContent()}
+        </SlideContainer>
       </main>
 
       {/* Slide Deck Grid Overview Modal */}
