@@ -118,7 +118,7 @@ export const Slide9Takeaways: React.FC = () => {
         <h1 className="text-2xl @sm:text-3xl @lg:text-4xl @xl:text-5xl font-black text-slate-900 tracking-tight leading-tight">
           Synthesis &amp; <span className="text-sky-600">Key Takeaways</span>
         </h1>
-        <p className="text-xs @sm:text-sm @lg:text-base @xl:text-lg @2xl:text-xl text-slate-600 mt-1 @sm:mt-1.5 max-w-5xl font-medium">
+        <p className="text-xs @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-lg text-slate-600 mt-1 @sm:mt-1.5 max-w-5xl font-medium">
           A four-pillar framework shifting urban risk management from reactive disaster response to institutionalized municipal resilience.
         </p>
       </div>
@@ -156,7 +156,7 @@ export const Slide9Takeaways: React.FC = () => {
                       <span className="text-[11px] @sm:text-xs @xl:text-sm font-mono font-bold text-slate-400 uppercase tracking-wider block mb-0.5">
                         Pillar {item.number} · {item.category}
                       </span>
-                      <h2 className="text-lg @sm:text-xl @lg:text-2xl @xl:text-2xl @2xl:text-3xl font-black text-slate-900 leading-snug tracking-tight">
+                      <h2 className="text-lg @sm:text-xl @lg:text-xl @xl:text-2xl @2xl:text-2xl font-black text-slate-900 leading-snug tracking-tight">
                         {item.title}
                       </h2>
                     </div>
@@ -170,7 +170,7 @@ export const Slide9Takeaways: React.FC = () => {
                   {item.points.map((pt, pIdx) => (
                     <div
                       key={pIdx}
-                      className="flex items-start gap-2.5 @sm:gap-3 text-sm @sm:text-base @lg:text-base @xl:text-lg @2xl:text-xl text-slate-700 leading-relaxed"
+                      className="flex items-start gap-2.5 @sm:gap-3 text-sm @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-base text-slate-700 leading-relaxed"
                     >
                       <CheckCircle2 className={`w-4 h-4 @sm:w-4.5 @sm:h-4.5 @xl:w-5 @xl:h-5 mt-0.5 @xl:mt-1 shrink-0 ${item.checkColor}`} />
                       <p>
