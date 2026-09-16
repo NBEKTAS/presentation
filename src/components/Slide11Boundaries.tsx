@@ -111,7 +111,7 @@ export const Slide11Boundaries: React.FC = () => {
                       <span className="text-[11px] @sm:text-xs @xl:text-sm font-mono font-bold text-slate-400 uppercase tracking-wider block mb-0.5">
                         {pillar.subtitle}
                       </span>
-                      <h2 className="text-base @sm:text-lg @lg:text-xl @xl:text-xl @2xl:text-2xl font-black text-slate-900 leading-snug tracking-tight">
+                      <h2 className="text-lg @sm:text-xl @lg:text-2xl @xl:text-2xl @2xl:text-[1.65rem] font-black text-slate-900 leading-snug tracking-tight">
                         {pillar.title}
                       </h2>
                     </div>
@@ -130,7 +130,7 @@ export const Slide11Boundaries: React.FC = () => {
                       <CheckCircle2
                         className={`w-4 h-4 @sm:w-4.5 @sm:h-4.5 @xl:w-5 @xl:h-5 mt-0.5 @xl:mt-1 shrink-0 ${pillar.checkColor}`}
                       />
-                      <div className="text-sm @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-base text-slate-700 leading-relaxed">
+                      <div className="text-base @sm:text-lg @lg:text-lg @xl:text-xl @2xl:text-xl text-slate-700 leading-relaxed">
                         <strong className="font-bold text-slate-950 block mb-0.5">
                           {pt.label}
                         </strong>
