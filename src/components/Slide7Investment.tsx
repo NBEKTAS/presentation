@@ -9,9 +9,9 @@ export const Slide7Investment: React.FC = () => {
         <img
           src={`${import.meta.env.BASE_URL}images/izmir_skyline.png`}
           alt="İzmir Skyline"
-          className="w-full h-full object-cover object-center opacity-50"
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-white/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-white/20 pointer-events-none" />
       </div>
 
       {/* Source Link */}
@@ -39,7 +39,7 @@ export const Slide7Investment: React.FC = () => {
         {/* Two Columns: Structural vs Non-Structural Measures */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 flex-1 min-h-0">
           {/* Structural Measures Card */}
-          <div className="bg-white/95 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm flex flex-col justify-between">
+          <div className="bg-white/70 hover:bg-white/80 transition-colors backdrop-blur-md border border-white/50 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-slate-100">
                 <span className="p-2 sm:p-2.5 rounded-xl bg-sky-50 text-sky-700 border border-sky-200 shadow-2xs">
@@ -115,7 +115,7 @@ export const Slide7Investment: React.FC = () => {
           </div>
 
           {/* Non-Structural Measures Card */}
-          <div className="bg-white/95 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm flex flex-col justify-between">
+          <div className="bg-white/70 hover:bg-white/80 transition-colors backdrop-blur-md border border-white/50 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-slate-100">
                 <span className="p-2 sm:p-2.5 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 shadow-2xs">
@@ -192,7 +192,7 @@ export const Slide7Investment: React.FC = () => {
         </div>
 
         {/* Multi-Stage Decision Appraisal Funnel */}
-        <div className="bg-white/95 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-3 sm:p-5 lg:p-6 shadow-sm shrink-0">
+        <div className="bg-white/70 hover:bg-white/80 transition-colors backdrop-blur-md border border-white/50 rounded-2xl p-3 sm:p-5 lg:p-6 shadow-lg shrink-0">
           <div className="flex items-center justify-between mb-2 sm:mb-3">
             <div className="flex items-center gap-2">
               <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-sky-600" />
