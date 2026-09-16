@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Slide8Recovery: React.FC = () => {
   return (
-    <div className="w-full h-full flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-y-auto">
+    <div className="w-full h-full flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-hidden">
       {/* Slide Header */}
       <div className="shrink-0 mb-1 sm:mb-2">
         <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -14,7 +14,7 @@ export const Slide8Recovery: React.FC = () => {
       </div>
 
       {/* Main Diagram Canvas - Proportional flex container filling the slide height */}
-      <div className="flex-1 bg-white rounded-2xl border border-slate-200/90 p-3 sm:p-4 lg:p-5 shadow-xs flex flex-col justify-between overflow-visible gap-4 sm:gap-6 min-h-min mb-4">
+      <div className="flex-1 min-h-0 bg-white rounded-2xl border border-slate-200/90 p-2 sm:p-3 lg:p-4 shadow-xs flex flex-col justify-between overflow-hidden gap-2 sm:gap-3 lg:gap-4 mb-2">
         
         {/* ========================================================= */}
         {/* 1. PRE-DISASTER PHASE (GREEN) */}
