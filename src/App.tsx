@@ -203,27 +203,27 @@ export default function App() {
       />
 
       {/* Main Slide Presentation Stage */}
-      <main className="flex-1 min-h-0 w-full relative overflow-y-auto overflow-x-hidden flex flex-col p-2 sm:p-4 lg:p-6 items-stretch">
+      <main className="flex-1 min-h-0 w-full relative overflow-y-auto overflow-x-hidden flex flex-col p-4 sm:p-6 lg:p-8 items-stretch">
         {/* On-screen Directional Floating Buttons */}
         {currentSlide > 1 && (
           <button
             onClick={handlePrev}
-            className="fixed left-2 sm:left-3 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
+            className="fixed left-2 sm:left-4 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
             title="Previous Slide (← / ↑ / Page Up)"
             aria-label="Previous Slide"
           >
-            <ChevronLeft className="w-5 h-5 transition-transform group-hover:-translate-x-0.5" />
+            <ChevronLeft className="w-6 h-6 transition-transform group-hover:-translate-x-0.5" />
           </button>
         )}
 
         {currentSlide < SLIDES_LIST.length && (
           <button
             onClick={handleNext}
-            className="fixed right-2 sm:right-3 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
+            className="fixed right-2 sm:right-4 top-1/2 -translate-y-1/2 z-40 p-2 sm:p-2.5 rounded-full bg-white/80 hover:bg-white text-slate-600 hover:text-sky-600 shadow-md border border-slate-200 backdrop-blur-xs transition-all hover:scale-110 opacity-40 hover:opacity-100 cursor-pointer group"
             title="Next Slide (→ / ↓ / Page Down / Space)"
             aria-label="Next Slide"
           >
-            <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
+            <ChevronRight className="w-6 h-6 transition-transform group-hover:translate-x-0.5" />
           </button>
         )}
 

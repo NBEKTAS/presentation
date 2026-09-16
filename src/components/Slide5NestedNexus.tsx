@@ -70,7 +70,7 @@ export const Slide5NestedNexus: React.FC = () => {
       </div>
 
       {/* Main Presentation Card */}
-      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-2 sm:p-3 lg:p-4 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 items-center overflow-hidden">
+      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-2 sm:p-3 lg:p-4 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-4 items-center overflow-y-auto">
         {/* Left Column: Concentric Circles Diagram (5 cols) */}
         <div className="lg:col-span-5 h-full flex flex-col items-center justify-center p-2">
           <svg viewBox="0 0 520 480" className="w-full h-full max-h-[440px] xl:max-h-[540px] overflow-visible">

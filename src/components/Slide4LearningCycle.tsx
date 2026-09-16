@@ -14,7 +14,7 @@ export const Slide4LearningCycle: React.FC = () => {
       </div>
 
       {/* Main Presentation Card */}
-      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm relative flex items-center justify-center overflow-hidden">
+      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm relative flex items-center justify-center overflow-y-auto">
         {/* Dynamic Responsive Curved Connecting Arcs */}
         <div className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0">
           {/* 1 -> 2 (Top to Right) */}
