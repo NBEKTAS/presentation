@@ -11,7 +11,7 @@ export const Slide7Investment: React.FC = () => {
           alt="İzmir Skyline"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-white/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-white/10 pointer-events-none" />
       </div>
 
       {/* Source Link */}
@@ -39,10 +39,10 @@ export const Slide7Investment: React.FC = () => {
         {/* Two Columns: Structural vs Non-Structural Measures */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 flex-1 min-h-0">
           {/* Structural Measures Card */}
-          <div className="bg-white/40 hover:bg-white/50 transition-colors backdrop-blur-md border border-white/50 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-between">
+          <div className="bg-white/25 hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-slate-300/30">
-                <span className="p-2 sm:p-2.5 rounded-xl bg-sky-100/60 text-sky-800 border border-sky-200/50 shadow-sm">
+              <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-white/30">
+                <span className="p-2 sm:p-2.5 rounded-xl bg-white/40 text-sky-800 border border-white/40 shadow-sm">
                   <Shield className="w-5 h-5 sm:w-6 sm:h-6" />
                 </span>
                 <div>
@@ -54,7 +54,7 @@ export const Slide7Investment: React.FC = () => {
 
             {/* List of Measures - Stretched to fill vertical space evenly */}
             <div className="flex-1 flex flex-col justify-around gap-2.5 sm:gap-3.5 my-1 sm:my-2">
-              <div className="flex items-start gap-3.5 bg-white/40 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/40 shadow-sm">
+              <div className="flex items-start gap-3.5 bg-white/20 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/30 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -71,7 +71,7 @@ export const Slide7Investment: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 bg-white/40 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/40 shadow-sm">
+              <div className="flex items-start gap-3.5 bg-white/20 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/30 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -88,7 +88,7 @@ export const Slide7Investment: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 bg-white/40 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/40 shadow-sm">
+              <div className="flex items-start gap-3.5 bg-white/20 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/30 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -115,10 +115,10 @@ export const Slide7Investment: React.FC = () => {
           </div>
 
           {/* Non-Structural Measures Card */}
-          <div className="bg-white/40 hover:bg-white/50 transition-colors backdrop-blur-md border border-white/50 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-between">
+          <div className="bg-white/25 hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/40 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-slate-300/30">
-                <span className="p-2 sm:p-2.5 rounded-xl bg-amber-100/60 text-amber-800 border border-amber-200/50 shadow-sm">
+              <div className="flex items-center gap-3 mb-2 sm:mb-4 pb-2 sm:pb-3 border-b border-white/30">
+                <span className="p-2 sm:p-2.5 rounded-xl bg-white/40 text-amber-800 border border-white/40 shadow-sm">
                   <Activity className="w-5 h-5 sm:w-6 sm:h-6" />
                 </span>
                 <div>
@@ -130,7 +130,7 @@ export const Slide7Investment: React.FC = () => {
 
             {/* List of Measures - Stretched to fill vertical space evenly */}
             <div className="flex-1 flex flex-col justify-around gap-2.5 sm:gap-3.5 my-1 sm:my-2">
-              <div className="flex items-start gap-3.5 bg-white/40 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/40 shadow-sm">
+              <div className="flex items-start gap-3.5 bg-white/20 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/30 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -147,7 +147,7 @@ export const Slide7Investment: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 bg-white/40 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/40 shadow-sm">
+              <div className="flex items-start gap-3.5 bg-white/20 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/30 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -164,7 +164,7 @@ export const Slide7Investment: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3.5 bg-white/40 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/40 shadow-sm">
+              <div className="flex items-start gap-3.5 bg-white/20 p-3 sm:p-4 lg:p-4.5 rounded-xl border border-white/30 shadow-sm">
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
@@ -192,7 +192,7 @@ export const Slide7Investment: React.FC = () => {
         </div>
 
         {/* Multi-Stage Decision Appraisal Funnel */}
-        <div className="bg-white/40 hover:bg-white/50 transition-colors backdrop-blur-md border border-white/50 rounded-2xl p-3 sm:p-5 lg:p-6 shadow-lg shrink-0">
+        <div className="bg-white/25 hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/40 rounded-2xl p-3 sm:p-5 lg:p-6 shadow-lg shrink-0">
           <div className="flex items-center justify-between mb-2 sm:mb-3">
             <div className="flex items-center gap-2">
               <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-sky-600" />
@@ -207,7 +207,7 @@ export const Slide7Investment: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 lg:gap-6 font-mono">
             {/* Stage 1: CBA */}
-            <div className="flex-1 w-full bg-white/40 border border-white/50 rounded-xl p-3 sm:p-4 text-center shadow-sm">
+            <div className="flex-1 w-full bg-white/20 border border-white/30 rounded-xl p-3 sm:p-4 text-center shadow-sm">
               <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-slate-500 block mb-1">
                 Stage 1
               </span>
@@ -223,7 +223,7 @@ export const Slide7Investment: React.FC = () => {
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 rotate-90 sm:rotate-0 shrink-0" />
 
             {/* Stage 2: CEA */}
-            <div className="flex-1 w-full bg-white/40 border border-white/50 rounded-xl p-3 sm:p-4 text-center shadow-sm">
+            <div className="flex-1 w-full bg-white/20 border border-white/30 rounded-xl p-3 sm:p-4 text-center shadow-sm">
               <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-slate-500 block mb-1">
                 Stage 2
               </span>
@@ -239,7 +239,7 @@ export const Slide7Investment: React.FC = () => {
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 rotate-90 sm:rotate-0 shrink-0" />
 
             {/* Stage 3: MCA */}
-            <div className="flex-1 w-full bg-sky-100/40 border border-sky-300/50 rounded-xl p-3 sm:p-4 text-center shadow-sm">
+            <div className="flex-1 w-full bg-sky-50/30 border border-sky-300/40 rounded-xl p-3 sm:p-4 text-center shadow-sm">
               <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-sky-700 block mb-1">
                 Stage 3
               </span>
