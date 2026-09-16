@@ -64,7 +64,7 @@ export const Slide5NestedNexus: React.FC = () => {
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
           Nested Nexus <span className="text-sky-600">Architecture Model</span>
         </h1>
-        <p className="text-xs sm:text-sm lg:text-base text-slate-500 mt-1">
+        <p className="text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-500 mt-1">
           A four-tier concentric system nesting municipal operations inside international policy, urban systems, and regional seismotectonics.
         </p>
       </div>
@@ -223,15 +223,15 @@ export const Slide5NestedNexus: React.FC = () => {
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2.5">
                   <tier.icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-800 shrink-0" />
-                  <h3 className="font-bold text-sm sm:text-base lg:text-lg text-slate-900">
+                  <h3 className="font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-900">
                     {tier.name}
                   </h3>
                 </div>
-                <span className={`text-[11px] sm:text-xs lg:text-sm px-2.5 py-0.5 rounded-full font-bold ${tier.tagColor}`}>
+                <span className={`text-xs sm:text-sm lg:text-base xl:text-lg px-2.5 py-0.5 rounded-full font-bold ${tier.tagColor}`}>
                   {tier.role}
                 </span>
               </div>
-              <ul className="space-y-1 sm:space-y-1.5 text-xs sm:text-sm lg:text-[15px] text-slate-700">
+              <ul className="space-y-1 sm:space-y-1.5 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-700">
                 {tier.points.map((pt, pIdx) => (
                   <li key={pIdx} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0 mt-1.5" />

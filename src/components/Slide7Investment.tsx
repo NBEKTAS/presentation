@@ -9,7 +9,7 @@ export const Slide7Investment: React.FC = () => {
         <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
           Turn Priorities into Investment
         </h1>
-        <p className="text-xs sm:text-sm lg:text-base text-slate-500">
+        <p className="text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-500">
           Systematic appraisal funnels translating disaster risk reduction priorities into municipal capital allocations.
         </p>
       </div>
@@ -38,14 +38,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-sm sm:text-base lg:text-lg mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-base sm:text-lg lg:text-xl xl:text-2xl mb-0.5">
                       Structural Retrofitting
                     </strong>
                     <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">
                       High-Risk Buildings
                     </span>
                   </div>
-                  <span className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed block mt-1">
+                  <span className="text-slate-600 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl leading-relaxed block mt-1">
                     Seismic strengthening and structural retrofitting interventions prioritized for high-risk buildings and critical public assets.
                   </span>
                 </div>
@@ -55,14 +55,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-sm sm:text-base lg:text-lg mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-base sm:text-lg lg:text-xl xl:text-2xl mb-0.5">
                       Lifeline Infrastructure Strengthening
                     </strong>
                     <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">
                       Critical Networks
                     </span>
                   </div>
-                  <span className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed block mt-1">
+                  <span className="text-slate-600 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl leading-relaxed block mt-1">
                     Physical hardening of water, energy, and transportation networks to maintain functionality and reduce secondary disruptions.
                   </span>
                 </div>
@@ -72,14 +72,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-sm sm:text-base lg:text-lg mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-base sm:text-lg lg:text-xl xl:text-2xl mb-0.5">
                       Site-Specific Ground Mitigation
                     </strong>
                     <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">
                       Geotechnical Works
                     </span>
                   </div>
-                  <span className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed block mt-1">
+                  <span className="text-slate-600 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl leading-relaxed block mt-1">
                     Geotechnical ground improvement and engineering works addressing local ground shaking amplification, slope stability, and liquefaction risk.
                   </span>
                 </div>
@@ -114,14 +114,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-sm sm:text-base lg:text-lg mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-base sm:text-lg lg:text-xl xl:text-2xl mb-0.5">
                       Risk-Informed Land-Use Planning
                     </strong>
                     <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
                       Spatial Master Plans
                     </span>
                   </div>
-                  <span className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed block mt-1">
+                  <span className="text-slate-600 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl leading-relaxed block mt-1">
                     Integrating hazard assessments and microzonation findings directly into statutory spatial master plans and building development regulations.
                   </span>
                 </div>
@@ -131,14 +131,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-sm sm:text-base lg:text-lg mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-base sm:text-lg lg:text-xl xl:text-2xl mb-0.5">
                       Early Warning &amp; Emergency Protocols
                     </strong>
                     <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
                       Operational Readiness
                     </span>
                   </div>
-                  <span className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed block mt-1">
+                  <span className="text-slate-600 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl leading-relaxed block mt-1">
                     Deploying monitoring networks and automated response protocols to alert operational agencies and initiate protective actions.
                   </span>
                 </div>
@@ -148,14 +148,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-sm sm:text-base lg:text-lg mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-base sm:text-lg lg:text-xl xl:text-2xl mb-0.5">
                       Disaster Risk Financing &amp; Preparedness
                     </strong>
                     <span className="text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
                       Fiscal Reserves
                     </span>
                   </div>
-                  <span className="text-slate-600 text-xs sm:text-sm lg:text-[15px] leading-relaxed block mt-1">
+                  <span className="text-slate-600 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl leading-relaxed block mt-1">
                     Establishing fiscal reserves, insurance coverage mechanisms, and institutional arrangements to support rapid post-disaster response and recovery.
                   </span>
                 </div>
@@ -176,7 +176,7 @@ export const Slide7Investment: React.FC = () => {
           <div className="flex items-center justify-between mb-2 sm:mb-3">
             <div className="flex items-center gap-2">
               <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-sky-600" />
-              <span className="text-xs sm:text-sm lg:text-base font-bold uppercase tracking-wider text-slate-800">
+              <span className="text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl font-bold uppercase tracking-wider text-slate-800">
                 Multi-Stage Decision Appraisal Funnel
               </span>
             </div>
@@ -192,7 +192,7 @@ export const Slide7Investment: React.FC = () => {
                 Stage 1
               </span>
               <strong className="block text-sky-700 text-lg sm:text-2xl lg:text-3xl font-black">CBA</strong>
-              <span className="text-xs sm:text-sm lg:text-base text-slate-800 font-sans block mt-1 font-bold">
+              <span className="text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-800 font-sans block mt-1 font-bold">
                 Cost-Benefit Analysis
               </span>
               <span className="text-xs sm:text-sm text-slate-600 font-sans block mt-0.5">
@@ -208,7 +208,7 @@ export const Slide7Investment: React.FC = () => {
                 Stage 2
               </span>
               <strong className="block text-amber-700 text-lg sm:text-2xl lg:text-3xl font-black">CEA</strong>
-              <span className="text-xs sm:text-sm lg:text-base text-slate-800 font-sans block mt-1 font-bold">
+              <span className="text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-800 font-sans block mt-1 font-bold">
                 Cost-Effectiveness Analysis
               </span>
               <span className="text-xs sm:text-sm text-slate-600 font-sans block mt-0.5">
@@ -224,7 +224,7 @@ export const Slide7Investment: React.FC = () => {
                 Stage 3
               </span>
               <strong className="block text-sky-800 text-lg sm:text-2xl lg:text-3xl font-black">MCA</strong>
-              <span className="text-xs sm:text-sm lg:text-base text-sky-950 font-sans block mt-1 font-bold">
+              <span className="text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-sky-950 font-sans block mt-1 font-bold">
                 Multi-Criteria Appraisal
               </span>
               <span className="text-xs sm:text-sm text-sky-800 font-sans block mt-0.5">

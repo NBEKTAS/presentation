@@ -123,7 +123,7 @@ export const Slide11Boundaries: React.FC = () => {
 
                   {/* Concise Overview Statement */}
                   <div className="bg-slate-50 border border-slate-100/90 rounded-xl px-3 sm:px-3.5 xl:px-4 py-2 xl:py-2.5">
-                    <p className="text-xs sm:text-sm lg:text-[15px] xl:text-base 2xl:text-lg font-medium text-slate-700 leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium text-slate-700 leading-relaxed">
                       {pillar.intro}
                     </p>
                   </div>
@@ -139,7 +139,7 @@ export const Slide11Boundaries: React.FC = () => {
                       <CheckCircle2
                         className={`w-4 h-4 sm:w-4.5 sm:h-4.5 xl:w-5 xl:h-5 mt-0.5 xl:mt-1 shrink-0 ${pillar.checkColor}`}
                       />
-                      <div className="text-xs sm:text-sm lg:text-[15px] xl:text-base 2xl:text-[17px] text-slate-700 leading-relaxed">
+                      <div className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-700 leading-relaxed">
                         <strong className="font-bold text-slate-950 block mb-0.5">
                           {pt.label}
                         </strong>
