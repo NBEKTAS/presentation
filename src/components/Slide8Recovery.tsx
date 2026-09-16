@@ -14,7 +14,7 @@ export const Slide8Recovery: React.FC = () => {
       </div>
 
       {/* Main Diagram Canvas - Proportional flex container filling the slide height */}
-      <div className="flex-1 min-h-0 bg-white rounded-2xl border border-slate-200/90 p-2 sm:p-3 lg:p-4 shadow-xs flex flex-col justify-between overflow-hidden gap-2 sm:gap-3 lg:gap-4 mb-2">
+      <div className="flex-1 min-h-0 bg-white rounded-2xl border border-slate-200/90 p-1 sm:p-2 lg:p-3 shadow-xs flex flex-col justify-between overflow-hidden gap-1 sm:gap-1.5 lg:gap-2 mb-1">
         
         {/* ========================================================= */}
         {/* 1. PRE-DISASTER PHASE (GREEN) */}
@@ -82,8 +82,8 @@ export const Slide8Recovery: React.FC = () => {
         </div>
 
         {/* Transition Arrow 1: Green -> Orange */}
-        <div className="flex justify-center items-center my-0 sm:my-0.5 shrink-0">
-          <svg width="28" height="18" viewBox="0 0 28 18" fill="none" className="text-emerald-700">
+        <div className="flex justify-center items-center shrink-0 -my-1 sm:-my-0.5 relative z-20">
+          <svg width="20" height="12" viewBox="0 0 28 18" fill="none" className="text-emerald-700">
             <path d="M14 18L5 7H10V0H18V7H23L14 18Z" fill="currentColor" />
           </svg>
         </div>
@@ -170,8 +170,8 @@ export const Slide8Recovery: React.FC = () => {
         </div>
 
         {/* Transition Arrow 2: Orange -> Blue */}
-        <div className="flex justify-center items-center my-0 sm:my-0.5 shrink-0">
-          <svg width="28" height="18" viewBox="0 0 28 18" fill="none" className="text-amber-600">
+        <div className="flex justify-center items-center shrink-0 -my-1 sm:-my-0.5 relative z-20">
+          <svg width="20" height="12" viewBox="0 0 28 18" fill="none" className="text-amber-600">
             <path d="M14 18L5 7H10V0H18V7H23L14 18Z" fill="currentColor" />
           </svg>
         </div>
@@ -225,8 +225,8 @@ export const Slide8Recovery: React.FC = () => {
         </div>
 
         {/* Transition Arrow 3: Blue -> Feedback Loop */}
-        <div className="flex justify-center items-center my-0 sm:my-0.5 shrink-0">
-          <svg width="28" height="18" viewBox="0 0 28 18" fill="none" className="text-blue-600">
+        <div className="flex justify-center items-center shrink-0 -my-1 sm:-my-0.5 relative z-20">
+          <svg width="20" height="12" viewBox="0 0 28 18" fill="none" className="text-blue-600">
             <path d="M14 18L5 7H10V0H18V7H23L14 18Z" fill="currentColor" />
           </svg>
         </div>
@@ -234,7 +234,7 @@ export const Slide8Recovery: React.FC = () => {
         {/* ========================================================= */}
         {/* 4. THE FEEDBACK LOOP (GREEN) */}
         {/* ========================================================= */}
-        <div className="max-w-3xl mx-auto w-full bg-emerald-800 text-white rounded-xl py-2 sm:py-2.5 lg:py-3 px-5 sm:px-8 shadow-sm flex items-center justify-between shrink-0">
+        <div className="max-w-3xl mx-auto w-full bg-emerald-800 text-white rounded-xl py-1 sm:py-1.5 lg:py-2 px-4 sm:px-6 shadow-sm flex items-center justify-between shrink-0">
           {/* Left Loop Arrow */}
           <div className="flex items-center">
             <svg width="34" height="26" viewBox="0 0 32 24" fill="none" className="text-emerald-200">
