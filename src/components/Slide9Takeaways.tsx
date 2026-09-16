@@ -118,7 +118,7 @@ export const Slide9Takeaways: React.FC = () => {
         <h1 className="text-2xl @sm:text-3xl @lg:text-4xl @xl:text-5xl font-black text-slate-900 tracking-tight leading-tight">
           Synthesis &amp; <span className="text-sky-600">Key Takeaways</span>
         </h1>
-        <p className="text-xs @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-lg text-slate-600 mt-1 @sm:mt-1.5 max-w-5xl font-medium">
+        <p className="text-xs @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-lg text-slate-600 mt-1 @sm:mt-1.5 max-w-none font-medium">
           A four-pillar framework shifting urban risk management from reactive disaster response to institutionalized municipal resilience.
         </p>
       </div>

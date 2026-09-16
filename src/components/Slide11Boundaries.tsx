@@ -83,7 +83,7 @@ export const Slide11Boundaries: React.FC = () => {
         <h1 className="text-2xl @sm:text-3xl @lg:text-4xl @xl:text-5xl font-black text-slate-900 tracking-tight leading-tight">
           Contribution &amp; <span className="text-sky-600">Evidence Boundaries</span>
         </h1>
-        <p className="text-xs @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-lg text-slate-600 mt-1 @sm:mt-1.5 max-w-5xl font-medium">
+        <p className="text-xs @sm:text-sm @lg:text-[15px] @xl:text-base @2xl:text-lg text-slate-600 mt-1 @sm:mt-1.5 max-w-none font-medium">
           Framing core research innovations, empirical validation parameters, and cross-metropolitan transferability.
         </p>
       </div>
