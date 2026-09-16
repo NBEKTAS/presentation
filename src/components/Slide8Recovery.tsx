@@ -105,8 +105,8 @@ export const Slide8Recovery: React.FC = () => {
               <div className="bg-amber-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0 truncate relative z-10">
                 Seismic Event (Disequilibrium)
               </div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none z-0 mt-6">
-                <svg viewBox="0 0 220 50" className="w-full h-full scale-[1.3]">
+              <div className="flex-1 flex items-center justify-center bg-white p-2 relative z-10">
+                <svg viewBox="0 0 220 50" className="w-full h-full max-h-[40px] sm:max-h-[50px] scale-[1.2]">
                   {/* Jagged Seismograph Wave in Red */}
                   <path
                     d="M -10 25 L 40 25 L 48 16 L 55 35 L 62 6 L 70 44 L 78 12 L 86 36 L 94 22 L 102 28 L 230 25"
@@ -120,16 +120,6 @@ export const Slide8Recovery: React.FC = () => {
                   <ellipse cx="74" cy="40" rx="18" ry="5" fill="none" stroke="#dc2626" strokeWidth="2" opacity="0.8" />
                   <ellipse cx="74" cy="40" rx="32" ry="8" fill="none" stroke="#dc2626" strokeWidth="1.5" strokeDasharray="4 2" opacity="0.6" />
                 </svg>
-              </div>
-              <div className="p-1 sm:p-1.5 flex-1 flex flex-col items-center justify-center relative z-10 text-center space-y-0.5">
-                <div className="flex items-center gap-1.5 font-bold text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
-                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-600 shrink-0" />
-                  <span>Transient Shock</span>
-                </div>
-                <div className="flex items-center gap-1.5 font-bold text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
-                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-600 shrink-0" />
-                  <span>Structural Shaking</span>
-                </div>
               </div>
             </div>
 
