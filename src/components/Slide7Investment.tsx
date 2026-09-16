@@ -58,14 +58,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-2xl mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-xl mb-0.5">
                       Structural Retrofitting
                     </strong>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">
                       High-Risk Buildings
                     </span>
                   </div>
-                    <span className="text-slate-600 text-xl leading-relaxed block mt-1">
+                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
                       Prioritized seismic strengthening and retrofitting for high-risk buildings and critical public assets.
                     </span>
                 </div>
@@ -75,14 +75,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-2xl mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-xl mb-0.5">
                       Lifeline Infrastructure Strengthening
                     </strong>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">
                       Critical Networks
                     </span>
                   </div>
-                    <span className="text-slate-600 text-xl leading-relaxed block mt-1">
+                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
                       Physical hardening of water, energy, and transit networks to maintain critical functionality.
                     </span>
                 </div>
@@ -92,14 +92,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-2xl mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-xl mb-0.5">
                       Site-Specific Ground Mitigation
                     </strong>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">
                       Geotechnical Works
                     </span>
                   </div>
-                    <span className="text-slate-600 text-xl leading-relaxed block mt-1">
+                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
                       Geotechnical engineering to address local ground amplification, slope stability, and liquefaction risk.
                     </span>
                 </div>
@@ -134,14 +134,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-2xl mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-xl mb-0.5">
                       Risk-Informed Land-Use Planning
                     </strong>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
                       Spatial Master Plans
                     </span>
                   </div>
-                    <span className="text-slate-600 text-xl leading-relaxed block mt-1">
+                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
                       Integrating hazard assessments and microzonation directly into statutory spatial master plans and regulations.
                     </span>
                 </div>
@@ -151,14 +151,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-2xl mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-xl mb-0.5">
                       Early Warning &amp; Emergency Protocols
                     </strong>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
                       Operational Readiness
                     </span>
                   </div>
-                    <span className="text-slate-600 text-xl leading-relaxed block mt-1">
+                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
                       Deploying monitoring networks and automated protocols to alert agencies and initiate protective actions.
                     </span>
                 </div>
@@ -168,14 +168,14 @@ export const Slide7Investment: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 block font-bold text-2xl mb-0.5">
+                    <strong className="text-slate-900 block font-bold text-xl mb-0.5">
                       Disaster Risk Financing &amp; Preparedness
                     </strong>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-100 text-amber-800">
                       Fiscal Reserves
                     </span>
                   </div>
-                    <span className="text-slate-600 text-xl leading-relaxed block mt-1">
+                    <span className="text-slate-600 text-base leading-relaxed block mt-1">
                       Establishing fiscal reserves and insurance mechanisms to support rapid post-disaster recovery.
                     </span>
                 </div>
