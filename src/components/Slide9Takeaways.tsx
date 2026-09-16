@@ -166,10 +166,10 @@ export const Slide9Takeaways: React.FC = () => {
                 </div>
 
                 {/* Scannable Bullets - Slide 4 Compact Style */}
-                <ul className="flex-1 flex flex-col justify-evenly py-1 gap-1.5 @xl:gap-2 text-xs @sm:text-sm @lg:text-[15px] text-slate-700">
+                <ul className="flex-1 flex flex-col justify-evenly py-1 gap-1.5 @xl:gap-2 text-sm @sm:text-base @lg:text-lg text-slate-700">
                   {item.points.map((pt, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2.5">
-                      <span className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${
+                    <li key={pIdx} className="flex items-start gap-2.5 @lg:gap-3">
+                      <span className={`w-2 h-2 @lg:w-2.5 @lg:h-2.5 rounded-full mt-1.5 @lg:mt-2 shrink-0 ${
                         item.theme === 'sky' ? 'bg-sky-500' :
                         item.theme === 'emerald' ? 'bg-emerald-500' :
                         item.theme === 'amber' ? 'bg-amber-500' : 'bg-purple-500'
