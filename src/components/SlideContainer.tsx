@@ -6,8 +6,8 @@ interface SlideContainerProps {
 
 export const SlideContainer: React.FC<SlideContainerProps> = ({ children }) => {
   // Define reference design dimensions (standard 16:9 laptop slide)
-  const targetWidth = 1440;
-  const targetHeight = 810;
+  const targetWidth = 1920;
+  const targetHeight = 1080;
   const targetRatio = targetWidth / targetHeight;
 
   const wrapperRef = useRef<HTMLDivElement>(null);
