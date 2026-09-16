@@ -363,7 +363,7 @@ export async function loadCachedRegionalGemFaults(
   centerLat = 38.435
 ): Promise<GemFaultFeature[]> {
   try {
-    const res = await fetch('/data/gem_active_faults_regional.geojson');
+    const res = await fetch(`${import.meta.env.BASE_URL}data/gem_active_faults_regional.geojson`);
     if (!res.ok) {
       console.warn(`Failed to fetch cached regional GEM faults: ${res.status}`);
       return [];
