@@ -190,69 +190,6 @@ export const Slide7Investment: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Multi-Stage Decision Appraisal Funnel */}
-        <div className="bg-white/25 hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/40 rounded-2xl p-2 sm:p-3 lg:p-4 shadow-lg shrink-0">
-          <div className="flex items-center justify-between mb-2 sm:mb-3">
-            <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-sky-600" />
-              <span className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold uppercase tracking-wider text-slate-800">
-                Multi-Stage Decision Appraisal Funnel
-              </span>
-            </div>
-            <span className="text-xs sm:text-sm text-slate-500 font-medium">
-              Section 3.3 · From Technical Feasibility to Statutory Budget Allocation
-            </span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 lg:gap-6 font-mono">
-            {/* Stage 1: CBA */}
-            <div className="flex-1 w-full bg-white/20 border border-white/30 rounded-xl p-2 sm:p-3 text-center shadow-sm">
-              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-slate-500 block mb-1">
-                Stage 1
-              </span>
-              <strong className="block text-sky-700 text-lg sm:text-2xl lg:text-3xl font-black">CBA</strong>
-              <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-800 font-sans block mt-1 font-bold">
-                Cost-Benefit Analysis
-              </span>
-              <span className="text-xs sm:text-sm text-slate-600 font-sans block mt-0.5">
-                Economic feasibility &amp; monetizable risk reduction
-              </span>
-            </div>
-
-            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 rotate-90 sm:rotate-0 shrink-0" />
-
-            {/* Stage 2: CEA */}
-            <div className="flex-1 w-full bg-white/20 border border-white/30 rounded-xl p-2 sm:p-3 text-center shadow-sm">
-              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-slate-500 block mb-1">
-                Stage 2
-              </span>
-              <strong className="block text-amber-700 text-lg sm:text-2xl lg:text-3xl font-black">CEA</strong>
-              <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-800 font-sans block mt-1 font-bold">
-                Cost-Effectiveness Analysis
-              </span>
-              <span className="text-xs sm:text-sm text-slate-600 font-sans block mt-0.5">
-                Assessment when benefits cannot be fully monetized
-              </span>
-            </div>
-
-            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 rotate-90 sm:rotate-0 shrink-0" />
-
-            {/* Stage 3: MCA */}
-            <div className="flex-1 w-full bg-sky-50/30 border border-sky-300/40 rounded-xl p-2 sm:p-3 text-center shadow-sm">
-              <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider text-sky-700 block mb-1">
-                Stage 3
-              </span>
-              <strong className="block text-sky-800 text-lg sm:text-2xl lg:text-3xl font-black">MCA</strong>
-              <span className="text-sm sm:text-base lg:text-lg xl:text-xl text-sky-950 font-sans block mt-1 font-bold">
-                Multi-Criteria Appraisal
-              </span>
-              <span className="text-xs sm:text-sm text-sky-800 font-sans block mt-0.5">
-                Multi-dimensional institutional &amp; strategic priorities
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
