@@ -22,8 +22,8 @@ export const Slide8Recovery: React.FC = () => {
         <div className="relative border-2 border-emerald-700 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-4 sm:pt-4 lg:pt-5 bg-emerald-50/25 flex-1 min-h-0 flex flex-col justify-center">
           {/* Phase Header Tag */}
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-700 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-sm sm:text-base lg:text-lg xl:text-lg font-extrabold uppercase tracking-wider leading-tight">Pre-Disaster Phase</div>
-            <div className="text-[9px] sm:text-[10px] text-emerald-100 font-medium leading-none">Preparedness &amp; Mitigation</div>
+            <div className="text-sm sm:text-base lg:text-xl xl:text-2xl font-extrabold uppercase tracking-wider leading-tight">Pre-Disaster Phase</div>
+            <div className="text-xs sm:text-sm lg:text-base text-emerald-100 font-medium leading-tight mt-0.5">Preparedness &amp; Mitigation</div>
           </div>
 
           {/* 3 Sub-Boxes */}
@@ -94,8 +94,8 @@ export const Slide8Recovery: React.FC = () => {
         <div className="relative border-2 border-amber-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-4 sm:pt-4 lg:pt-5 bg-amber-50/25 flex-1 min-h-0 flex flex-col justify-center">
           {/* Phase Header Tag */}
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-sm sm:text-base lg:text-lg xl:text-lg font-extrabold uppercase tracking-wider leading-tight">During Disaster Phase</div>
-            <div className="text-[9px] sm:text-[10px] text-amber-100 font-medium leading-none">Disturbance &amp; Response</div>
+            <div className="text-sm sm:text-base lg:text-xl xl:text-2xl font-extrabold uppercase tracking-wider leading-tight">During Disaster Phase</div>
+            <div className="text-xs sm:text-sm lg:text-base text-amber-100 font-medium leading-tight mt-0.5">Disturbance &amp; Response</div>
           </div>
 
           {/* 3 Sub-Boxes */}
@@ -172,8 +172,8 @@ export const Slide8Recovery: React.FC = () => {
         <div className="relative border-2 border-blue-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-4 sm:pt-4 lg:pt-5 bg-blue-50/25 flex-1 min-h-0 flex flex-col justify-center">
           {/* Phase Header Tag */}
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-sm sm:text-base lg:text-lg xl:text-lg font-extrabold uppercase tracking-wider leading-tight">Post-Disaster Phase</div>
-            <div className="text-[9px] sm:text-[10px] text-blue-100 font-medium leading-none">Recovery &amp; Continuous Improvement</div>
+            <div className="text-sm sm:text-base lg:text-xl xl:text-2xl font-extrabold uppercase tracking-wider leading-tight">Post-Disaster Phase</div>
+            <div className="text-xs sm:text-sm lg:text-base text-blue-100 font-medium leading-tight mt-0.5">Recovery &amp; Continuous Improvement</div>
           </div>
 
           {/* 2 Centered Sub-Boxes */}
@@ -240,10 +240,10 @@ export const Slide8Recovery: React.FC = () => {
           </div>
 
           <div className="text-center px-2 sm:px-3">
-            <div className="text-sm sm:text-base lg:text-lg xl:text-xl font-black tracking-widest uppercase leading-tight">
+            <div className="text-base sm:text-lg lg:text-xl xl:text-2xl font-black tracking-widest uppercase leading-tight">
               The Feedback Loop
             </div>
-            <div className="text-[9px] sm:text-[10px] text-emerald-100 font-medium mt-0.5">
+            <div className="text-xs sm:text-sm lg:text-base text-emerald-100 font-medium mt-1">
               Lessons Learned &amp; Ongoing Monitoring
             </div>
           </div>
