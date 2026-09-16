@@ -58,7 +58,7 @@ export const Slide5NestedNexus: React.FC = () => {
   ];
 
   return (
-    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[1600px] mx-auto">
+    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[100rem] mx-auto">
       {/* Slide Heading */}
       <div className="mb-3 lg:mb-4 shrink-0">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">

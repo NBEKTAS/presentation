@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Slide8Recovery: React.FC = () => {
   return (
-    <div className="w-full h-full flex flex-col max-w-[1600px] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-y-auto">
+    <div className="w-full h-full flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-y-auto">
       {/* Slide Header */}
       <div className="shrink-0 mb-1 sm:mb-2">
         <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -106,7 +106,7 @@ export const Slide8Recovery: React.FC = () => {
                 Seismic Event (Disequilibrium)
               </div>
               <div className="p-2 sm:p-3 flex-1 flex flex-col items-center justify-center">
-                <svg viewBox="0 0 220 50" className="w-full max-w-[280px] h-10 sm:h-12 lg:h-14">
+                <svg viewBox="0 0 220 50" className="w-full max-w-[17.5rem] h-10 sm:h-12 lg:h-14">
                   {/* Jagged Seismograph Wave in Red */}
                   <path
                     d="M 5 25 L 40 25 L 48 16 L 55 35 L 62 6 L 70 44 L 78 12 L 86 36 L 94 22 L 102 28 L 215 25"

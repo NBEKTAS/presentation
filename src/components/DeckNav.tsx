@@ -78,7 +78,7 @@ export const DeckNav: React.FC<DeckNavProps> = ({
             onSelectSlide(Number(e.target.value));
             e.target.blur();
           }}
-          className="h-8 bg-slate-100 text-slate-800 border border-slate-200 px-2.5 rounded-md text-xs font-semibold outline-none cursor-pointer hover:bg-slate-200/70 transition-colors max-w-[190px] sm:max-w-[280px]"
+          className="h-8 bg-slate-100 text-slate-800 border border-slate-200 px-2.5 rounded-md text-xs font-semibold outline-none cursor-pointer hover:bg-slate-200/70 transition-colors max-w-[11.875rem] sm:max-w-[17.5rem]"
         >
           {slides.map((s) => (
             <option key={s.id} value={s.number}>

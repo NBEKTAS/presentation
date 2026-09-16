@@ -81,7 +81,7 @@ export const Slide11Boundaries: React.FC = () => {
   ];
 
   return (
-    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[1850px] mx-auto p-2 sm:p-4 lg:p-5 xl:p-6">
+    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[115.625rem] mx-auto p-2 sm:p-4 lg:p-5 xl:p-6">
       {/* Slide Header */}
       <div className="mb-2 sm:mb-3 lg:mb-4 shrink-0 border-b border-slate-200/80 pb-2 sm:pb-3 xl:pb-4">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black text-slate-900 tracking-tight leading-tight">

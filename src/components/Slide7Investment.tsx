@@ -3,7 +3,7 @@ import { ArrowRight, Shield, Activity, Layers, CheckCircle2 } from 'lucide-react
 
 export const Slide7Investment: React.FC = () => {
   return (
-    <div className="w-full h-full min-h-0 flex flex-col max-w-[1600px] mx-auto p-1 sm:p-3 lg:p-4 justify-between">
+    <div className="w-full h-full min-h-0 flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between">
       {/* Title */}
       <div className="mb-2 sm:mb-3 shrink-0">
         <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">

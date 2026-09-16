@@ -17,6 +17,26 @@
   }
 }
 
+/* Presentation scaling for large screens (above 1536px) */
+@media (min-width: 1536px) and (min-height: 800px) {
+  html {
+    /* Dynamically scale base font size so entire Tailwind UI scales up */
+    font-size: clamp(16px, min(1.05vw, 1.8vh), 32px) !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: clamp(18px, min(1.2vw, 2.1vh), 42px) !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: clamp(24px, min(1.3vw, 2.3vh), 56px) !important;
+  }
+}
+
 /* Leaflet Container Fixes */
 .leaflet-container {
   font-family: inherit;

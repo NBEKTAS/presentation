@@ -120,7 +120,7 @@ export const Slide2SystemicRisk: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full min-h-0 flex flex-col max-w-[1700px] mx-auto p-2 sm:p-4">
+    <div className="w-full h-full min-h-0 flex flex-col max-w-[106.25rem] mx-auto p-2 sm:p-4">
       {/* Title */}
       <div className="mb-2">
         <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
@@ -137,7 +137,7 @@ export const Slide2SystemicRisk: React.FC = () => {
         <div ref={mapContainerRef} className="absolute inset-0 w-full h-full" />
 
         {/* Floating Top Status Badges */}
-        <div className="absolute top-3 left-3 z-[500] flex flex-wrap gap-2 pointer-events-none max-w-[calc(100%-380px)]">
+        <div className="absolute top-3 left-3 z-[500] flex flex-wrap gap-2 pointer-events-none max-w-[calc(100%-23.75rem)]">
           <div className="pointer-events-auto bg-white/95 backdrop-blur-md border border-slate-200/90 px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 shadow-sm flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
             <strong>ESRM20 Regional Seismic Risk</strong>
@@ -157,7 +157,7 @@ export const Slide2SystemicRisk: React.FC = () => {
         </div>
 
         {/* Floating Right Frosted Glass Panel */}
-        <div className="absolute top-3 right-3 z-[500] w-80 sm:w-[350px] max-w-[calc(100%-1.5rem)] max-h-[calc(100%-1.5rem)] bg-white/90 backdrop-blur-md border border-white/80 rounded-2xl p-4 sm:p-5 flex flex-col shadow-xl overflow-y-auto">
+        <div className="absolute top-3 right-3 z-[500] w-80 sm:w-[21.875rem] max-w-[calc(100%-1.5rem)] max-h-[calc(100%-1.5rem)] bg-white/90 backdrop-blur-md border border-white/80 rounded-2xl p-4 sm:p-5 flex flex-col shadow-xl overflow-y-auto">
           <div className="flex items-center justify-between pb-2 border-b border-slate-200 mb-3">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
               <Activity className="w-4 h-4 text-sky-600" />

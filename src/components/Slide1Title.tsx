@@ -3,7 +3,7 @@ import { Mail } from 'lucide-react';
 
 export const Slide1Title: React.FC = () => {
   return (
-    <div className="w-full h-full min-h-0 flex flex-col justify-center items-center max-w-[1400px] mx-auto py-2 px-4 sm:px-8">
+    <div className="w-full h-full min-h-0 flex flex-col justify-center items-center max-w-[87.5rem] mx-auto py-2 px-4 sm:px-8">
       <div className="w-full bg-white rounded-3xl border border-slate-200 p-8 sm:p-14 lg:p-16 shadow-xl relative overflow-hidden flex flex-col justify-center">
         {/* Subtle accent bar */}
         <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-sky-600 via-emerald-600 to-amber-500" />

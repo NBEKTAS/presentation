@@ -40,7 +40,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
   )}`;
 
   return (
-    <div className="relative w-full h-full min-h-0 flex flex-col justify-between max-w-[1700px] mx-auto p-3 sm:p-4 lg:p-5 xl:p-6 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+    <div className="relative w-full h-full min-h-0 flex flex-col justify-between max-w-[106.25rem] mx-auto p-3 sm:p-4 lg:p-5 xl:p-6 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
       {/* University Campus Aerial Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
         <img
