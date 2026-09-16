@@ -18,19 +18,19 @@ export const Slide9Takeaways: React.FC = () => {
       checkColor: 'text-sky-600',
       title: 'From Fragmented Fixes to Systemic Resilience',
       principle:
-        'Synchronizes physical structural safety with municipal lifelines and cross-agency governance.',
+        'Will synchronize physical structural safety with municipal lifelines and cross-agency governance.',
       points: [
         {
           label: 'Lifeline Interdependence',
-          text: 'Couples building safety with lifeline network reliability.',
+          text: 'Will couple building safety with lifeline network reliability.',
         },
         {
           label: 'Multi-Agency Spatial Data',
-          text: 'Unifies agency operations around a shared risk intelligence platform.',
+          text: 'Aims to unify agency operations around a shared risk intelligence platform.',
         },
         {
           label: 'Area-Wide Interventions',
-          text: 'Prioritizes district-scale resilience over single-building interventions.',
+          text: 'Will prioritize district-scale resilience over single-building interventions.',
         },
       ],
     },
@@ -43,19 +43,19 @@ export const Slide9Takeaways: React.FC = () => {
       checkColor: 'text-emerald-600',
       title: 'Sendai-Aligned Continuous Learning Loop',
       principle:
-        'Unifies mitigation, response, and recovery into an unbroken continuum across disaster cycles.',
+        'Will unify mitigation, response, and recovery into an unbroken continuum across disaster cycles.',
       points: [
         {
           label: 'Post-Disaster Forensics',
-          text: 'Translates structural damage diagnostics into updated seismic fragility models.',
+          text: 'Will translate structural damage diagnostics into updated seismic fragility models.',
         },
         {
           label: 'Statutory Build Back Better',
-          text: 'Pre-enacts reconstruction bylaws before seismic events strike.',
+          text: 'Will pre-enact reconstruction bylaws before seismic events strike.',
         },
         {
           label: 'Digital Risk Inventories',
-          text: 'Preserves risk knowledge across changing political administrations.',
+          text: 'Designed to preserve risk knowledge across changing political administrations.',
         },
       ],
     },
@@ -68,7 +68,7 @@ export const Slide9Takeaways: React.FC = () => {
       checkColor: 'text-amber-600',
       title: 'Operational Decision-Support Instruments',
       principle:
-        'Directly translates hazard microzonation and engineering models into municipal capital budgets.',
+        'Will directly translate hazard microzonation and engineering models into municipal capital budgets.',
       points: [
         {
           label: 'Binding Master Plans',
@@ -76,11 +76,11 @@ export const Slide9Takeaways: React.FC = () => {
         },
         {
           label: 'Ex-Ante Risk Reserves',
-          text: 'Directs municipal budgets toward pre-disaster adaptation rather than post-disaster relief.',
+          text: 'Will direct municipal budgets toward pre-disaster adaptation rather than post-disaster relief.',
         },
         {
           label: 'Appraisal Algorithms',
-          text: 'Employs automated appraisal algorithms to prevent subjective prioritization.',
+          text: 'Will employ automated appraisal algorithms to prevent subjective prioritization.',
         },
       ],
     },
@@ -93,7 +93,7 @@ export const Slide9Takeaways: React.FC = () => {
       checkColor: 'text-purple-600',
       title: 'Statutory Mainstreaming & Civic Cohesion',
       principle:
-        'Embeds quantitative risk thresholds into legally binding master plans and community networks.',
+        'Aims to embed quantitative risk thresholds into legally binding master plans and community networks.',
       points: [
         {
           label: 'Binding Master Plans',
@@ -101,11 +101,11 @@ export const Slide9Takeaways: React.FC = () => {
         },
         {
           label: 'Ex-Ante Risk Reserves',
-          text: 'Pre-allocates municipal contingency reserves instead of relying on post-disaster debt.',
+          text: 'Will pre-allocate municipal contingency reserves instead of relying on post-disaster debt.',
         },
         {
           label: 'Grassroots CBDRM Toolkits',
-          text: 'Empowers neighborhood volunteer networks with open-access hazard maps and resources.',
+          text: 'Will empower neighborhood volunteer networks with open-access hazard maps and resources.',
         },
       ],
     },

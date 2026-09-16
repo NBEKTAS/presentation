@@ -12,19 +12,19 @@ export const Slide11Boundaries: React.FC = () => {
       iconBg: 'bg-sky-50 text-sky-700 border-sky-200',
       checkColor: 'text-sky-600',
       intro:
-        'Bridges the divide between technical ground-motion models and municipal capital budgeting.',
+        'Aims to bridge the divide between technical ground-motion models and municipal capital budgeting.',
       points: [
         {
           label: 'Operational 9-Cell Matrix',
-          text: 'Converts ground acceleration into statutory risk registers and CapEx votes.',
+          text: 'Will convert ground acceleration into statutory risk registers and CapEx votes.',
         },
         {
           label: 'Departmental Ownership',
-          text: 'Establishes workflows across water, transport, health, and housing agencies.',
+          text: 'Will establish workflows across water, transport, health, and housing agencies.',
         },
         {
           label: 'Ex-Ante Resourcing',
-          text: 'Shifts municipal policy to institutionalized, pre-allocated resilience budgets.',
+          text: 'Designed to shift municipal policy to institutionalized, pre-allocated resilience budgets.',
         },
       ],
     },
@@ -41,15 +41,15 @@ export const Slide11Boundaries: React.FC = () => {
       points: [
         {
           label: 'Metropolitan Testbed',
-          text: 'Calibrated for İzmir\'s active faults, basin amplification, and concrete housing.',
+          text: 'To be calibrated for İzmir\'s active faults, basin amplification, and concrete housing.',
         },
         {
           label: 'Longitudinal Validation',
-          text: 'Theoretical loss reductions require empirical verification against future events.',
+          text: 'Theoretical loss reductions will require empirical verification against future events.',
         },
         {
           label: 'Fiscal Boundaries',
-          text: 'Velocity is constrained by municipal debt ceilings and sovereign borrowing limits.',
+          text: 'Velocity will be constrained by municipal debt ceilings and sovereign borrowing limits.',
         },
       ],
     },
