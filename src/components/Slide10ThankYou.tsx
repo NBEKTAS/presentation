@@ -46,7 +46,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
         <img
           src={`${import.meta.env.BASE_URL}images/sze_campus_bg.jpg`}
           alt="Széchenyi István University Campus, Győr"
-          className="w-full h-full object-contain object-center opacity-90"
+          className="w-full h-full object-cover object-center opacity-90"
           referrerPolicy="no-referrer"
         />
         {/* Very soft edge gradient to ensure top title readability without dimming the campus photo */}
