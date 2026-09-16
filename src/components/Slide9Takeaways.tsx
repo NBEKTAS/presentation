@@ -162,12 +162,7 @@ export const Slide9Takeaways: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Concise Principle Statement */}
-                  <div className="bg-slate-50 border border-slate-100/90 rounded-xl px-3 @sm:px-3.5 @xl:px-4 py-2 @xl:py-2.5 mb-1">
-                    <p className="text-sm @sm:text-base font-medium text-slate-700 leading-relaxed">
-                      {item.principle}
-                    </p>
-                  </div>
+
                 </div>
 
                 {/* Scannable Bullets - Slide 4 Compact Style */}
