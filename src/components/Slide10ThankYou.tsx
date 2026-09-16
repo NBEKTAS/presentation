@@ -40,7 +40,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
   )}`;
 
   return (
-    <div className="relative w-full h-full min-h-0 flex flex-col justify-between max-w-[106.25rem] mx-auto p-3 sm:p-4 lg:p-5 xl:p-6 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+    <div className="relative w-full h-full min-h-0 flex flex-col justify-between max-w-[106.25rem] mx-auto p-3 @sm:p-4 @lg:p-5 @xl:p-6 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
       {/* University Campus Aerial Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none bg-slate-950">
         <img
@@ -56,12 +56,12 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
       {/* Foreground Content Layer */}
       <div className="relative z-10 flex flex-col justify-between h-full w-full min-h-0">
         {/* Slide Header with crisp white & sky text */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-3 sm:mb-4 shrink-0 border-b border-white/20 pb-2.5 sm:pb-3.5">
+        <div className="flex flex-col @sm:flex-row @sm:items-end justify-between gap-2 mb-3 @sm:mb-4 shrink-0 border-b border-white/20 pb-2.5 @sm:pb-3.5">
           <div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-black text-white tracking-tight leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+            <h1 className="text-2xl @sm:text-3xl @lg:text-4xl @xl:text-[2.75rem] font-black text-white tracking-tight leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
               Thank <span className="text-sky-300">You</span>
             </h1>
-            <p className="text-xs sm:text-sm lg:text-base xl:text-lg text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
+            <p className="text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
               Questions, Discussion &amp; Collaborative Research Opportunities
             </p>
           </div>
@@ -69,7 +69,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
           {onRestart && (
             <button
               onClick={onRestart}
-              className="self-start sm:self-auto inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/30 bg-slate-950/40 hover:bg-slate-950/60 backdrop-blur-sm text-xs sm:text-sm font-bold text-white shadow-lg transition-all cursor-pointer shrink-0"
+              className="self-start @sm:self-auto inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/30 bg-slate-950/40 hover:bg-slate-950/60 backdrop-blur-sm text-xs @sm:text-sm font-bold text-white shadow-lg transition-all cursor-pointer shrink-0"
             >
               <RotateCcw className="w-4 h-4 text-sky-400" />
               <span>Restart Presentation</span>
@@ -78,9 +78,9 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
         </div>
 
         {/* Main Content: Highly Transparent Ultra-Light Glass Columns */}
-        <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 items-stretch">
+        <div className="flex-1 min-h-0 grid grid-cols-1 @lg:grid-cols-12 gap-4 @sm:gap-5 items-stretch">
           {/* Left Column: Presenter Profile & Verified Contacts (6 cols) */}
-          <div className="lg:col-span-6 bg-slate-950/15 hover:bg-slate-950/20 backdrop-blur-[2px] border border-white/30 rounded-2xl p-5 sm:p-6 lg:p-7 shadow-2xl flex flex-col justify-between relative overflow-hidden transition-colors">
+          <div className="@lg:col-span-6 bg-slate-950/15 hover:bg-slate-950/20 backdrop-blur-[2px] border border-white/30 rounded-2xl p-5 @sm:p-6 @lg:p-7 shadow-2xl flex flex-col justify-between relative overflow-hidden transition-colors">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-400 to-emerald-400" />
 
             <div>
@@ -90,19 +90,19 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                   <span className="text-xs font-mono font-black text-sky-200 uppercase tracking-wider bg-sky-950/60 px-3.5 py-1 rounded-full border border-sky-400/50 inline-block shadow-sm">
                     Presenter
                   </span>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.6rem] font-black text-white tracking-tight mt-2.5 leading-tight drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
+                  <h2 className="text-2xl @sm:text-3xl @lg:text-4xl @xl:text-[2.6rem] font-black text-white tracking-tight mt-2.5 leading-tight drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
                     Dr. Nurullah Bektaş
                   </h2>
-                  <div className="text-sm sm:text-base lg:text-lg text-white font-extrabold mt-2 flex items-center gap-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
+                  <div className="text-sm @sm:text-base @lg:text-lg text-white font-extrabold mt-2 flex items-center gap-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
                     <Building2 className="w-4.5 h-4.5 text-sky-300 shrink-0" />
                     <span>Széchenyi István University (SZE), Győr, Hungary</span>
                   </div>
-                  <div className="text-xs sm:text-sm lg:text-base text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                  <div className="text-xs @sm:text-sm @lg:text-base text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
                     Department of Structural Engineering &amp; Geotechnics
                   </div>
                 </div>
 
-                <div className="p-3.5 bg-slate-950/30 rounded-2xl text-sky-300 border border-white/25 shadow-md shrink-0 hidden sm:block">
+                <div className="p-3.5 bg-slate-950/30 rounded-2xl text-sky-300 border border-white/25 shadow-md shrink-0 hidden @sm:block">
                   <GraduationCap className="w-9 h-9 drop-shadow-sm" />
                 </div>
               </div>
@@ -112,7 +112,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                 <div className="flex items-center justify-between bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 p-3.5 rounded-xl transition-colors shadow-md">
                   <a
                     href="mailto:bektas.nurullah@sze.hu"
-                    className="flex items-center gap-3 text-white hover:text-sky-300 truncate font-mono text-xs sm:text-sm lg:text-base font-black tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]"
+                    className="flex items-center gap-3 text-white hover:text-sky-300 truncate font-mono text-xs @sm:text-sm @lg:text-base font-black tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]"
                   >
                     <span className="p-2 bg-sky-500/25 text-sky-200 rounded-lg shrink-0 border border-sky-400/50 shadow-xs">
                       <Mail className="w-4 h-4" />
@@ -141,7 +141,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                 <div className="flex items-center justify-between bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 p-3.5 rounded-xl transition-colors shadow-md">
                   <a
                     href="mailto:info@zevizar.com"
-                    className="flex items-center gap-3 text-white hover:text-emerald-300 truncate font-mono text-xs sm:text-sm lg:text-base font-black tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]"
+                    className="flex items-center gap-3 text-white hover:text-emerald-300 truncate font-mono text-xs @sm:text-sm @lg:text-base font-black tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]"
                   >
                     <span className="p-2 bg-emerald-500/25 text-emerald-200 rounded-lg shrink-0 border border-emerald-400/50 shadow-xs">
                       <Mail className="w-4 h-4" />
@@ -170,7 +170,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
             </div>
 
             {/* Academic Web Portals & Professional Network Links */}
-            <div className="mt-6 pt-4 border-t border-white/20 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+            <div className="mt-6 pt-4 border-t border-white/20 flex flex-wrap items-center justify-between gap-3 text-xs @sm:text-sm">
               <a
                 href="https://zevizar.com"
                 target="_blank"
@@ -207,18 +207,18 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
           </div>
 
           {/* Right Column: SciCentrum & Zevizar DIP QR Showcase (6 cols) */}
-          <div className="lg:col-span-6 bg-slate-950/15 hover:bg-slate-950/20 backdrop-blur-[2px] border border-white/30 rounded-2xl p-5 sm:p-6 lg:p-7 shadow-2xl flex flex-col justify-between relative overflow-hidden transition-colors">
+          <div className="@lg:col-span-6 bg-slate-950/15 hover:bg-slate-950/20 backdrop-blur-[2px] border border-white/30 rounded-2xl p-5 @sm:p-6 @lg:p-7 shadow-2xl flex flex-col justify-between relative overflow-hidden transition-colors">
             <div className="absolute top-0 left-0 right-0 h-1 bg-sky-400" />
 
             {/* Section Header */}
             <div className="mb-4">
               <div className="flex items-center gap-2.5">
                 <QrCode className="w-5 h-5 text-sky-300" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+                <h3 className="text-lg @sm:text-xl @lg:text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                   Digital Platforms &amp; Collaboration
                 </h3>
               </div>
-              <p className="text-xs sm:text-sm text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
+              <p className="text-xs @sm:text-sm text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
                 Scan QR codes to access collaborative research tools and AI disaster intelligence.
               </p>
             </div>
@@ -226,9 +226,9 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
             {/* Dual Large QR Code Modules: SciCentrum & Zevizar DIP */}
             <div className="flex-1 flex flex-col justify-around gap-4 my-1">
               {/* SciCentrum QR Module - Highly Transparent Glass Module */}
-              <div className="flex-1 bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 rounded-2xl p-4 sm:p-4.5 flex flex-row items-center gap-4 sm:gap-5 transition-all shadow-md">
+              <div className="flex-1 bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 rounded-2xl p-4 @sm:p-4.5 flex flex-row items-center gap-4 @sm:gap-5 transition-all shadow-md">
                 {/* QR Box - Pure White Frame for Instant Scanner Recognition */}
-                <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 bg-white p-2.5 rounded-2xl border-2 border-white/90 shadow-2xl flex items-center justify-center shrink-0">
+                <div className="w-28 h-28 @sm:w-32 @sm:h-32 @lg:w-36 @lg:h-36 @xl:w-40 @xl:h-40 bg-white p-2.5 rounded-2xl border-2 border-white/90 shadow-2xl flex items-center justify-center shrink-0">
                   <img
                     src={sciCentrumQrSrc}
                     alt="SciCentrum QR Code"
@@ -245,13 +245,13 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                         Academic Network
                       </span>
                     </div>
-                    <h4 className="text-base sm:text-lg lg:text-xl font-black text-white mt-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+                    <h4 className="text-base @sm:text-lg @lg:text-xl font-black text-white mt-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                       SciCentrum
                     </h4>
-                    <span className="text-xs sm:text-sm font-black text-sky-300 block drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <span className="text-xs @sm:text-sm font-black text-sky-300 block drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
                       Find Your Research Partner
                     </span>
-                    <p className="text-xs sm:text-sm text-slate-100 mt-1.5 line-clamp-2 leading-relaxed font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
+                    <p className="text-xs @sm:text-sm text-slate-100 mt-1.5 line-clamp-2 leading-relaxed font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
                       Connect with peers, discover collaborative studies, and engage in global scholarly forums.
                     </p>
                   </div>
@@ -260,7 +260,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                     href={sciCentrumUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-3 self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs sm:text-sm font-black shadow-md transition-colors"
+                    className="mt-3 self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs @sm:text-sm font-black shadow-md transition-colors"
                   >
                     <span>Visit scicentrum.zevizar.com</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -269,9 +269,9 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
               </div>
 
               {/* Zevizar DIP (Disaster Intelligence Platform) QR Module */}
-              <div className="flex-1 bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 rounded-2xl p-4 sm:p-4.5 flex flex-row items-center gap-4 sm:gap-5 transition-all shadow-md">
+              <div className="flex-1 bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 rounded-2xl p-4 @sm:p-4.5 flex flex-row items-center gap-4 @sm:gap-5 transition-all shadow-md">
                 {/* QR Box - Pure White Frame for Instant Scanner Recognition */}
-                <div className="w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 bg-white p-2.5 rounded-2xl border-2 border-white/90 shadow-2xl flex items-center justify-center shrink-0">
+                <div className="w-28 h-28 @sm:w-32 @sm:h-32 @lg:w-36 @lg:h-36 @xl:w-40 @xl:h-40 bg-white p-2.5 rounded-2xl border-2 border-white/90 shadow-2xl flex items-center justify-center shrink-0">
                   <img
                     src={dipQrSrc}
                     alt="Zevizar DIP QR Code"
@@ -288,13 +288,13 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                         Disaster Intelligence
                       </span>
                     </div>
-                    <h4 className="text-base sm:text-lg lg:text-xl font-black text-white mt-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
+                    <h4 className="text-base @sm:text-lg @lg:text-xl font-black text-white mt-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
                       Zevizar DIP
                     </h4>
-                    <span className="text-xs sm:text-sm font-black text-emerald-300 block drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+                    <span className="text-xs @sm:text-sm font-black text-emerald-300 block drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
                       Decision Support &amp; Telemetry
                     </span>
-                    <p className="text-xs sm:text-sm text-slate-100 mt-1.5 line-clamp-2 leading-relaxed font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
+                    <p className="text-xs @sm:text-sm text-slate-100 mt-1.5 line-clamp-2 leading-relaxed font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
                       100% GDPR-compliant Private AI platform with conversational GIS bridge and proactive simulation.
                     </p>
                   </div>
@@ -303,7 +303,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                     href={dipUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-3 self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs sm:text-sm font-black shadow-md transition-colors"
+                    className="mt-3 self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs @sm:text-sm font-black shadow-md transition-colors"
                   >
                     <span>Launch dip.zevizar.com</span>
                     <ExternalLink className="w-3.5 h-3.5" />

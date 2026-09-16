@@ -2,44 +2,44 @@ import React from 'react';
 
 export const Slide8Recovery: React.FC = () => {
   return (
-    <div className="w-full h-full flex flex-col max-w-[100rem] mx-auto p-1 sm:p-3 lg:p-4 justify-between overflow-hidden">
+    <div className="w-full h-full flex flex-col max-w-[100rem] mx-auto p-1 @sm:p-3 @lg:p-4 justify-between overflow-hidden">
       {/* Slide Header */}
-      <div className="shrink-0 mb-1 sm:mb-2">
-        <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
+      <div className="shrink-0 mb-1 @sm:mb-2">
+        <h1 className="text-xl @sm:text-2xl @lg:text-3xl font-extrabold text-slate-900 tracking-tight">
           Operational Cycle of the Integrated Resilience Framework for İzmir
         </h1>
-        <p className="text-base sm:text-lg lg:text-xl xl:text-xl text-slate-500">
+        <p className="text-base @sm:text-lg @lg:text-xl @xl:text-xl text-slate-500">
           Continuous closed-loop cycle connecting pre-disaster mitigation, event disturbance response, and adaptive recovery.
         </p>
       </div>
 
       {/* Main Diagram Canvas - Proportional flex container filling the slide height */}
-      <div className="flex-1 bg-white rounded-2xl border border-slate-200/90 p-1 sm:p-2 lg:p-3 shadow-xs flex flex-col justify-between overflow-y-auto overflow-x-hidden gap-1 sm:gap-1.5 lg:gap-2 mb-1">
+      <div className="flex-1 bg-white rounded-2xl border border-slate-200/90 p-1 @sm:p-2 @lg:p-3 shadow-xs flex flex-col justify-between overflow-y-auto overflow-x-hidden gap-1 @sm:gap-1.5 @lg:gap-2 mb-1">
         
         {/* ========================================================= */}
         {/* 1. PRE-DISASTER PHASE (GREEN) */}
         {/* ========================================================= */}
-        <div className="relative border-2 border-emerald-700 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-5 sm:pt-6 lg:pt-7 bg-emerald-50/25 flex-1 flex flex-col justify-center">
+        <div className="relative border-2 border-emerald-700 rounded-xl px-1.5 @sm:px-2 @lg:px-2.5 pb-1.5 @sm:pb-2 @lg:pb-2.5 pt-5 @sm:pt-6 @lg:pt-7 bg-emerald-50/25 flex-1 flex flex-col justify-center">
           {/* Phase Header Tag */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-700 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-xs sm:text-sm lg:text-base font-extrabold uppercase tracking-wider leading-tight">Pre-Disaster Phase</div>
-            <div className="text-[10px] sm:text-xs text-emerald-100 font-medium leading-tight mt-0.5">Preparedness &amp; Mitigation</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-700 text-white px-3 @sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
+            <div className="text-xs @sm:text-sm @lg:text-base font-extrabold uppercase tracking-wider leading-tight">Pre-Disaster Phase</div>
+            <div className="text-[10px] @sm:text-xs text-emerald-100 font-medium leading-tight mt-0.5">Preparedness &amp; Mitigation</div>
           </div>
 
           {/* 3 Sub-Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 flex-1 items-stretch">
+          <div className="grid grid-cols-1 @md:grid-cols-3 gap-2 @sm:gap-3 @lg:gap-4 flex-1 items-stretch">
             {/* Box 1 */}
             <div className="border border-emerald-700/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-emerald-700 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-emerald-700 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Risk Identification &amp; Assessment
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
                   <span>Hazard Modeling</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
                   <span>Vulnerability Analysis</span>
                 </div>
               </div>
@@ -47,16 +47,16 @@ export const Slide8Recovery: React.FC = () => {
 
             {/* Box 2 */}
             <div className="border border-emerald-700/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-emerald-700 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-emerald-700 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Risk Prevention &amp; Mitigation
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
                   <span>Structural Retrofitting</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
                   <span>Land-Use Planning</span>
                 </div>
               </div>
@@ -64,16 +64,16 @@ export const Slide8Recovery: React.FC = () => {
 
             {/* Box 3 */}
             <div className="border border-emerald-700/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-emerald-700 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-emerald-700 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Emergency Preparedness
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
                   <span>Early Warning Systems</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-emerald-700 shrink-0" />
                   <span>Response Planning</span>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export const Slide8Recovery: React.FC = () => {
         </div>
 
         {/* Transition Arrow 1: Green -> Orange */}
-        <div className="flex justify-center items-center shrink-0 -my-1 sm:-my-0.5 relative z-20">
+        <div className="flex justify-center items-center shrink-0 -my-1 @sm:-my-0.5 relative z-20">
           <svg width="20" height="12" viewBox="0 0 28 18" fill="none" className="text-emerald-700">
             <path d="M14 18L5 7H10V0H18V7H23L14 18Z" fill="currentColor" />
           </svg>
@@ -91,22 +91,22 @@ export const Slide8Recovery: React.FC = () => {
         {/* ========================================================= */}
         {/* 2. DURING DISASTER PHASE (ORANGE) */}
         {/* ========================================================= */}
-        <div className="relative border-2 border-amber-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-5 sm:pt-6 lg:pt-7 bg-amber-50/25 flex-1 flex flex-col justify-center">
+        <div className="relative border-2 border-amber-600 rounded-xl px-1.5 @sm:px-2 @lg:px-2.5 pb-1.5 @sm:pb-2 @lg:pb-2.5 pt-5 @sm:pt-6 @lg:pt-7 bg-amber-50/25 flex-1 flex flex-col justify-center">
           {/* Phase Header Tag */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-xs sm:text-sm lg:text-base font-extrabold uppercase tracking-wider leading-tight">During Disaster Phase</div>
-            <div className="text-[10px] sm:text-xs text-amber-100 font-medium leading-tight mt-0.5">Disturbance &amp; Response</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white px-3 @sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
+            <div className="text-xs @sm:text-sm @lg:text-base font-extrabold uppercase tracking-wider leading-tight">During Disaster Phase</div>
+            <div className="text-[10px] @sm:text-xs text-amber-100 font-medium leading-tight mt-0.5">Disturbance &amp; Response</div>
           </div>
 
           {/* 3 Sub-Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 flex-1 items-stretch">
+          <div className="grid grid-cols-1 @md:grid-cols-3 gap-2 @sm:gap-3 @lg:gap-4 flex-1 items-stretch">
             {/* Box 1: Seismic Event with wave graphic */}
             <div className="border border-amber-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col relative">
-              <div className="bg-amber-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0 truncate relative z-10">
+              <div className="bg-amber-600 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0 truncate relative z-10">
                 Seismic Event (Disequilibrium)
               </div>
               <div className="flex-1 flex items-center justify-center bg-white p-2 relative z-10">
-                <svg viewBox="0 0 220 50" className="w-full h-full max-h-[40px] sm:max-h-[50px] scale-[1.2]">
+                <svg viewBox="0 0 220 50" className="w-full h-full max-h-[40px] @sm:max-h-[50px] scale-[1.2]">
                   {/* Jagged Seismograph Wave in Red */}
                   <path
                     d="M -10 25 L 40 25 L 48 16 L 55 35 L 62 6 L 70 44 L 78 12 L 86 36 L 94 22 L 102 28 L 230 25"
@@ -125,16 +125,16 @@ export const Slide8Recovery: React.FC = () => {
 
             {/* Box 2 */}
             <div className="border border-amber-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-amber-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-amber-600 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Emergency Response
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
                   <span>Search &amp; Rescue</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
                   <span>Evacuation Operations</span>
                 </div>
               </div>
@@ -142,16 +142,16 @@ export const Slide8Recovery: React.FC = () => {
 
             {/* Box 3 */}
             <div className="border border-amber-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-amber-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-amber-600 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Rapid Damage Assessment
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
                   <span>Damage Evaluation</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-amber-600 shrink-0" />
                   <span>Resource Deployment</span>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export const Slide8Recovery: React.FC = () => {
         </div>
 
         {/* Transition Arrow 2: Orange -> Blue */}
-        <div className="flex justify-center items-center shrink-0 -my-1 sm:-my-0.5 relative z-20">
+        <div className="flex justify-center items-center shrink-0 -my-1 @sm:-my-0.5 relative z-20">
           <svg width="20" height="12" viewBox="0 0 28 18" fill="none" className="text-amber-600">
             <path d="M14 18L5 7H10V0H18V7H23L14 18Z" fill="currentColor" />
           </svg>
@@ -169,27 +169,27 @@ export const Slide8Recovery: React.FC = () => {
         {/* ========================================================= */}
         {/* 3. POST-DISASTER PHASE (BLUE) */}
         {/* ========================================================= */}
-        <div className="relative border-2 border-blue-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-5 sm:pt-6 lg:pt-7 bg-blue-50/25 flex-1 flex flex-col justify-center">
+        <div className="relative border-2 border-blue-600 rounded-xl px-1.5 @sm:px-2 @lg:px-2.5 pb-1.5 @sm:pb-2 @lg:pb-2.5 pt-5 @sm:pt-6 @lg:pt-7 bg-blue-50/25 flex-1 flex flex-col justify-center">
           {/* Phase Header Tag */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-xs sm:text-sm lg:text-base font-extrabold uppercase tracking-wider leading-tight">Post-Disaster Phase</div>
-            <div className="text-[10px] sm:text-xs text-blue-100 font-medium leading-tight mt-0.5">Recovery &amp; Continuous Improvement</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-3 @sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
+            <div className="text-xs @sm:text-sm @lg:text-base font-extrabold uppercase tracking-wider leading-tight">Post-Disaster Phase</div>
+            <div className="text-[10px] @sm:text-xs text-blue-100 font-medium leading-tight mt-0.5">Recovery &amp; Continuous Improvement</div>
           </div>
 
           {/* 2 Centered Sub-Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-4xl mx-auto w-full flex-1 items-stretch">
+          <div className="grid grid-cols-1 @md:grid-cols-2 gap-3 @sm:gap-4 @lg:gap-6 max-w-4xl mx-auto w-full flex-1 items-stretch">
             {/* Box 1 */}
             <div className="border border-blue-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-blue-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-blue-600 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Recovery &amp; Rehabilitation
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
                   <span>Infrastructure Repair</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
                   <span>Community Support</span>
                 </div>
               </div>
@@ -197,16 +197,16 @@ export const Slide8Recovery: React.FC = () => {
 
             {/* Box 2 */}
             <div className="border border-blue-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
-              <div className="bg-blue-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
+              <div className="bg-blue-600 text-white text-sm @sm:text-base @lg:text-lg @xl:text-lg font-bold text-center py-0.5 @sm:py-1 px-1 @sm:px-2 shrink-0">
                 Adaptation &amp; Transformation
               </div>
-              <div className="p-1 sm:p-1.5 lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs sm:text-sm lg:text-base xl:text-lg text-slate-800">
+              <div className="p-1 @sm:p-1.5 @lg:p-2 flex-1 flex flex-col justify-center space-y-0.5 text-xs @sm:text-sm @lg:text-base @xl:text-lg text-slate-800">
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
                   <span>Building Resilience</span>
                 </div>
                 <div className="flex items-center gap-2 font-semibold">
-                  <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
+                  <span className="w-2 h-2 @sm:w-2.5 @sm:h-2.5 rounded-full bg-blue-600 shrink-0" />
                   <span>Urban Renewal</span>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export const Slide8Recovery: React.FC = () => {
         </div>
 
         {/* Transition Arrow 3: Blue -> Feedback Loop */}
-        <div className="flex justify-center items-center shrink-0 -my-1 sm:-my-0.5 relative z-20">
+        <div className="flex justify-center items-center shrink-0 -my-1 @sm:-my-0.5 relative z-20">
           <svg width="20" height="12" viewBox="0 0 28 18" fill="none" className="text-blue-600">
             <path d="M14 18L5 7H10V0H18V7H23L14 18Z" fill="currentColor" />
           </svg>
@@ -224,7 +224,7 @@ export const Slide8Recovery: React.FC = () => {
         {/* ========================================================= */}
         {/* 4. THE FEEDBACK LOOP (GREEN) */}
         {/* ========================================================= */}
-        <div className="max-w-3xl mx-auto w-full bg-emerald-800 text-white rounded-xl py-1 sm:py-1.5 lg:py-2 px-4 sm:px-6 shadow-sm flex items-center justify-between shrink-0">
+        <div className="max-w-3xl mx-auto w-full bg-emerald-800 text-white rounded-xl py-1 @sm:py-1.5 @lg:py-2 px-4 @sm:px-6 shadow-sm flex items-center justify-between shrink-0">
           {/* Left Loop Arrow */}
           <div className="flex items-center">
             <svg width="34" height="26" viewBox="0 0 32 24" fill="none" className="text-emerald-200">
@@ -239,11 +239,11 @@ export const Slide8Recovery: React.FC = () => {
             </svg>
           </div>
 
-          <div className="text-center px-2 sm:px-3">
-            <div className="text-sm sm:text-base lg:text-lg font-black tracking-widest uppercase leading-tight">
+          <div className="text-center px-2 @sm:px-3">
+            <div className="text-sm @sm:text-base @lg:text-lg font-black tracking-widest uppercase leading-tight">
               The Feedback Loop
             </div>
-            <div className="text-[10px] sm:text-xs lg:text-sm text-emerald-100 font-medium mt-0.5">
+            <div className="text-[10px] @sm:text-xs @lg:text-sm text-emerald-100 font-medium mt-0.5">
               Lessons Learned &amp; Ongoing Monitoring
             </div>
           </div>
@@ -266,7 +266,7 @@ export const Slide8Recovery: React.FC = () => {
       </div>
 
       {/* Manuscript Academic Caption */}
-      <div className="mt-1 sm:mt-1.5 text-center text-xs sm:text-sm text-slate-600 shrink-0">
+      <div className="mt-1 @sm:mt-1.5 text-center text-xs @sm:text-sm text-slate-600 shrink-0">
         <span className="font-bold text-slate-800">Figure 3.</span> Operational Cycle of the Integrated Resilience Framework for İzmir, illustrating the continuous feedback loop among the four core components.
       </div>
     </div>

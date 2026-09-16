@@ -20,7 +20,7 @@ export const SlideOverviewModal: React.FC<SlideOverviewModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[2000] bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[2000] bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 @sm:p-6 animate-in fade-in duration-200">
       <div className="bg-white rounded-2xl border border-slate-200 max-w-4xl w-full max-h-[88vh] flex flex-col shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
@@ -37,7 +37,7 @@ export const SlideOverviewModal: React.FC<SlideOverviewModalProps> = ({
         </div>
 
         {/* Slide Grid */}
-        <div className="p-6 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="p-6 overflow-y-auto grid grid-cols-1 @sm:grid-cols-2 @md:grid-cols-3 @lg:grid-cols-4 gap-4">
           {slides.map((s) => {
             const isActive = s.number === currentSlide;
             return (

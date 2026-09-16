@@ -387,13 +387,13 @@ export const Slide3IzmirFocus: React.FC = () => {
   }, [gemFaults, showFaults]);
 
   return (
-    <div className="w-full h-full min-h-0 flex flex-col max-w-[106.25rem] mx-auto p-2 sm:p-4">
+    <div className="w-full h-full min-h-0 flex flex-col max-w-[106.25rem] mx-auto p-2 @sm:p-4">
       {/* Title */}
       <div className="mb-2">
-        <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+        <h1 className="text-xl @sm:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
           İzmir motivates a <span className="text-sky-600">city-scale</span> approach
         </h1>
-        <p className="text-xs sm:text-sm text-slate-500">
+        <p className="text-xs @sm:text-sm text-slate-500">
           Regional active fault network (GEM) & metropolitan exposure: soft basin amplification, 17 active faults, and critical lifeline assets.
         </p>
       </div>
@@ -419,7 +419,7 @@ export const Slide3IzmirFocus: React.FC = () => {
         </div>
 
         {/* Floating Right Frosted Glass Sidebar */}
-        <div className="absolute top-3 right-3 z-[500] w-80 sm:w-[21.875rem] max-w-[calc(100%-1.5rem)] max-h-[calc(100%-1.5rem)] bg-white/90 backdrop-blur-md border border-white/80 rounded-2xl p-4 sm:p-5 flex flex-col shadow-xl overflow-y-auto">
+        <div className="absolute top-3 right-3 z-[500] w-80 @sm:w-[21.875rem] max-w-[calc(100%-1.5rem)] max-h-[calc(100%-1.5rem)] bg-white/90 backdrop-blur-md border border-white/80 rounded-2xl p-4 @sm:p-5 flex flex-col shadow-xl overflow-y-auto">
           <div className="flex items-center justify-between pb-2 border-b border-slate-200 mb-3">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
               <Building className="w-4 h-4 text-sky-600" />
@@ -650,7 +650,7 @@ export const Slide3IzmirFocus: React.FC = () => {
 
         {/* Selected GEM Fault Callout Modal */}
         {selectedGemFault && (
-          <div className="absolute bottom-16 right-3 sm:right-[370px] z-[500] max-w-sm bg-white/95 backdrop-blur-md border border-rose-200 p-4 rounded-xl shadow-xl text-xs animate-in fade-in">
+          <div className="absolute bottom-16 right-3 @sm:right-[370px] z-[500] max-w-sm bg-white/95 backdrop-blur-md border border-rose-200 p-4 rounded-xl shadow-xl text-xs animate-in fade-in">
             <div className="flex items-center justify-between font-bold text-slate-900 mb-1.5">
               <span className="flex items-center gap-1.5 text-rose-700">
                 <Database className="w-4 h-4 text-rose-600" />
@@ -717,7 +717,7 @@ export const Slide3IzmirFocus: React.FC = () => {
 
         {/* Selected Earthquake Callout Modal */}
         {selectedQuake && (
-          <div className="absolute bottom-16 right-3 sm:right-[370px] z-[500] max-w-sm bg-white/98 backdrop-blur-md border border-rose-200 p-4 rounded-xl shadow-2xl text-xs animate-in fade-in">
+          <div className="absolute bottom-16 right-3 @sm:right-[370px] z-[500] max-w-sm bg-white/98 backdrop-blur-md border border-rose-200 p-4 rounded-xl shadow-2xl text-xs animate-in fade-in">
             <div className="flex items-center justify-between font-bold text-slate-900 mb-2">
               <div className="flex items-center gap-2">
                 <span className="px-1.5 py-0.5 rounded font-mono font-bold text-[10px] bg-rose-600 text-white">
