@@ -14,20 +14,20 @@ export const Slide8Recovery: React.FC = () => {
       </div>
 
       {/* Main Diagram Canvas - Proportional flex container filling the slide height */}
-      <div className="flex-1 min-h-0 bg-white rounded-2xl border border-slate-200/90 p-1 sm:p-2 lg:p-3 shadow-xs flex flex-col justify-between overflow-hidden gap-1 sm:gap-1.5 lg:gap-2 mb-1">
+      <div className="flex-1 bg-white rounded-2xl border border-slate-200/90 p-1 sm:p-2 lg:p-3 shadow-xs flex flex-col justify-between overflow-y-auto overflow-x-hidden gap-1 sm:gap-1.5 lg:gap-2 mb-1">
         
         {/* ========================================================= */}
         {/* 1. PRE-DISASTER PHASE (GREEN) */}
         {/* ========================================================= */}
-        <div className="relative border-2 border-emerald-700 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-4 sm:pt-4 lg:pt-5 bg-emerald-50/25 flex-1 min-h-0 flex flex-col justify-center">
+        <div className="relative border-2 border-emerald-700 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-5 sm:pt-6 lg:pt-7 bg-emerald-50/25 flex-1 flex flex-col justify-center">
           {/* Phase Header Tag */}
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-700 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-sm sm:text-base lg:text-xl xl:text-2xl font-extrabold uppercase tracking-wider leading-tight">Pre-Disaster Phase</div>
-            <div className="text-xs sm:text-sm lg:text-base text-emerald-100 font-medium leading-tight mt-0.5">Preparedness &amp; Mitigation</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-700 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
+            <div className="text-xs sm:text-sm lg:text-base font-extrabold uppercase tracking-wider leading-tight">Pre-Disaster Phase</div>
+            <div className="text-[10px] sm:text-xs text-emerald-100 font-medium leading-tight mt-0.5">Preparedness &amp; Mitigation</div>
           </div>
 
           {/* 3 Sub-Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 mt-0.5 sm:mt-1 flex-1 min-h-0 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 flex-1 items-stretch">
             {/* Box 1 */}
             <div className="border border-emerald-700/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
               <div className="bg-emerald-700 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
@@ -91,15 +91,15 @@ export const Slide8Recovery: React.FC = () => {
         {/* ========================================================= */}
         {/* 2. DURING DISASTER PHASE (ORANGE) */}
         {/* ========================================================= */}
-        <div className="relative border-2 border-amber-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-4 sm:pt-4 lg:pt-5 bg-amber-50/25 flex-1 min-h-0 flex flex-col justify-center">
+        <div className="relative border-2 border-amber-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-5 sm:pt-6 lg:pt-7 bg-amber-50/25 flex-1 flex flex-col justify-center">
           {/* Phase Header Tag */}
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-sm sm:text-base lg:text-xl xl:text-2xl font-extrabold uppercase tracking-wider leading-tight">During Disaster Phase</div>
-            <div className="text-xs sm:text-sm lg:text-base text-amber-100 font-medium leading-tight mt-0.5">Disturbance &amp; Response</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
+            <div className="text-xs sm:text-sm lg:text-base font-extrabold uppercase tracking-wider leading-tight">During Disaster Phase</div>
+            <div className="text-[10px] sm:text-xs text-amber-100 font-medium leading-tight mt-0.5">Disturbance &amp; Response</div>
           </div>
 
           {/* 3 Sub-Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 mt-0.5 sm:mt-1 flex-1 min-h-0 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 lg:gap-4 flex-1 items-stretch">
             {/* Box 1: Seismic Event with wave graphic */}
             <div className="border border-amber-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col relative">
               <div className="bg-amber-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0 truncate relative z-10">
@@ -169,15 +169,15 @@ export const Slide8Recovery: React.FC = () => {
         {/* ========================================================= */}
         {/* 3. POST-DISASTER PHASE (BLUE) */}
         {/* ========================================================= */}
-        <div className="relative border-2 border-blue-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-4 sm:pt-4 lg:pt-5 bg-blue-50/25 flex-1 min-h-0 flex flex-col justify-center">
+        <div className="relative border-2 border-blue-600 rounded-xl px-1.5 sm:px-2 lg:px-2.5 pb-1.5 sm:pb-2 lg:pb-2.5 pt-5 sm:pt-6 lg:pt-7 bg-blue-50/25 flex-1 flex flex-col justify-center">
           {/* Phase Header Tag */}
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
-            <div className="text-sm sm:text-base lg:text-xl xl:text-2xl font-extrabold uppercase tracking-wider leading-tight">Post-Disaster Phase</div>
-            <div className="text-xs sm:text-sm lg:text-base text-blue-100 font-medium leading-tight mt-0.5">Recovery &amp; Continuous Improvement</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-3 sm:px-4 py-0.5 rounded-md shadow-xs text-center whitespace-nowrap">
+            <div className="text-xs sm:text-sm lg:text-base font-extrabold uppercase tracking-wider leading-tight">Post-Disaster Phase</div>
+            <div className="text-[10px] sm:text-xs text-blue-100 font-medium leading-tight mt-0.5">Recovery &amp; Continuous Improvement</div>
           </div>
 
           {/* 2 Centered Sub-Boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-4xl mx-auto w-full mt-0.5 sm:mt-1 flex-1 min-h-0 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-6 max-w-4xl mx-auto w-full flex-1 items-stretch">
             {/* Box 1 */}
             <div className="border border-blue-600/80 rounded-lg bg-white overflow-hidden shadow-2xs flex flex-col">
               <div className="bg-blue-600 text-white text-sm sm:text-base lg:text-lg xl:text-lg font-bold text-center py-0.5 sm:py-1 px-1 sm:px-2 shrink-0">
@@ -240,10 +240,10 @@ export const Slide8Recovery: React.FC = () => {
           </div>
 
           <div className="text-center px-2 sm:px-3">
-            <div className="text-base sm:text-lg lg:text-xl xl:text-2xl font-black tracking-widest uppercase leading-tight">
+            <div className="text-sm sm:text-base lg:text-lg font-black tracking-widest uppercase leading-tight">
               The Feedback Loop
             </div>
-            <div className="text-xs sm:text-sm lg:text-base text-emerald-100 font-medium mt-1">
+            <div className="text-[10px] sm:text-xs lg:text-sm text-emerald-100 font-medium mt-0.5">
               Lessons Learned &amp; Ongoing Monitoring
             </div>
           </div>
