@@ -1,4 +1,9 @@
+node_modules/
+build/
+dist/
+coverage/
 .DS_Store
-.freebuff/
-~$*
 *.log
+.env*
+!.env.example
+.app_pid

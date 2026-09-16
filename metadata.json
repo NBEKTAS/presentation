@@ -1,0 +1,8 @@
+{
+  "name": "Remix City-Scale Earthquake Risk Management Framework",
+  "description": "Interactive presentation deck and city-scale earthquake risk management platform for urban resilience, featuring seismotectonic cartography, ESRM20 regional hazard models, Sendai cycle architecture, and municipal operational toolkits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
