@@ -153,10 +153,10 @@ export const Slide9Takeaways: React.FC = () => {
                       <Icon className="w-5 h-5 @sm:w-6 @sm:h-6 @xl:w-7 @xl:h-7" />
                     </span>
                     <div className="min-w-0">
-                      <span className="text-[11px] @sm:text-xs @xl:text-sm font-mono font-bold text-slate-400 uppercase tracking-wider block mb-0.5">
+                      <span className="text-[10px] @sm:text-[11px] @xl:text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-0.5">
                         Pillar {item.number} · {item.category}
                       </span>
-                      <h2 className="text-lg @sm:text-xl @lg:text-2xl font-black text-slate-900 leading-snug tracking-tight">
+                      <h2 className="text-base @sm:text-lg @lg:text-xl font-black text-slate-900 leading-snug tracking-tight">
                         {item.title}
                       </h2>
                     </div>
@@ -166,10 +166,10 @@ export const Slide9Takeaways: React.FC = () => {
                 </div>
 
                 {/* Scannable Bullets - Slide 4 Compact Style */}
-                <ul className="flex-1 flex flex-col justify-evenly py-1 gap-1.5 @xl:gap-2 text-sm @sm:text-base @lg:text-lg text-slate-700">
+                <ul className="flex-1 flex flex-col justify-evenly py-1 gap-1.5 @xl:gap-2 text-xs @sm:text-sm @lg:text-[15px] text-slate-700">
                   {item.points.map((pt, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2.5 @lg:gap-3">
-                      <span className={`w-2 h-2 @lg:w-2.5 @lg:h-2.5 rounded-full mt-1.5 @lg:mt-2 shrink-0 ${
+                    <li key={pIdx} className="flex items-start gap-2.5">
+                      <span className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${
                         item.theme === 'sky' ? 'bg-sky-500' :
                         item.theme === 'emerald' ? 'bg-emerald-500' :
                         item.theme === 'amber' ? 'bg-amber-500' : 'bg-purple-500'
