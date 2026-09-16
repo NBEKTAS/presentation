@@ -44,7 +44,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
       {/* University Campus Aerial Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
         <img
-          src="/images/sze_campus_bg.jpg"
+          src={`${import.meta.env.BASE_URL}images/sze_campus_bg.jpg`}
           alt="Széchenyi István University Campus, Győr"
           className="w-full h-full object-cover object-center"
           referrerPolicy="no-referrer"
