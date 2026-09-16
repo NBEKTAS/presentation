@@ -9,9 +9,9 @@ export const Slide7Investment: React.FC = () => {
         <img
           src={`${import.meta.env.BASE_URL}images/izmir_skyline.png`}
           alt="İzmir Skyline"
-          className="w-full h-full object-cover object-center opacity-40"
+          className="w-full h-full object-cover object-center opacity-50"
         />
-        <div className="absolute inset-0 bg-slate-50/70 backdrop-blur-[2px] pointer-events-none" />
+        <div className="absolute inset-0 bg-white/40 pointer-events-none" />
       </div>
 
       {/* Source Link */}
