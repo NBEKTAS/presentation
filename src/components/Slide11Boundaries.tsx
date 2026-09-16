@@ -119,7 +119,7 @@ export const Slide11Boundaries: React.FC = () => {
 
                   {/* Concise Overview Statement */}
                   <div className="bg-slate-50 border border-slate-100/90 rounded-xl px-3 @sm:px-3.5 @xl:px-4 py-2 @xl:py-2.5">
-                    <p className="text-sm @sm:text-base @lg:text-lg font-medium text-slate-700 leading-relaxed">
+                    <p className="text-xs @sm:text-sm @lg:text-base font-medium text-slate-700 leading-relaxed">
                       {pillar.intro}
                     </p>
                   </div>
@@ -130,12 +130,12 @@ export const Slide11Boundaries: React.FC = () => {
                   {pillar.points.map((pt, pIdx) => (
                     <div
                       key={pIdx}
-                      className="bg-slate-50/70 hover:bg-slate-50 border border-slate-100/90 rounded-xl p-3 @sm:p-3.5 @xl:p-4.5 transition-colors flex items-start gap-2.5 @sm:gap-3"
+                      className="bg-slate-50/70 hover:bg-slate-50 border border-slate-100/90 rounded-xl p-2.5 @sm:p-3 @xl:p-3.5 transition-colors flex items-start gap-2.5 @sm:gap-3"
                     >
                       <CheckCircle2
-                        className={`w-4 h-4 @sm:w-4.5 @sm:h-4.5 @xl:w-5 @xl:h-5 mt-0.5 @xl:mt-1 shrink-0 ${pillar.checkColor}`}
+                        className={`w-4 h-4 @sm:w-4.5 @sm:h-4.5 @xl:w-5 @xl:h-5 mt-0.5 shrink-0 ${pillar.checkColor}`}
                       />
-                      <div className="text-sm @sm:text-base @lg:text-lg text-slate-700 leading-relaxed">
+                      <div className="text-xs @sm:text-sm @lg:text-base text-slate-700 leading-relaxed">
                         <strong className="font-bold text-slate-950 block mb-0.5">
                           {pt.label}
                         </strong>
