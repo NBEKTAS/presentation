@@ -117,7 +117,12 @@ export const Slide11Boundaries: React.FC = () => {
                     </div>
                   </div>
 
-
+                  {/* Concise Overview Statement */}
+                  <div className="bg-slate-50 border border-slate-100/90 rounded-xl px-3 @sm:px-3.5 @xl:px-4 py-2 @xl:py-2.5">
+                    <p className="text-sm @sm:text-base @lg:text-lg font-medium text-slate-700 leading-relaxed">
+                      {pillar.intro}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Scannable Bullets Proportionally Distributed on Full Screen */}
@@ -130,10 +135,11 @@ export const Slide11Boundaries: React.FC = () => {
                       <CheckCircle2
                         className={`w-4 h-4 @sm:w-4.5 @sm:h-4.5 @xl:w-5 @xl:h-5 mt-0.5 @xl:mt-1 shrink-0 ${pillar.checkColor}`}
                       />
-                      <div className="text-sm @sm:text-base @lg:text-lg text-slate-700 leading-relaxed flex items-center h-full">
-                        <strong className="font-bold text-slate-950 text-lg @sm:text-xl @lg:text-2xl">
+                      <div className="text-sm @sm:text-base @lg:text-lg text-slate-700 leading-relaxed">
+                        <strong className="font-bold text-slate-950 block mb-0.5">
                           {pt.label}
                         </strong>
+                        <span>{pt.text}</span>
                       </div>
                     </div>
                   ))}
