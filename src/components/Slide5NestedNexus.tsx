@@ -58,7 +58,7 @@ export const Slide5NestedNexus: React.FC = () => {
   ];
 
   return (
-    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[100rem] mx-auto">
+    <div className="w-full h-full min-h-0 flex flex-col justify-between max-w-[100rem] mx-auto overflow-hidden">
       {/* Slide Heading */}
       <div className="mb-3 lg:mb-4 shrink-0">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -70,7 +70,7 @@ export const Slide5NestedNexus: React.FC = () => {
       </div>
 
       {/* Main Presentation Card */}
-      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center overflow-hidden">
+      <div className="flex-1 min-h-0 w-full bg-white rounded-2xl border border-slate-200 p-2 sm:p-4 lg:p-6 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-center overflow-hidden">
         {/* Left Column: Concentric Circles Diagram (5 cols) */}
         <div className="lg:col-span-5 h-full flex flex-col items-center justify-center p-2">
           <svg viewBox="0 0 520 480" className="w-full h-full max-h-[440px] xl:max-h-[540px] overflow-visible">
@@ -214,24 +214,24 @@ export const Slide5NestedNexus: React.FC = () => {
         </div>
 
         {/* Right Column: The 4 Structural Tiers (7 cols) */}
-        <div className="lg:col-span-7 h-full flex flex-col justify-between gap-3 lg:gap-4 py-1">
+        <div className="lg:col-span-7 h-full flex flex-col justify-between gap-2 lg:gap-3 py-1 overflow-hidden">
           {tiers.map((tier) => (
             <div
               key={tier.id}
-              className={`flex-1 p-3.5 sm:p-4 lg:p-5 rounded-xl border ${tier.color} shadow-2xs flex flex-col justify-center`}
+              className={`flex-1 min-h-0 p-2.5 sm:p-3 lg:p-4 rounded-xl border ${tier.color} shadow-2xs flex flex-col justify-center overflow-hidden`}
             >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2.5">
+              <div className="flex items-center justify-between mb-1.5">
+                <div className="flex items-center gap-2">
                   <tier.icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-800 shrink-0" />
-                  <h3 className="font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-900">
+                  <h3 className="font-bold text-sm sm:text-base lg:text-lg xl:text-xl text-slate-900 truncate">
                     {tier.name}
                   </h3>
                 </div>
-                <span className={`text-xs sm:text-sm lg:text-base xl:text-lg px-2.5 py-0.5 rounded-full font-bold ${tier.tagColor}`}>
+                <span className={`text-[10px] sm:text-xs lg:text-sm xl:text-base px-2 py-0.5 rounded-full font-bold whitespace-nowrap overflow-hidden text-ellipsis ml-2 ${tier.tagColor}`}>
                   {tier.role}
                 </span>
               </div>
-              <ul className="space-y-1 sm:space-y-1.5 text-base sm:text-lg lg:text-xl xl:text-2xl xl:text-xl text-slate-700">
+              <ul className="space-y-0.5 sm:space-y-1 text-sm sm:text-base lg:text-lg xl:text-xl text-slate-700 min-h-0 overflow-hidden">
                 {tier.points.map((pt, pIdx) => (
                   <li key={pIdx} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0 mt-1.5" />
