@@ -12,6 +12,8 @@ import {
   Linkedin,
   Network,
   Cpu,
+  BookOpen,
+  User,
 } from 'lucide-react';
 
 interface Slide10ThankYouProps {
@@ -27,17 +29,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
     setTimeout(() => setCopiedEmail(null), 2000);
   };
 
-  // QR Code URLs for SciCentrum and Zevizar DIP
-  const sciCentrumUrl = 'https://scicentrum.zevizar.com/';
-  const dipUrl = 'https://dip.zevizar.com/';
   const linkedInUrl = 'https://www.linkedin.com/in/nurullahbektas/';
-
-  const sciCentrumQrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=360x360&margin=6&data=${encodeURIComponent(
-    sciCentrumUrl
-  )}`;
-  const dipQrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=360x360&margin=6&data=${encodeURIComponent(
-    dipUrl
-  )}`;
 
   return (
     <div className="relative w-full h-full min-h-0 flex flex-col justify-between max-w-[106.25rem] mx-auto p-3 @sm:p-4 @lg:p-5 @xl:p-6 rounded-2xl overflow-hidden shadow-2xl border border-white/20">
@@ -100,6 +92,11 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                   <div className="text-xs @sm:text-sm @lg:text-base text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
                     Department of Structural Engineering &amp; Geotechnics
                   </div>
+                  <div className="mt-4 text-sm @sm:text-base text-slate-200 leading-relaxed font-bold drop-shadow-md">
+                    <p>
+                      Researcher specializing in systemic risk, structural engineering, disaster resilience, and technology. Focused on developing quantitative frameworks and digital platforms for mitigating risks in critical infrastructure.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="p-3.5 bg-slate-950/30 rounded-2xl text-sky-300 border border-white/25 shadow-md shrink-0 hidden @sm:block">
@@ -138,61 +135,12 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                   </button>
                 </div>
 
-                <div className="flex items-center justify-between bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 p-3.5 rounded-xl transition-colors shadow-md">
-                  <a
-                    href="mailto:info@zevizar.com"
-                    className="flex items-center gap-3 text-white hover:text-emerald-300 truncate font-mono text-xs @sm:text-sm @lg:text-base font-black tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]"
-                  >
-                    <span className="p-2 bg-emerald-500/25 text-emerald-200 rounded-lg shrink-0 border border-emerald-400/50 shadow-xs">
-                      <Mail className="w-4 h-4" />
-                    </span>
-                    <span className="truncate">info@zevizar.com</span>
-                  </a>
-                  <button
-                    onClick={() => copyToClipboard('info@zevizar.com', 'zevizar')}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/15 hover:bg-white/25 border border-white/30 text-xs font-bold text-white shadow-sm cursor-pointer shrink-0 ml-2 transition-colors"
-                    title="Copy Email"
-                  >
-                    {copiedEmail === 'zevizar' ? (
-                      <>
-                        <Check className="w-3.5 h-3.5 text-emerald-300" />
-                        <span className="text-emerald-200 font-extrabold">Copied</span>
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-3.5 h-3.5 text-slate-100" />
-                        <span>Copy</span>
-                      </>
-                    )}
-                  </button>
-                </div>
+
               </div>
             </div>
 
             {/* Academic Web Portals & Professional Network Links */}
-            <div className="mt-6 pt-4 border-t border-white/20 flex flex-wrap items-center justify-between gap-3 text-xs @sm:text-sm">
-              <a
-                href="https://zevizar.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 font-bold text-white hover:text-sky-300 bg-slate-950/25 hover:bg-slate-950/45 px-3.5 py-2 rounded-xl border border-white/25 shadow-sm transition-colors drop-shadow-sm"
-              >
-                <Globe className="w-4 h-4 text-sky-400" />
-                <span>zevizar.com</span>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
-              </a>
-
-              <a
-                href="https://cdrn.zevizar.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 font-bold text-white hover:text-emerald-300 bg-slate-950/25 hover:bg-slate-950/45 px-3.5 py-2 rounded-xl border border-white/25 shadow-sm transition-colors drop-shadow-sm"
-              >
-                <Globe className="w-4 h-4 text-emerald-400" />
-                <span>cdrn.zevizar.com</span>
-                <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
-              </a>
-
+            <div className="mt-6 pt-4 border-t border-white/20 flex flex-wrap items-center justify-start gap-3 text-xs @sm:text-sm">
               <a
                 href={linkedInUrl}
                 target="_blank"
@@ -203,119 +151,102 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                 <span>LinkedIn</span>
                 <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
               </a>
+
+              <a
+                href="https://scholar.google.com/citations?user=8wdUpBsAAAAJ&hl=en"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-white hover:text-sky-300 bg-slate-950/25 hover:bg-slate-950/45 px-3.5 py-2 rounded-xl border border-white/25 shadow-sm transition-colors drop-shadow-sm"
+              >
+                <BookOpen className="w-4 h-4 text-sky-400" />
+                <span>Google Scholar</span>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
+              </a>
+
+              <a
+                href="https://www.researchgate.net/profile/Nurullah-Bektas?ev=hdr_xprf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-white hover:text-sky-300 bg-slate-950/25 hover:bg-slate-950/45 px-3.5 py-2 rounded-xl border border-white/25 shadow-sm transition-colors drop-shadow-sm"
+              >
+                <Network className="w-4 h-4 text-sky-400" />
+                <span>ResearchGate</span>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
+              </a>
+
+              <a
+                href="https://scicentrum.zevizar.com/profile/nurullah-bektas"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-white hover:text-sky-300 bg-slate-950/25 hover:bg-slate-950/45 px-3.5 py-2 rounded-xl border border-white/25 shadow-sm transition-colors drop-shadow-sm"
+              >
+                <User className="w-4 h-4 text-sky-400" />
+                <span>SciCentrum Profile</span>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-300" />
+              </a>
             </div>
           </div>
 
-          {/* Right Column: SciCentrum & Zevizar DIP QR Showcase (6 cols) */}
-          <div className="@lg:col-span-6 bg-slate-950/15 hover:bg-slate-950/20 backdrop-blur-[2px] border border-white/30 rounded-2xl p-5 @sm:p-6 @lg:p-7 shadow-2xl flex flex-col justify-between relative overflow-hidden transition-colors">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-sky-400" />
-
-            {/* Section Header */}
-            <div className="mb-4">
+          {/* Right Column: Independent Initiatives (Zevizar Ecosystem) */}
+          <div className="@lg:col-span-6 bg-slate-900/40 hover:bg-slate-900/50 backdrop-blur-md border border-emerald-500/30 rounded-2xl p-5 @sm:p-6 @lg:p-7 shadow-2xl flex flex-col relative overflow-hidden transition-colors">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-teal-400" />
+            
+            <div className="mb-6">
               <div className="flex items-center gap-2.5">
-                <QrCode className="w-5 h-5 text-sky-300" />
-                <h3 className="text-lg @sm:text-xl @lg:text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
-                  Digital Platforms &amp; Collaboration
+                <Globe className="w-5 h-5 text-emerald-400" />
+                <h3 className="text-xl @sm:text-2xl font-black text-white drop-shadow-md">
+                  Dr. Bektaş's Involvements
                 </h3>
               </div>
-              <p className="text-xs @sm:text-sm text-slate-100 font-bold mt-1 drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
-                Scan QR codes to access collaborative research tools and AI disaster intelligence.
+              <p className="text-sm text-slate-200 font-bold mt-1.5 drop-shadow-sm">
+                Explore the Zevizar ecosystem and other collaborative platforms I am involved in.
               </p>
             </div>
 
-            {/* Dual Large QR Code Modules: SciCentrum & Zevizar DIP */}
-            <div className="flex-1 flex flex-col justify-around gap-4 my-1">
-              {/* SciCentrum QR Module - Highly Transparent Glass Module */}
-              <div className="flex-1 bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 rounded-2xl p-4 @sm:p-4.5 flex flex-row items-center gap-4 @sm:gap-5 transition-all shadow-md">
-                {/* QR Box - Pure White Frame for Instant Scanner Recognition */}
-                <div className="w-28 h-28 @sm:w-32 @sm:h-32 @lg:w-36 @lg:h-36 @xl:w-40 @xl:h-40 bg-white p-2.5 rounded-2xl border-2 border-white/90 shadow-2xl flex items-center justify-center shrink-0">
-                  <img
-                    src={sciCentrumQrSrc}
-                    alt="SciCentrum QR Code"
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
+            <ol className="flex flex-col gap-4 list-decimal list-inside text-emerald-400 font-black space-y-1 overflow-y-auto pr-2 custom-scrollbar">
+              <li className="bg-slate-950/30 p-4 rounded-xl border border-white/10 hover:border-emerald-400/50 transition-colors shadow-md">
+                <a href="https://zevizar.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-base @sm:text-lg text-emerald-300 hover:text-emerald-100">
+                  <span className="underline decoration-emerald-500/50 underline-offset-4">Zevizar Core</span>
+                  <ExternalLink className="w-4 h-4 text-emerald-500" />
+                </a>
+                <p className="text-xs @sm:text-sm text-slate-300 mt-2 pl-6 font-bold leading-relaxed">
+                  The primary organization driving resilient technology, disaster intelligence, and advanced structural solutions.
+                </p>
+              </li>
 
-                <div className="flex flex-col justify-between flex-1 min-w-0">
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <Network className="w-3.5 h-3.5 text-sky-300" />
-                      <span className="text-[11px] font-mono font-black text-sky-200 uppercase tracking-wider bg-sky-950/60 px-2.5 py-0.5 rounded border border-sky-400/50 shadow-xs">
-                        Academic Network
-                      </span>
-                    </div>
-                    <h4 className="text-base @sm:text-lg @lg:text-xl font-black text-white mt-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
-                      SciCentrum
-                    </h4>
-                    <span className="text-xs @sm:text-sm font-black text-sky-300 block drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
-                      Find Your Research Partner
-                    </span>
-                    <p className="text-xs @sm:text-sm text-slate-100 mt-1.5 line-clamp-2 leading-relaxed font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
-                      Connect with peers, discover collaborative studies, and engage in global scholarly forums.
-                    </p>
-                  </div>
+              <li className="bg-slate-950/30 p-4 rounded-xl border border-white/10 hover:border-emerald-400/50 transition-colors shadow-md">
+                <a href="https://cdrn.zevizar.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-base @sm:text-lg text-emerald-300 hover:text-emerald-100">
+                  <span className="underline decoration-emerald-500/50 underline-offset-4">CDRN Association</span>
+                  <ExternalLink className="w-4 h-4 text-emerald-500" />
+                </a>
+                <p className="text-xs @sm:text-sm text-slate-300 mt-2 pl-6 font-bold leading-relaxed">
+                  Collaborative Disaster Resilience Network. An international consortium fostering joint research and active mitigation strategies.
+                </p>
+              </li>
 
-                  <a
-                    href={sciCentrumUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 text-xs @sm:text-sm font-black shadow-md transition-colors"
-                  >
-                    <span>Visit scicentrum.zevizar.com</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
+              <li className="bg-slate-950/30 p-4 rounded-xl border border-white/10 hover:border-emerald-400/50 transition-colors shadow-md">
+                <a href="https://dip.zevizar.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-base @sm:text-lg text-emerald-300 hover:text-emerald-100">
+                  <span className="underline decoration-emerald-500/50 underline-offset-4">Zevizar DIP</span>
+                  <ExternalLink className="w-4 h-4 text-emerald-500" />
+                </a>
+                <p className="text-xs @sm:text-sm text-slate-300 mt-2 pl-6 font-bold leading-relaxed">
+                  Disaster Intelligence Platform. A 100% GDPR-compliant Private AI platform providing decision support, conversational GIS, and real-time telemetry.
+                </p>
+              </li>
 
-              {/* Zevizar DIP (Disaster Intelligence Platform) QR Module */}
-              <div className="flex-1 bg-slate-950/20 hover:bg-slate-950/30 border border-white/25 rounded-2xl p-4 @sm:p-4.5 flex flex-row items-center gap-4 @sm:gap-5 transition-all shadow-md">
-                {/* QR Box - Pure White Frame for Instant Scanner Recognition */}
-                <div className="w-28 h-28 @sm:w-32 @sm:h-32 @lg:w-36 @lg:h-36 @xl:w-40 @xl:h-40 bg-white p-2.5 rounded-2xl border-2 border-white/90 shadow-2xl flex items-center justify-center shrink-0">
-                  <img
-                    src={dipQrSrc}
-                    alt="Zevizar DIP QR Code"
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="flex flex-col justify-between flex-1 min-w-0">
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <Cpu className="w-3.5 h-3.5 text-emerald-300" />
-                      <span className="text-[11px] font-mono font-black text-emerald-200 uppercase tracking-wider bg-emerald-950/60 px-2.5 py-0.5 rounded border border-emerald-400/50 shadow-xs">
-                        Disaster Intelligence
-                      </span>
-                    </div>
-                    <h4 className="text-base @sm:text-lg @lg:text-xl font-black text-white mt-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)]">
-                      Zevizar DIP
-                    </h4>
-                    <span className="text-xs @sm:text-sm font-black text-emerald-300 block drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
-                      Decision Support &amp; Telemetry
-                    </span>
-                    <p className="text-xs @sm:text-sm text-slate-100 mt-1.5 line-clamp-2 leading-relaxed font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.95)]">
-                      100% GDPR-compliant Private AI platform with conversational GIS bridge and proactive simulation.
-                    </p>
-                  </div>
-
-                  <a
-                    href={dipUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 self-start inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs @sm:text-sm font-black shadow-md transition-colors"
-                  >
-                    <span>Launch dip.zevizar.com</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Card Note */}
-            <div className="pt-3 border-t border-white/20 flex items-center justify-between text-xs text-slate-100 font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.95)]">
-              <span>High-End Resilience Technology &amp; Academic Partnership</span>
-              <span className="font-mono text-white font-black">Live Platforms</span>
+              <li className="bg-slate-950/30 p-4 rounded-xl border border-white/10 hover:border-emerald-400/50 transition-colors shadow-md">
+                <a href="https://scicentrum.zevizar.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-base @sm:text-lg text-emerald-300 hover:text-emerald-100">
+                  <span className="underline decoration-emerald-500/50 underline-offset-4">SciCentrum</span>
+                  <ExternalLink className="w-4 h-4 text-emerald-500" />
+                </a>
+                <p className="text-xs @sm:text-sm text-slate-300 mt-2 pl-6 font-bold leading-relaxed">
+                  Academic network designed to help researchers connect with peers, discover collaborative studies, and engage in global scholarly forums.
+                </p>
+              </li>
+            </ol>
+            
+            <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between text-xs text-emerald-200/70 font-bold drop-shadow-sm">
+              <span>Distinct from Széchenyi István University</span>
             </div>
           </div>
         </div>
