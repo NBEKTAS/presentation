@@ -245,9 +245,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
               </li>
             </ol>
             
-            <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between text-xs text-emerald-200/70 font-bold drop-shadow-sm">
-              <span>Distinct from Széchenyi István University</span>
-            </div>
+
           </div>
         </div>
       </div>
