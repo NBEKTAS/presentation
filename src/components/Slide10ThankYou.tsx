@@ -220,7 +220,7 @@ export const Slide10ThankYou: React.FC<Slide10ThankYouProps> = ({ onRestart }) =
                   <ExternalLink className="w-4 h-4 text-emerald-500" />
                 </a>
                 <p className="text-xs @sm:text-sm text-slate-300 mt-2 pl-6 font-bold leading-relaxed">
-                  Collaborative Disaster Resilience Network. An international consortium fostering joint research and active mitigation strategies.
+                  Collaborative Community Resilience Network. An international consortium fostering joint research and active mitigation strategies.
                 </p>
               </li>
 
